@@ -1,0 +1,1174 @@
+2026-10-12 17:30:38.116 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-12 17:30:39.035 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-12 17:30:39.044 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-12 17:30:39.296 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-12 17:30:39.299 +07:00 [INF] Hosting environment: Development
+2026-10-12 17:30:39.302 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-12 17:30:42.632 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-12 17:30:43.279 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 668.4332ms
+2026-10-12 17:30:43.291 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-12 17:30:43.292 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-12 17:30:43.291 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-12 17:30:43.292 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-12 17:30:43.296 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-12 17:30:43.302 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-12 17:30:43.308 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-12 17:30:43.390 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 89.9206ms
+2026-10-12 17:30:43.405 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 113.7511ms
+2026-10-12 17:30:43.406 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 113.5852ms
+2026-10-12 17:30:43.405 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 113.3952ms
+2026-10-12 17:30:43.405 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 112.6222ms
+2026-10-12 17:30:43.415 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 119.1584ms
+2026-10-12 17:30:43.499 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 191.8055ms
+2026-10-12 17:30:43.550 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-12 17:30:43.622 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 72.2369ms
+2026-10-12 17:31:00.632 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 42
+2026-10-12 17:31:00.844 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:31:00.899 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-12 17:31:01.569 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-12 17:31:07.089 +07:00 [INF] Executed DbCommand (188ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-12 17:31:07.319 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, Role: GiamDoc
+2026-10-12 17:31:07.350 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:31:07.417 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 6498.0992ms
+2026-10-12 17:31:07.423 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:31:07.487 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 6855.3833ms
+2026-10-12 17:31:25.659 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/BangLuong - null null
+2026-10-12 17:31:25.902 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.BangLuongController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:31:25.916 +07:00 [INF] Route matched with {action = "GetAll", controller = "BangLuong"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller QuanLyNhanSu.Controllers.BangLuongController (QuanLyNhanSu).
+2026-10-12 17:31:25.928 +07:00 [INF] Đang lấy danh sách bảng lương
+2026-10-12 17:31:26.004 +07:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BangLuongId], [b].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien], [b].[Thang], [b].[Nam], [b].[LuongCoBan], [b].[PhuCap], [b].[Thuong], [b].[TongLuong]
+FROM [BangLuongs] AS [b]
+INNER JOIN [NhanViens] AS [n] ON [b].[NhanVienId] = [n].[NhanVienId]
+2026-10-12 17:31:26.020 +07:00 [INF] Lấy bảng lương thành công. Số lượng: 7
+2026-10-12 17:31:26.025 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.BangLuongDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:31:26.056 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.BangLuongController.GetAll (QuanLyNhanSu) in 133.726ms
+2026-10-12 17:31:26.062 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.BangLuongController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:31:26.067 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/BangLuong - 200 null application/json; charset=utf-8 408.1906ms
+2026-10-12 17:31:48.949 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/NhanVien - null null
+2026-10-12 17:31:48.968 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:31:48.977 +07:00 [INF] Route matched with {action = "GetAll", controller = "NhanVien"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller QuanLyNhanSu.Controllers.NhanVienController (QuanLyNhanSu).
+2026-10-12 17:31:49.424 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n0].[NhanVienId], [n0].[HoTen], [n0].[NgaySinh], [n0].[GioiTinh], [n0].[SoDienThoai], [n0].[Email], [n0].[DiaChi], [n0].[NgayVaoLam], [n0].[LuongCoBan], [n0].[PhuCap], [n0].[Thuong], [n0].[PhongBanId], [p].[TenPhongBan], [n0].[ChucVuId], [c].[TenChucVu]
+FROM (
+    SELECT [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong]
+    FROM [NhanViens] AS [n]
+    ORDER BY [n].[NhanVienId]
+    OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+) AS [n0]
+INNER JOIN [PhongBans] AS [p] ON [n0].[PhongBanId] = [p].[PhongBanId]
+INNER JOIN [ChucVus] AS [c] ON [n0].[ChucVuId] = [c].[ChucVuId]
+ORDER BY [n0].[NhanVienId]
+2026-10-12 17:31:49.438 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.NhanVienDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:31:49.480 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu) in 498.7766ms
+2026-10-12 17:31:49.488 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:31:49.493 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/NhanVien - 200 null application/json; charset=utf-8 544.3003ms
+2026-10-12 17:31:49.532 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/ChamCong - null null
+2026-10-12 17:31:49.546 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.ChamCongController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:31:49.553 +07:00 [INF] Route matched with {action = "GetAll", controller = "ChamCong"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller QuanLyNhanSu.Controllers.ChamCongController (QuanLyNhanSu).
+2026-10-12 17:31:49.565 +07:00 [INF] Đang lấy danh sách chấm công
+2026-10-12 17:31:49.627 +07:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ChamCongId], [c].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien], [c].[ThoiGianCham], [c].[HinhAnh], [c].[ViTri], [c].[Latitude], [c].[Longitude]
+FROM [ChamCongs] AS [c]
+INNER JOIN [NhanViens] AS [n] ON [c].[NhanVienId] = [n].[NhanVienId]
+2026-10-12 17:31:49.640 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.ChamCongDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:31:49.665 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.ChamCongController.GetAll (QuanLyNhanSu) in 106.6023ms
+2026-10-12 17:31:49.672 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.ChamCongController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:31:49.677 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/ChamCong - 200 null application/json; charset=utf-8 144.5278ms
+2026-10-12 17:31:49.849 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/uploads/an_20260926.jpg - null null
+2026-10-12 17:31:49.849 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/abc.jpg - null null
+2026-10-12 17:31:49.852 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151//uploads/chamcong/d3dc9491-ab81-4809-9c86-6305b91bf7ab.jpg - null null
+2026-10-12 17:31:50.005 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/abc.jpg - 404 0 null 119.2144ms
+2026-10-12 17:31:49.967 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/uploads/an_20260926.jpg - 404 0 null 118.9803ms
+2026-10-12 17:31:49.853 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151//uploads/chamcong/607eef77-e68e-4e00-9efe-8f4b3ab197a1.jpg - null null
+2026-10-12 17:31:49.880 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151//uploads/chamcong/c96bb11e-692c-4618-96d6-708e9fd3b9c1.jpg - null null
+2026-10-12 17:31:49.883 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151//uploads/chamcong/97982e86-79a1-4ab1-bdf6-487e06676a4d.jpg - null null
+2026-10-12 17:31:49.888 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151//uploads/chamcong/86c314fc-d0e9-4ff0-a0c2-8d34f64a93e1.jpg - null null
+2026-10-12 17:31:49.891 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/https://localhost:7151/Images/ee3900a2-5c77-4a0e-bb3d-ca0f1f34ef76.jpg - null null
+2026-10-12 17:31:49.895 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/https://localhost:7151/Images/6f9bbbcf-c565-4d06-9f42-4b685987b78b.jpg - null null
+2026-10-12 17:31:49.903 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/https://localhost:7151/Images/049a2866-a3f5-4898-9a68-b5f302ac3068.jpg - null null
+2026-10-12 17:31:49.929 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/https://localhost:7151/Images/55395238-2540-4673-b247-1e8008296549.jpg - null null
+2026-10-12 17:31:50.024 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7151/abc.jpg, Response status code: 404
+2026-10-12 17:31:50.028 +07:00 [INF] The file //uploads/chamcong/d3dc9491-ab81-4809-9c86-6305b91bf7ab.jpg was not modified
+2026-10-12 17:31:50.033 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7151/uploads/an_20260926.jpg, Response status code: 404
+2026-10-12 17:31:50.043 +07:00 [INF] The file //uploads/chamcong/607eef77-e68e-4e00-9efe-8f4b3ab197a1.jpg was not modified
+2026-10-12 17:31:50.052 +07:00 [INF] The file //uploads/chamcong/c96bb11e-692c-4618-96d6-708e9fd3b9c1.jpg was not modified
+2026-10-12 17:31:50.061 +07:00 [INF] The file //uploads/chamcong/97982e86-79a1-4ab1-bdf6-487e06676a4d.jpg was not modified
+2026-10-12 17:31:50.069 +07:00 [INF] The file //uploads/chamcong/86c314fc-d0e9-4ff0-a0c2-8d34f64a93e1.jpg was not modified
+2026-10-12 17:31:50.078 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/https://localhost:7151/Images/ee3900a2-5c77-4a0e-bb3d-ca0f1f34ef76.jpg - 404 0 null 186.8508ms
+2026-10-12 17:31:50.084 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/https://localhost:7151/Images/6f9bbbcf-c565-4d06-9f42-4b685987b78b.jpg - 404 0 null 189.7107ms
+2026-10-12 17:31:50.092 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/https://localhost:7151/Images/049a2866-a3f5-4898-9a68-b5f302ac3068.jpg - 404 0 null 189.8011ms
+2026-10-12 17:31:50.099 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/https://localhost:7151/Images/55395238-2540-4673-b247-1e8008296549.jpg - 404 0 null 170.622ms
+2026-10-12 17:31:50.108 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151//uploads/chamcong/d3dc9491-ab81-4809-9c86-6305b91bf7ab.jpg - 304 null image/jpeg 255.9185ms
+2026-10-12 17:31:50.115 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151//uploads/chamcong/607eef77-e68e-4e00-9efe-8f4b3ab197a1.jpg - 304 null image/jpeg 262.7722ms
+2026-10-12 17:31:50.118 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151//uploads/chamcong/c96bb11e-692c-4618-96d6-708e9fd3b9c1.jpg - 304 null image/jpeg 261.7617ms
+2026-10-12 17:31:50.121 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151//uploads/chamcong/97982e86-79a1-4ab1-bdf6-487e06676a4d.jpg - 304 null image/jpeg 238.9032ms
+2026-10-12 17:31:50.124 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151//uploads/chamcong/86c314fc-d0e9-4ff0-a0c2-8d34f64a93e1.jpg - 304 null image/jpeg 236.8613ms
+2026-10-12 17:31:50.133 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7151/https://localhost:7151/Images/ee3900a2-5c77-4a0e-bb3d-ca0f1f34ef76.jpg, Response status code: 404
+2026-10-12 17:31:50.144 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7151/https://localhost:7151/Images/6f9bbbcf-c565-4d06-9f42-4b685987b78b.jpg, Response status code: 404
+2026-10-12 17:31:50.150 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7151/https://localhost:7151/Images/049a2866-a3f5-4898-9a68-b5f302ac3068.jpg, Response status code: 404
+2026-10-12 17:31:50.158 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7151/https://localhost:7151/Images/55395238-2540-4673-b247-1e8008296549.jpg, Response status code: 404
+2026-10-12 17:32:06.275 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/NhanVien - null null
+2026-10-12 17:32:06.288 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:32:06.292 +07:00 [INF] Route matched with {action = "GetAll", controller = "NhanVien"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller QuanLyNhanSu.Controllers.NhanVienController (QuanLyNhanSu).
+2026-10-12 17:32:06.319 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n0].[NhanVienId], [n0].[HoTen], [n0].[NgaySinh], [n0].[GioiTinh], [n0].[SoDienThoai], [n0].[Email], [n0].[DiaChi], [n0].[NgayVaoLam], [n0].[LuongCoBan], [n0].[PhuCap], [n0].[Thuong], [n0].[PhongBanId], [p].[TenPhongBan], [n0].[ChucVuId], [c].[TenChucVu]
+FROM (
+    SELECT [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong]
+    FROM [NhanViens] AS [n]
+    ORDER BY [n].[NhanVienId]
+    OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+) AS [n0]
+INNER JOIN [PhongBans] AS [p] ON [n0].[PhongBanId] = [p].[PhongBanId]
+INNER JOIN [ChucVus] AS [c] ON [n0].[ChucVuId] = [c].[ChucVuId]
+ORDER BY [n0].[NhanVienId]
+2026-10-12 17:32:06.325 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.NhanVienDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:32:06.328 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu) in 31.8225ms
+2026-10-12 17:32:06.332 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:32:06.335 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/NhanVien - 200 null application/json; charset=utf-8 60.7849ms
+2026-10-12 17:32:08.948 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/NhanVien - null null
+2026-10-12 17:32:08.958 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:32:08.961 +07:00 [INF] Route matched with {action = "GetAll", controller = "NhanVien"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller QuanLyNhanSu.Controllers.NhanVienController (QuanLyNhanSu).
+2026-10-12 17:32:08.981 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n0].[NhanVienId], [n0].[HoTen], [n0].[NgaySinh], [n0].[GioiTinh], [n0].[SoDienThoai], [n0].[Email], [n0].[DiaChi], [n0].[NgayVaoLam], [n0].[LuongCoBan], [n0].[PhuCap], [n0].[Thuong], [n0].[PhongBanId], [p].[TenPhongBan], [n0].[ChucVuId], [c].[TenChucVu]
+FROM (
+    SELECT [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong]
+    FROM [NhanViens] AS [n]
+    ORDER BY [n].[NhanVienId]
+    OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+) AS [n0]
+INNER JOIN [PhongBans] AS [p] ON [n0].[PhongBanId] = [p].[PhongBanId]
+INNER JOIN [ChucVus] AS [c] ON [n0].[ChucVuId] = [c].[ChucVuId]
+ORDER BY [n0].[NhanVienId]
+2026-10-12 17:32:08.990 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.NhanVienDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:32:08.994 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu) in 26.6453ms
+2026-10-12 17:32:08.998 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:32:09.001 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/NhanVien - 200 null application/json; charset=utf-8 53.4185ms
+2026-10-12 17:32:09.010 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/ChamCong - null null
+2026-10-12 17:32:09.018 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.ChamCongController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:32:09.021 +07:00 [INF] Route matched with {action = "GetAll", controller = "ChamCong"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller QuanLyNhanSu.Controllers.ChamCongController (QuanLyNhanSu).
+2026-10-12 17:32:09.026 +07:00 [INF] Đang lấy danh sách chấm công
+2026-10-12 17:32:09.032 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ChamCongId], [c].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien], [c].[ThoiGianCham], [c].[HinhAnh], [c].[ViTri], [c].[Latitude], [c].[Longitude]
+FROM [ChamCongs] AS [c]
+INNER JOIN [NhanViens] AS [n] ON [c].[NhanVienId] = [n].[NhanVienId]
+2026-10-12 17:32:09.038 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.ChamCongDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:32:09.043 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.ChamCongController.GetAll (QuanLyNhanSu) in 17.0338ms
+2026-10-12 17:32:09.047 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.ChamCongController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:32:09.050 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/ChamCong - 200 null application/json; charset=utf-8 40.006ms
+2026-10-12 17:32:09.097 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/abc.jpg - null null
+2026-10-12 17:32:09.097 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/uploads/an_20260926.jpg - null null
+2026-10-12 17:32:09.107 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/https://localhost:7151/Images/ee3900a2-5c77-4a0e-bb3d-ca0f1f34ef76.jpg - null null
+2026-10-12 17:32:09.104 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/abc.jpg - 404 0 null 6.6248ms
+2026-10-12 17:32:09.107 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/uploads/an_20260926.jpg - 404 0 null 10.5253ms
+2026-10-12 17:32:09.108 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/https://localhost:7151/Images/049a2866-a3f5-4898-9a68-b5f302ac3068.jpg - null null
+2026-10-12 17:32:09.108 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/https://localhost:7151/Images/55395238-2540-4673-b247-1e8008296549.jpg - null null
+2026-10-12 17:32:09.109 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/https://localhost:7151/Images/6f9bbbcf-c565-4d06-9f42-4b685987b78b.jpg - null null
+2026-10-12 17:32:09.114 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/https://localhost:7151/Images/ee3900a2-5c77-4a0e-bb3d-ca0f1f34ef76.jpg - 404 0 null 7.4479ms
+2026-10-12 17:32:09.121 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7151/abc.jpg, Response status code: 404
+2026-10-12 17:32:09.129 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7151/uploads/an_20260926.jpg, Response status code: 404
+2026-10-12 17:32:09.136 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/https://localhost:7151/Images/049a2866-a3f5-4898-9a68-b5f302ac3068.jpg - 404 0 null 28.132ms
+2026-10-12 17:32:09.142 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/https://localhost:7151/Images/55395238-2540-4673-b247-1e8008296549.jpg - 404 0 null 33.8792ms
+2026-10-12 17:32:09.148 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/https://localhost:7151/Images/6f9bbbcf-c565-4d06-9f42-4b685987b78b.jpg - 404 0 null 39.1584ms
+2026-10-12 17:32:09.156 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7151/https://localhost:7151/Images/ee3900a2-5c77-4a0e-bb3d-ca0f1f34ef76.jpg, Response status code: 404
+2026-10-12 17:32:09.171 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7151/https://localhost:7151/Images/049a2866-a3f5-4898-9a68-b5f302ac3068.jpg, Response status code: 404
+2026-10-12 17:32:09.180 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7151/https://localhost:7151/Images/55395238-2540-4673-b247-1e8008296549.jpg, Response status code: 404
+2026-10-12 17:32:09.188 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7151/https://localhost:7151/Images/6f9bbbcf-c565-4d06-9f42-4b685987b78b.jpg, Response status code: 404
+2026-10-12 17:32:13.267 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/NhanVien - null null
+2026-10-12 17:32:13.278 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:32:13.282 +07:00 [INF] Route matched with {action = "GetAll", controller = "NhanVien"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller QuanLyNhanSu.Controllers.NhanVienController (QuanLyNhanSu).
+2026-10-12 17:32:13.296 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n0].[NhanVienId], [n0].[HoTen], [n0].[NgaySinh], [n0].[GioiTinh], [n0].[SoDienThoai], [n0].[Email], [n0].[DiaChi], [n0].[NgayVaoLam], [n0].[LuongCoBan], [n0].[PhuCap], [n0].[Thuong], [n0].[PhongBanId], [p].[TenPhongBan], [n0].[ChucVuId], [c].[TenChucVu]
+FROM (
+    SELECT [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong]
+    FROM [NhanViens] AS [n]
+    ORDER BY [n].[NhanVienId]
+    OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+) AS [n0]
+INNER JOIN [PhongBans] AS [p] ON [n0].[PhongBanId] = [p].[PhongBanId]
+INNER JOIN [ChucVus] AS [c] ON [n0].[ChucVuId] = [c].[ChucVuId]
+ORDER BY [n0].[NhanVienId]
+2026-10-12 17:32:13.305 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.NhanVienDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:32:13.310 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu) in 20.7564ms
+2026-10-12 17:32:13.315 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:32:13.319 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/NhanVien - 200 null application/json; charset=utf-8 52.096ms
+2026-10-12 17:32:16.183 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/NhanVien?pageNumber=1&pageSize=1000 - null null
+2026-10-12 17:32:16.193 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:32:16.197 +07:00 [INF] Route matched with {action = "GetAll", controller = "NhanVien"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller QuanLyNhanSu.Controllers.NhanVienController (QuanLyNhanSu).
+2026-10-12 17:32:16.222 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n0].[NhanVienId], [n0].[HoTen], [n0].[NgaySinh], [n0].[GioiTinh], [n0].[SoDienThoai], [n0].[Email], [n0].[DiaChi], [n0].[NgayVaoLam], [n0].[LuongCoBan], [n0].[PhuCap], [n0].[Thuong], [n0].[PhongBanId], [p].[TenPhongBan], [n0].[ChucVuId], [c].[TenChucVu]
+FROM (
+    SELECT [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong]
+    FROM [NhanViens] AS [n]
+    ORDER BY [n].[NhanVienId]
+    OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+) AS [n0]
+INNER JOIN [PhongBans] AS [p] ON [n0].[PhongBanId] = [p].[PhongBanId]
+INNER JOIN [ChucVus] AS [c] ON [n0].[ChucVuId] = [c].[ChucVuId]
+ORDER BY [n0].[NhanVienId]
+2026-10-12 17:32:16.230 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.NhanVienDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:32:16.236 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu) in 34.1542ms
+2026-10-12 17:32:16.241 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:32:16.244 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/NhanVien?pageNumber=1&pageSize=1000 - 200 null application/json; charset=utf-8 61.2032ms
+2026-10-12 17:32:16.254 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/TaiKhoan - null null
+2026-10-12 17:32:16.263 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:32:16.270 +07:00 [INF] Route matched with {action = "GetAll", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-12 17:32:16.306 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+2026-10-12 17:32:16.315 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.TaiKhoanDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:32:16.327 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.GetAll (QuanLyNhanSu) in 51.7556ms
+2026-10-12 17:32:16.333 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:32:16.337 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/TaiKhoan - 200 null application/json; charset=utf-8 83.6079ms
+2026-10-12 17:32:16.369 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/BangLuong/thong-ke-nam?nam=2026 - null null
+2026-10-12 17:32:16.379 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.BangLuongController.GetThongKeTheoNam (QuanLyNhanSu)'
+2026-10-12 17:32:16.391 +07:00 [INF] Route matched with {action = "GetThongKeTheoNam", controller = "BangLuong"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetThongKeTheoNam(Int32) on controller QuanLyNhanSu.Controllers.BangLuongController (QuanLyNhanSu).
+2026-10-12 17:32:16.401 +07:00 [INF] Thống kê quỹ lương cả năm 2026
+2026-10-12 17:32:16.548 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@thang='?' (DbType = Int32), @_8__locals1_nam='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BangLuongId], [b].[LuongCoBan], [b].[Nam], [b].[NhanVienId], [b].[PhuCap], [b].[Thang], [b].[Thuong], [b].[TongLuong]
+FROM [BangLuongs] AS [b]
+WHERE [b].[Thang] = @thang AND [b].[Nam] = @_8__locals1_nam
+2026-10-12 17:32:16.570 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@thang='?' (DbType = Int32), @_8__locals1_nam='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BangLuongId], [b].[LuongCoBan], [b].[Nam], [b].[NhanVienId], [b].[PhuCap], [b].[Thang], [b].[Thuong], [b].[TongLuong]
+FROM [BangLuongs] AS [b]
+WHERE [b].[Thang] = @thang AND [b].[Nam] = @_8__locals1_nam
+2026-10-12 17:32:16.579 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@thang='?' (DbType = Int32), @_8__locals1_nam='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BangLuongId], [b].[LuongCoBan], [b].[Nam], [b].[NhanVienId], [b].[PhuCap], [b].[Thang], [b].[Thuong], [b].[TongLuong]
+FROM [BangLuongs] AS [b]
+WHERE [b].[Thang] = @thang AND [b].[Nam] = @_8__locals1_nam
+2026-10-12 17:32:16.587 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@thang='?' (DbType = Int32), @_8__locals1_nam='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BangLuongId], [b].[LuongCoBan], [b].[Nam], [b].[NhanVienId], [b].[PhuCap], [b].[Thang], [b].[Thuong], [b].[TongLuong]
+FROM [BangLuongs] AS [b]
+WHERE [b].[Thang] = @thang AND [b].[Nam] = @_8__locals1_nam
+2026-10-12 17:32:16.595 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@thang='?' (DbType = Int32), @_8__locals1_nam='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BangLuongId], [b].[LuongCoBan], [b].[Nam], [b].[NhanVienId], [b].[PhuCap], [b].[Thang], [b].[Thuong], [b].[TongLuong]
+FROM [BangLuongs] AS [b]
+WHERE [b].[Thang] = @thang AND [b].[Nam] = @_8__locals1_nam
+2026-10-12 17:32:16.604 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@thang='?' (DbType = Int32), @_8__locals1_nam='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BangLuongId], [b].[LuongCoBan], [b].[Nam], [b].[NhanVienId], [b].[PhuCap], [b].[Thang], [b].[Thuong], [b].[TongLuong]
+FROM [BangLuongs] AS [b]
+WHERE [b].[Thang] = @thang AND [b].[Nam] = @_8__locals1_nam
+2026-10-12 17:32:16.614 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@thang='?' (DbType = Int32), @_8__locals1_nam='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BangLuongId], [b].[LuongCoBan], [b].[Nam], [b].[NhanVienId], [b].[PhuCap], [b].[Thang], [b].[Thuong], [b].[TongLuong]
+FROM [BangLuongs] AS [b]
+WHERE [b].[Thang] = @thang AND [b].[Nam] = @_8__locals1_nam
+2026-10-12 17:32:16.623 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@thang='?' (DbType = Int32), @_8__locals1_nam='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BangLuongId], [b].[LuongCoBan], [b].[Nam], [b].[NhanVienId], [b].[PhuCap], [b].[Thang], [b].[Thuong], [b].[TongLuong]
+FROM [BangLuongs] AS [b]
+WHERE [b].[Thang] = @thang AND [b].[Nam] = @_8__locals1_nam
+2026-10-12 17:32:16.853 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@thang='?' (DbType = Int32), @_8__locals1_nam='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BangLuongId], [b].[LuongCoBan], [b].[Nam], [b].[NhanVienId], [b].[PhuCap], [b].[Thang], [b].[Thuong], [b].[TongLuong]
+FROM [BangLuongs] AS [b]
+WHERE [b].[Thang] = @thang AND [b].[Nam] = @_8__locals1_nam
+2026-10-12 17:32:16.862 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@thang='?' (DbType = Int32), @_8__locals1_nam='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BangLuongId], [b].[LuongCoBan], [b].[Nam], [b].[NhanVienId], [b].[PhuCap], [b].[Thang], [b].[Thuong], [b].[TongLuong]
+FROM [BangLuongs] AS [b]
+WHERE [b].[Thang] = @thang AND [b].[Nam] = @_8__locals1_nam
+2026-10-12 17:32:16.869 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@thang='?' (DbType = Int32), @_8__locals1_nam='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BangLuongId], [b].[LuongCoBan], [b].[Nam], [b].[NhanVienId], [b].[PhuCap], [b].[Thang], [b].[Thuong], [b].[TongLuong]
+FROM [BangLuongs] AS [b]
+WHERE [b].[Thang] = @thang AND [b].[Nam] = @_8__locals1_nam
+2026-10-12 17:32:16.877 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@thang='?' (DbType = Int32), @_8__locals1_nam='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BangLuongId], [b].[LuongCoBan], [b].[Nam], [b].[NhanVienId], [b].[PhuCap], [b].[Thang], [b].[Thuong], [b].[TongLuong]
+FROM [BangLuongs] AS [b]
+WHERE [b].[Thang] = @thang AND [b].[Nam] = @_8__locals1_nam
+2026-10-12 17:32:16.884 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.ThongKeLuongNamDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:32:16.893 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.BangLuongController.GetThongKeTheoNam (QuanLyNhanSu) in 494.8795ms
+2026-10-12 17:32:16.898 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.BangLuongController.GetThongKeTheoNam (QuanLyNhanSu)'
+2026-10-12 17:32:16.902 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/BangLuong/thong-ke-nam?nam=2026 - 200 null application/json; charset=utf-8 533.0669ms
+2026-10-12 17:32:58.634 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/NhanVien - null null
+2026-10-12 17:32:58.642 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:32:58.645 +07:00 [INF] Route matched with {action = "GetAll", controller = "NhanVien"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller QuanLyNhanSu.Controllers.NhanVienController (QuanLyNhanSu).
+2026-10-12 17:32:58.657 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n0].[NhanVienId], [n0].[HoTen], [n0].[NgaySinh], [n0].[GioiTinh], [n0].[SoDienThoai], [n0].[Email], [n0].[DiaChi], [n0].[NgayVaoLam], [n0].[LuongCoBan], [n0].[PhuCap], [n0].[Thuong], [n0].[PhongBanId], [p].[TenPhongBan], [n0].[ChucVuId], [c].[TenChucVu]
+FROM (
+    SELECT [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong]
+    FROM [NhanViens] AS [n]
+    ORDER BY [n].[NhanVienId]
+    OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+) AS [n0]
+INNER JOIN [PhongBans] AS [p] ON [n0].[PhongBanId] = [p].[PhongBanId]
+INNER JOIN [ChucVus] AS [c] ON [n0].[ChucVuId] = [c].[ChucVuId]
+ORDER BY [n0].[NhanVienId]
+2026-10-12 17:32:58.662 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.NhanVienDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:32:58.666 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu) in 16.064ms
+2026-10-12 17:32:58.670 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:32:58.673 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/NhanVien - 200 null application/json; charset=utf-8 39.4947ms
+2026-10-12 17:33:04.293 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/TaiKhoan - null null
+2026-10-12 17:33:04.302 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:33:04.305 +07:00 [INF] Route matched with {action = "GetAll", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-12 17:33:04.317 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+2026-10-12 17:33:04.323 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.TaiKhoanDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:33:04.327 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.GetAll (QuanLyNhanSu) in 17.5067ms
+2026-10-12 17:33:04.331 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:33:04.334 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/TaiKhoan - 200 null application/json; charset=utf-8 40.6836ms
+2026-10-12 17:33:17.915 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/PhongBan - null null
+2026-10-12 17:33:17.924 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.PhongBanController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:33:17.932 +07:00 [INF] Route matched with {action = "GetAll", controller = "PhongBan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller QuanLyNhanSu.Controllers.PhongBanController (QuanLyNhanSu).
+2026-10-12 17:33:17.964 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PhongBanId], [p].[TenPhongBan], [p].[MoTa]
+FROM [PhongBans] AS [p]
+2026-10-12 17:33:17.973 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.PhongBanDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:33:17.981 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.PhongBanController.GetAll (QuanLyNhanSu) in 41.7443ms
+2026-10-12 17:33:17.985 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.PhongBanController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:33:17.988 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/PhongBan - 200 null application/json; charset=utf-8 73.3555ms
+2026-10-12 17:33:32.064 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/ThongBao - null null
+2026-10-12 17:33:32.073 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.ThongBaoController.GetThongBaoCuaToi (QuanLyNhanSu)'
+2026-10-12 17:33:32.080 +07:00 [INF] Route matched with {action = "GetThongBaoCuaToi", controller = "ThongBao"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetThongBaoCuaToi() on controller QuanLyNhanSu.Controllers.ThongBaoController (QuanLyNhanSu).
+2026-10-12 17:33:32.173 +07:00 [INF] Executed DbCommand (23ms) [Parameters=[@nhanVienId='?' (DbType = Int32), @homNay='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ThongBaoId], [t0].[TieuDe], [t0].[NoiDung], [t0].[DoiTuongNhan], [t0].[PhongBanId], [t0].[NguoiGuiId], [t0].[NgayTao], [t0].[NgayHetHan], [t0].[TrangThai], [t].[DaDoc]
+FROM [ThongBaoNguoiNhans] AS [t]
+INNER JOIN [ThongBaos] AS [t0] ON [t].[ThongBaoId] = [t0].[ThongBaoId]
+WHERE [t].[NhanVienId] = @nhanVienId AND [t0].[TrangThai] = CAST(1 AS bit) AND ([t0].[NgayHetHan] IS NULL OR [t0].[NgayHetHan] >= @homNay)
+ORDER BY [t0].[NgayTao] DESC
+2026-10-12 17:33:32.190 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.ThongBaoDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:33:32.204 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.ThongBaoController.GetThongBaoCuaToi (QuanLyNhanSu) in 117.5233ms
+2026-10-12 17:33:32.207 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.ThongBaoController.GetThongBaoCuaToi (QuanLyNhanSu)'
+2026-10-12 17:33:32.210 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/ThongBao - 200 null application/json; charset=utf-8 145.3128ms
+2026-10-12 17:33:48.478 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/ThongBao - null null
+2026-10-12 17:33:48.485 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.ThongBaoController.GetThongBaoCuaToi (QuanLyNhanSu)'
+2026-10-12 17:33:48.488 +07:00 [INF] Route matched with {action = "GetThongBaoCuaToi", controller = "ThongBao"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetThongBaoCuaToi() on controller QuanLyNhanSu.Controllers.ThongBaoController (QuanLyNhanSu).
+2026-10-12 17:33:48.499 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@nhanVienId='?' (DbType = Int32), @homNay='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ThongBaoId], [t0].[TieuDe], [t0].[NoiDung], [t0].[DoiTuongNhan], [t0].[PhongBanId], [t0].[NguoiGuiId], [t0].[NgayTao], [t0].[NgayHetHan], [t0].[TrangThai], [t].[DaDoc]
+FROM [ThongBaoNguoiNhans] AS [t]
+INNER JOIN [ThongBaos] AS [t0] ON [t].[ThongBaoId] = [t0].[ThongBaoId]
+WHERE [t].[NhanVienId] = @nhanVienId AND [t0].[TrangThai] = CAST(1 AS bit) AND ([t0].[NgayHetHan] IS NULL OR [t0].[NgayHetHan] >= @homNay)
+ORDER BY [t0].[NgayTao] DESC
+2026-10-12 17:33:48.506 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.ThongBaoDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:33:48.511 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.ThongBaoController.GetThongBaoCuaToi (QuanLyNhanSu) in 17.8684ms
+2026-10-12 17:33:48.515 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.ThongBaoController.GetThongBaoCuaToi (QuanLyNhanSu)'
+2026-10-12 17:33:48.519 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/ThongBao - 200 null application/json; charset=utf-8 40.6421ms
+2026-10-12 17:35:19.955 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/ThongBao - application/json; charset=utf-8 null
+2026-10-12 17:35:19.964 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.ThongBaoController.AddThongBao (QuanLyNhanSu)'
+2026-10-12 17:35:19.971 +07:00 [INF] Route matched with {action = "AddThongBao", controller = "ThongBao"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddThongBao(QuanLyNhanSu.Models.DTO.AddThongBaoRequestDTO) on controller QuanLyNhanSu.Controllers.ThongBaoController (QuanLyNhanSu).
+2026-10-12 17:35:20.473 +07:00 [INF] Executed DbCommand (38ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (Size = 200), @p7='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ThongBaos] ([DoiTuongNhan], [NgayHetHan], [NgayTao], [NguoiGuiId], [NoiDung], [PhongBanId], [TieuDe], [TrangThai])
+OUTPUT INSERTED.[ThongBaoId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2026-10-12 17:35:20.565 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NhanVienId]
+FROM [NhanViens] AS [n]
+2026-10-12 17:35:20.699 +07:00 [INF] Executed DbCommand (21ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTime2), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (DbType = Boolean), @p13='?' (DbType = DateTime2), @p14='?' (DbType = Int32), @p15='?' (DbType = Int32), @p16='?' (DbType = Boolean), @p17='?' (DbType = DateTime2), @p18='?' (DbType = Int32), @p19='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [ThongBaoNguoiNhans] USING (
+VALUES (@p0, @p1, @p2, @p3, 0),
+(@p4, @p5, @p6, @p7, 1),
+(@p8, @p9, @p10, @p11, 2),
+(@p12, @p13, @p14, @p15, 3),
+(@p16, @p17, @p18, @p19, 4)) AS i ([DaDoc], [NgayDoc], [NhanVienId], [ThongBaoId], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([DaDoc], [NgayDoc], [NhanVienId], [ThongBaoId])
+VALUES (i.[DaDoc], i.[NgayDoc], i.[NhanVienId], i.[ThongBaoId])
+OUTPUT INSERTED.[ThongBaoNguoiNhanId], i._Position;
+2026-10-12 17:35:20.727 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[ThongBaoId], [t].[TieuDe], [t].[NoiDung], [t].[DoiTuongNhan], [t].[PhongBanId], [t].[NguoiGuiId], [t].[NgayTao], [t].[NgayHetHan], [t].[TrangThai], CAST(0 AS bit) AS [DaDoc]
+FROM [ThongBaos] AS [t]
+WHERE [t].[ThongBaoId] = @id
+2026-10-12 17:35:20.735 +07:00 [INF] Executing CreatedAtActionResult, writing value of type 'QuanLyNhanSu.Models.DTO.ThongBaoDTO'.
+2026-10-12 17:35:20.780 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.ThongBaoController.AddThongBao (QuanLyNhanSu) in 803.5479ms
+2026-10-12 17:35:20.784 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.ThongBaoController.AddThongBao (QuanLyNhanSu)'
+2026-10-12 17:35:20.786 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/ThongBao - 201 null application/json; charset=utf-8 831.2353ms
+2026-10-12 17:35:20.800 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/ThongBao - null null
+2026-10-12 17:35:20.805 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.ThongBaoController.GetThongBaoCuaToi (QuanLyNhanSu)'
+2026-10-12 17:35:20.807 +07:00 [INF] Route matched with {action = "GetThongBaoCuaToi", controller = "ThongBao"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetThongBaoCuaToi() on controller QuanLyNhanSu.Controllers.ThongBaoController (QuanLyNhanSu).
+2026-10-12 17:35:20.814 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@nhanVienId='?' (DbType = Int32), @homNay='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ThongBaoId], [t0].[TieuDe], [t0].[NoiDung], [t0].[DoiTuongNhan], [t0].[PhongBanId], [t0].[NguoiGuiId], [t0].[NgayTao], [t0].[NgayHetHan], [t0].[TrangThai], [t].[DaDoc]
+FROM [ThongBaoNguoiNhans] AS [t]
+INNER JOIN [ThongBaos] AS [t0] ON [t].[ThongBaoId] = [t0].[ThongBaoId]
+WHERE [t].[NhanVienId] = @nhanVienId AND [t0].[TrangThai] = CAST(1 AS bit) AND ([t0].[NgayHetHan] IS NULL OR [t0].[NgayHetHan] >= @homNay)
+ORDER BY [t0].[NgayTao] DESC
+2026-10-12 17:35:20.818 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.ThongBaoDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:35:20.821 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.ThongBaoController.GetThongBaoCuaToi (QuanLyNhanSu) in 10.2273ms
+2026-10-12 17:35:20.824 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.ThongBaoController.GetThongBaoCuaToi (QuanLyNhanSu)'
+2026-10-12 17:35:20.827 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/ThongBao - 200 null application/json; charset=utf-8 26.353ms
+2026-10-12 17:35:43.212 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 42
+2026-10-12 17:35:43.221 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:35:43.227 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-12 17:35:43.236 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: cuong
+2026-10-12 17:35:43.246 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-12 17:35:43.252 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 3, Role: NhanVien
+2026-10-12 17:35:43.256 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:35:43.261 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 27.3798ms
+2026-10-12 17:35:43.264 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:35:43.268 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 55.2538ms
+2026-10-12 17:35:46.110 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/ThongBao - null null
+2026-10-12 17:35:46.118 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.ThongBaoController.GetThongBaoCuaToi (QuanLyNhanSu)'
+2026-10-12 17:35:46.120 +07:00 [INF] Route matched with {action = "GetThongBaoCuaToi", controller = "ThongBao"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetThongBaoCuaToi() on controller QuanLyNhanSu.Controllers.ThongBaoController (QuanLyNhanSu).
+2026-10-12 17:35:46.131 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@nhanVienId='?' (DbType = Int32), @homNay='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ThongBaoId], [t0].[TieuDe], [t0].[NoiDung], [t0].[DoiTuongNhan], [t0].[PhongBanId], [t0].[NguoiGuiId], [t0].[NgayTao], [t0].[NgayHetHan], [t0].[TrangThai], [t].[DaDoc]
+FROM [ThongBaoNguoiNhans] AS [t]
+INNER JOIN [ThongBaos] AS [t0] ON [t].[ThongBaoId] = [t0].[ThongBaoId]
+WHERE [t].[NhanVienId] = @nhanVienId AND [t0].[TrangThai] = CAST(1 AS bit) AND ([t0].[NgayHetHan] IS NULL OR [t0].[NgayHetHan] >= @homNay)
+ORDER BY [t0].[NgayTao] DESC
+2026-10-12 17:35:46.137 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.ThongBaoDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:35:46.140 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.ThongBaoController.GetThongBaoCuaToi (QuanLyNhanSu) in 14.7992ms
+2026-10-12 17:35:46.145 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.ThongBaoController.GetThongBaoCuaToi (QuanLyNhanSu)'
+2026-10-12 17:35:46.147 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/ThongBao - 200 null application/json; charset=utf-8 37.9155ms
+2026-10-12 17:35:50.767 +07:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7151/api/ThongBao/3/da-doc - null 0
+2026-10-12 17:35:50.776 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.ThongBaoController.DanhDauDaDoc (QuanLyNhanSu)'
+2026-10-12 17:35:50.783 +07:00 [INF] Route matched with {action = "DanhDauDaDoc", controller = "ThongBao"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DanhDauDaDoc(Int32) on controller QuanLyNhanSu.Controllers.ThongBaoController (QuanLyNhanSu).
+2026-10-12 17:35:50.818 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@thongBaoId='?' (DbType = Int32), @nhanVienId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[ThongBaoNguoiNhanId], [t].[DaDoc], [t].[NgayDoc], [t].[NhanVienId], [t].[ThongBaoId]
+FROM [ThongBaoNguoiNhans] AS [t]
+WHERE [t].[ThongBaoId] = @thongBaoId AND [t].[NhanVienId] = @nhanVienId
+2026-10-12 17:35:50.846 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [ThongBaoNguoiNhans] SET [DaDoc] = @p0, [NgayDoc] = @p1
+OUTPUT 1
+WHERE [ThongBaoNguoiNhanId] = @p2;
+2026-10-12 17:35:50.856 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-10-12 17:35:50.861 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.ThongBaoController.DanhDauDaDoc (QuanLyNhanSu) in 71.2535ms
+2026-10-12 17:35:50.864 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.ThongBaoController.DanhDauDaDoc (QuanLyNhanSu)'
+2026-10-12 17:35:50.867 +07:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7151/api/ThongBao/3/da-doc - 200 null application/json; charset=utf-8 99.8328ms
+2026-10-12 17:35:50.879 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/ThongBao - null null
+2026-10-12 17:35:50.884 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.ThongBaoController.GetThongBaoCuaToi (QuanLyNhanSu)'
+2026-10-12 17:35:50.886 +07:00 [INF] Route matched with {action = "GetThongBaoCuaToi", controller = "ThongBao"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetThongBaoCuaToi() on controller QuanLyNhanSu.Controllers.ThongBaoController (QuanLyNhanSu).
+2026-10-12 17:35:50.894 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@nhanVienId='?' (DbType = Int32), @homNay='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ThongBaoId], [t0].[TieuDe], [t0].[NoiDung], [t0].[DoiTuongNhan], [t0].[PhongBanId], [t0].[NguoiGuiId], [t0].[NgayTao], [t0].[NgayHetHan], [t0].[TrangThai], [t].[DaDoc]
+FROM [ThongBaoNguoiNhans] AS [t]
+INNER JOIN [ThongBaos] AS [t0] ON [t].[ThongBaoId] = [t0].[ThongBaoId]
+WHERE [t].[NhanVienId] = @nhanVienId AND [t0].[TrangThai] = CAST(1 AS bit) AND ([t0].[NgayHetHan] IS NULL OR [t0].[NgayHetHan] >= @homNay)
+ORDER BY [t0].[NgayTao] DESC
+2026-10-12 17:35:50.898 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.ThongBaoDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:35:50.901 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.ThongBaoController.GetThongBaoCuaToi (QuanLyNhanSu) in 11.6141ms
+2026-10-12 17:35:50.904 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.ThongBaoController.GetThongBaoCuaToi (QuanLyNhanSu)'
+2026-10-12 17:35:50.906 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/ThongBao - 200 null application/json; charset=utf-8 27.3729ms
+2026-10-12 17:35:59.436 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/BangLuong/me - null null
+2026-10-12 17:35:59.449 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.BangLuongController.GetMySalary (QuanLyNhanSu)'
+2026-10-12 17:35:59.455 +07:00 [INF] Route matched with {action = "GetMySalary", controller = "BangLuong"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetMySalary() on controller QuanLyNhanSu.Controllers.BangLuongController (QuanLyNhanSu).
+2026-10-12 17:35:59.467 +07:00 [INF] Nhân viên đang lấy bảng lương cá nhân
+2026-10-12 17:35:59.499 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[@nhanVienId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BangLuongId], [b].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien], [b].[Thang], [b].[Nam], [b].[LuongCoBan], [b].[PhuCap], [b].[Thuong], [b].[TongLuong]
+FROM [BangLuongs] AS [b]
+INNER JOIN [NhanViens] AS [n] ON [b].[NhanVienId] = [n].[NhanVienId]
+WHERE [b].[NhanVienId] = @nhanVienId
+ORDER BY [b].[Nam] DESC, [b].[Thang] DESC
+2026-10-12 17:35:59.507 +07:00 [INF] Lấy bảng lương cá nhân thành công. NhanVienId: 3, Số lượng: 2
+2026-10-12 17:35:59.511 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.BangLuongDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:35:59.518 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.BangLuongController.GetMySalary (QuanLyNhanSu) in 56.3537ms
+2026-10-12 17:35:59.524 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.BangLuongController.GetMySalary (QuanLyNhanSu)'
+2026-10-12 17:35:59.527 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/BangLuong/me - 200 null application/json; charset=utf-8 91.3657ms
+2026-10-12 17:36:10.149 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 17:36:10.156 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:36:10.179 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:36:10.397 +07:00 [INF] Executed DbCommand (95ms) [Parameters=[@nhanVienId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[NhanVienId] = @nhanVienId
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 17:36:10.637 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:36:10.656 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 472.0984ms
+2026-10-12 17:36:10.662 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:36:10.671 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 522.3303ms
+2026-10-12 17:36:41.386 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/DonNghiPhep - application/json; charset=utf-8 null
+2026-10-12 17:36:41.394 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.TaoDon (QuanLyNhanSu)'
+2026-10-12 17:36:41.421 +07:00 [INF] Route matched with {action = "TaoDon", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] TaoDon(QuanLyNhanSu.Models.DTO.TaoDonNghiPhepRequestDTO) on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:36:41.584 +07:00 [INF] Executed DbCommand (46ms) [Parameters=[@p0='?' (Size = 500), @p1='?' (Size = 500), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (Size = 20)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [DonNghiPheps] ([GhiChuDuyet], [LyDoNghi], [NgayBatDauNghi], [NgayDuyet], [NgayKetThucNghi], [NgayVietDon], [NguoiDuyetId], [NhanVienId], [SoNgayNghi], [TrangThai])
+OUTPUT INSERTED.[DonNghiPhepId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2026-10-12 17:36:41.703 +07:00 [INF] Executed DbCommand (22ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[DonNghiPhepId] = @id
+2026-10-12 17:36:41.719 +07:00 [INF] Executing CreatedAtActionResult, writing value of type 'QuanLyNhanSu.Models.DTO.DonNghiPhepDTO'.
+2026-10-12 17:36:41.727 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.TaoDon (QuanLyNhanSu) in 298.4725ms
+2026-10-12 17:36:41.734 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.TaoDon (QuanLyNhanSu)'
+2026-10-12 17:36:41.739 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/DonNghiPhep - 201 null application/json; charset=utf-8 353.1194ms
+2026-10-12 17:36:41.783 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 17:36:41.794 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:36:41.798 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:36:41.814 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@nhanVienId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[NhanVienId] = @nhanVienId
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 17:36:41.824 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:36:41.828 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 23.7707ms
+2026-10-12 17:36:41.832 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:36:41.835 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 52.3991ms
+2026-10-12 17:36:50.689 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 17:36:50.697 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:36:50.700 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:36:50.710 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@nhanVienId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[NhanVienId] = @nhanVienId
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 17:36:50.718 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:36:50.722 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 16.1625ms
+2026-10-12 17:36:50.726 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:36:50.730 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 40.7577ms
+2026-10-12 17:36:51.797 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 17:36:51.807 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:36:51.810 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:36:51.821 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@nhanVienId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[NhanVienId] = @nhanVienId
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 17:36:51.831 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:36:51.836 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 19.7335ms
+2026-10-12 17:36:51.841 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:36:51.845 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 48.5214ms
+2026-10-12 17:36:55.625 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 17:36:55.636 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:36:55.641 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:36:55.652 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@nhanVienId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[NhanVienId] = @nhanVienId
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 17:36:55.661 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:36:55.667 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 19.6981ms
+2026-10-12 17:36:55.671 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:36:55.675 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 49.9997ms
+2026-10-12 17:36:58.619 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 17:36:58.630 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:36:58.634 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:36:58.645 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@nhanVienId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[NhanVienId] = @nhanVienId
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 17:36:58.655 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:36:58.659 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 18.5863ms
+2026-10-12 17:36:58.664 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:36:58.667 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 48.2133ms
+2026-10-12 17:37:11.100 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 42
+2026-10-12 17:37:11.110 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:37:11.114 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-12 17:37:11.122 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-12 17:37:11.128 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-12 17:37:11.136 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, Role: GiamDoc
+2026-10-12 17:37:11.139 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:37:11.144 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 23.5619ms
+2026-10-12 17:37:11.148 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:37:11.151 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 51.4261ms
+2026-10-12 17:37:18.441 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 17:37:18.451 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:37:18.455 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:37:18.525 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 17:37:18.538 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:37:18.543 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 83.1307ms
+2026-10-12 17:37:18.548 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:37:18.552 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 110.9589ms
+2026-10-12 17:37:28.902 +07:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7151/api/DonNghiPhep/6/duyet - application/json; charset=utf-8 null
+2026-10-12 17:37:28.913 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.DuyetDon (QuanLyNhanSu)'
+2026-10-12 17:37:28.945 +07:00 [INF] Route matched with {action = "DuyetDon", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DuyetDon(Int32, QuanLyNhanSu.Models.DTO.DuyetDonNghiPhepRequestDTO) on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:37:28.975 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[DonNghiPhepId] = @id
+2026-10-12 17:37:29.082 +07:00 [INF] Executed DbCommand (45ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (Size = 500), @p1='?' (Size = 500), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (Size = 20)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [DonNghiPheps] SET [GhiChuDuyet] = @p0, [LyDoNghi] = @p1, [NgayBatDauNghi] = @p2, [NgayDuyet] = @p3, [NgayKetThucNghi] = @p4, [NgayVietDon] = @p5, [NguoiDuyetId] = @p6, [NhanVienId] = @p7, [SoNgayNghi] = @p8, [TrangThai] = @p9
+OUTPUT 1
+WHERE [DonNghiPhepId] = @p10;
+2026-10-12 17:37:29.095 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[DonNghiPhepId] = @id
+2026-10-12 17:37:29.100 +07:00 [INF] Executing OkObjectResult, writing value of type 'QuanLyNhanSu.Models.DTO.DonNghiPhepDTO'.
+2026-10-12 17:37:29.103 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.DuyetDon (QuanLyNhanSu) in 149.279ms
+2026-10-12 17:37:29.106 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.DuyetDon (QuanLyNhanSu)'
+2026-10-12 17:37:29.108 +07:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7151/api/DonNghiPhep/6/duyet - 200 null application/json; charset=utf-8 205.8761ms
+2026-10-12 17:37:29.138 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 17:37:29.146 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:37:29.150 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:37:29.161 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 17:37:29.170 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:37:29.175 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 19.1969ms
+2026-10-12 17:37:29.179 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:37:29.182 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 44.0213ms
+2026-10-12 17:37:58.576 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/ChucVu - null null
+2026-10-12 17:37:58.586 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.ChucVuController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:37:58.592 +07:00 [INF] Route matched with {action = "GetAll", controller = "ChucVu"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller QuanLyNhanSu.Controllers.ChucVuController (QuanLyNhanSu).
+2026-10-12 17:37:58.652 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ChucVuId], [c].[TenChucVu], [c].[MoTa]
+FROM [ChucVus] AS [c]
+2026-10-12 17:37:58.657 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.ChucVuDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:37:58.663 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.ChucVuController.GetAll (QuanLyNhanSu) in 64.4613ms
+2026-10-12 17:37:58.667 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.ChucVuController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:37:58.669 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/ChucVu - 200 null application/json; charset=utf-8 93.2377ms
+2026-10-12 17:43:20.712 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-12 17:43:21.600 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-12 17:43:21.607 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-12 17:43:21.802 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-12 17:43:21.806 +07:00 [INF] Hosting environment: Development
+2026-10-12 17:43:21.808 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-12 17:43:23.155 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-12 17:43:23.942 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 803.1239ms
+2026-10-12 17:43:23.973 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-12 17:43:23.973 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-12 17:43:23.973 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-12 17:43:24.040 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 66.8669ms
+2026-10-12 17:43:24.040 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 66.696ms
+2026-10-12 17:43:24.045 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 72.0339ms
+2026-10-12 17:43:24.050 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-12 17:43:24.059 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-12 17:43:24.073 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-12 17:43:24.121 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 70.3096ms
+2026-10-12 17:43:24.125 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 66.1816ms
+2026-10-12 17:43:24.140 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-12 17:43:24.163 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 89.799ms
+2026-10-12 17:43:24.290 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 149.6726ms
+2026-10-12 17:43:24.441 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-12 17:43:24.533 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 92.6245ms
+2026-10-12 17:43:29.847 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 41
+2026-10-12 17:43:29.974 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:43:30.029 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-12 17:43:30.624 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: binh
+2026-10-12 17:43:35.881 +07:00 [INF] Executed DbCommand (203ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-12 17:43:36.038 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 2, Role: TruongPhong
+2026-10-12 17:43:36.062 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:43:36.128 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 6076.4245ms
+2026-10-12 17:43:36.135 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:43:36.170 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 6323.0567ms
+2026-10-12 17:44:02.101 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 17:44:02.286 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:44:02.317 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:44:02.755 +07:00 [INF] Executed DbCommand (98ms) [Parameters=[@nhanVienId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[NhanVienId] = @nhanVienId
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 17:44:02.803 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:44:02.837 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 514.5057ms
+2026-10-12 17:44:02.843 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:44:02.851 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 750.9081ms
+2026-10-12 17:44:12.510 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 17:44:12.529 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:44:12.534 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:44:12.841 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@nhanVienId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[NhanVienId] = @nhanVienId
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 17:44:12.849 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:44:12.854 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 314.0437ms
+2026-10-12 17:44:12.857 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:44:12.861 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 351.2491ms
+2026-10-12 17:44:45.137 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 42
+2026-10-12 17:44:45.146 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:44:45.149 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-12 17:44:45.158 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-12 17:44:45.173 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-12 17:44:45.180 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, Role: GiamDoc
+2026-10-12 17:44:45.184 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:44:45.190 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 35.3378ms
+2026-10-12 17:44:45.195 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:44:45.199 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 62.0865ms
+2026-10-12 17:44:50.688 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 17:44:50.701 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:44:50.704 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:44:50.802 +07:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 17:44:51.278 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:44:51.296 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 585.3413ms
+2026-10-12 17:44:51.299 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:44:51.303 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 614.56ms
+2026-10-12 17:45:05.590 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 42
+2026-10-12 17:45:05.598 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:45:05.601 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-12 17:45:05.612 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: cuong
+2026-10-12 17:45:05.619 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-12 17:45:05.628 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 3, Role: NhanVien
+2026-10-12 17:45:05.632 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:45:05.637 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 30.8356ms
+2026-10-12 17:45:05.643 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:45:05.647 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 57.2729ms
+2026-10-12 17:45:07.999 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 17:45:08.008 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:45:08.011 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:45:08.021 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@nhanVienId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[NhanVienId] = @nhanVienId
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 17:45:08.030 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:45:08.034 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 18.9682ms
+2026-10-12 17:45:08.037 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:45:08.040 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 40.5363ms
+2026-10-12 17:45:26.220 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 42
+2026-10-12 17:45:26.230 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:45:26.233 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-12 17:45:26.239 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-12 17:45:26.247 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-12 17:45:26.254 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, Role: GiamDoc
+2026-10-12 17:45:26.257 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:45:26.261 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 22.5675ms
+2026-10-12 17:45:26.264 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:45:26.268 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 47.3934ms
+2026-10-12 17:45:29.141 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 17:45:29.149 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:45:29.152 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:45:29.161 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 17:45:29.169 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:45:29.174 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 18.3386ms
+2026-10-12 17:45:29.177 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:45:29.180 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 38.391ms
+2026-10-12 17:45:44.745 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 42
+2026-10-12 17:45:44.755 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:45:44.759 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-12 17:45:44.766 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-12 17:45:44.773 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-12 17:45:44.781 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, Role: GiamDoc
+2026-10-12 17:45:44.785 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:45:44.790 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 24.9794ms
+2026-10-12 17:45:44.795 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:45:44.799 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 53.8281ms
+2026-10-12 17:45:50.525 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/NhanVien - null null
+2026-10-12 17:45:50.532 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:45:50.546 +07:00 [INF] Route matched with {action = "GetAll", controller = "NhanVien"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller QuanLyNhanSu.Controllers.NhanVienController (QuanLyNhanSu).
+2026-10-12 17:45:50.654 +07:00 [INF] Executed DbCommand (40ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n0].[NhanVienId], [n0].[HoTen], [n0].[NgaySinh], [n0].[GioiTinh], [n0].[SoDienThoai], [n0].[Email], [n0].[DiaChi], [n0].[NgayVaoLam], [n0].[LuongCoBan], [n0].[PhuCap], [n0].[Thuong], [n0].[PhongBanId], [p].[TenPhongBan], [n0].[ChucVuId], [c].[TenChucVu]
+FROM (
+    SELECT [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong]
+    FROM [NhanViens] AS [n]
+    ORDER BY [n].[NhanVienId]
+    OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+) AS [n0]
+INNER JOIN [PhongBans] AS [p] ON [n0].[PhongBanId] = [p].[PhongBanId]
+INNER JOIN [ChucVus] AS [c] ON [n0].[ChucVuId] = [c].[ChucVuId]
+ORDER BY [n0].[NhanVienId]
+2026-10-12 17:45:50.661 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.NhanVienDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:45:50.688 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu) in 138.4458ms
+2026-10-12 17:45:50.691 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.NhanVienController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:45:50.695 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/NhanVien - 200 null application/json; charset=utf-8 170.1067ms
+2026-10-12 17:46:24.825 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 42
+2026-10-12 17:46:24.832 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:46:24.834 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-12 17:46:24.840 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: thanh
+2026-10-12 17:46:24.845 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-12 17:46:24.853 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 5, Role: NhanVien
+2026-10-12 17:46:24.856 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:46:24.861 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 22.6298ms
+2026-10-12 17:46:24.866 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:46:24.870 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 46.081ms
+2026-10-12 17:46:27.141 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 17:46:27.150 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:46:27.152 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:46:27.162 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@nhanVienId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[NhanVienId] = @nhanVienId
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 17:46:27.167 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:46:27.170 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 13.0374ms
+2026-10-12 17:46:27.173 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:46:27.175 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 34.1626ms
+2026-10-12 17:46:36.871 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/DonNghiPhep - application/json; charset=utf-8 null
+2026-10-12 17:46:36.890 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.TaoDon (QuanLyNhanSu)'
+2026-10-12 17:46:36.920 +07:00 [INF] Route matched with {action = "TaoDon", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] TaoDon(QuanLyNhanSu.Models.DTO.TaoDonNghiPhepRequestDTO) on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:46:37.349 +07:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (Size = 500), @p1='?' (Size = 500), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (Size = 20)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [DonNghiPheps] ([GhiChuDuyet], [LyDoNghi], [NgayBatDauNghi], [NgayDuyet], [NgayKetThucNghi], [NgayVietDon], [NguoiDuyetId], [NhanVienId], [SoNgayNghi], [TrangThai])
+OUTPUT INSERTED.[DonNghiPhepId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2026-10-12 17:46:37.528 +07:00 [INF] Executed DbCommand (18ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[DonNghiPhepId] = @id
+2026-10-12 17:46:37.576 +07:00 [INF] Executing CreatedAtActionResult, writing value of type 'QuanLyNhanSu.Models.DTO.DonNghiPhepDTO'.
+2026-10-12 17:46:37.646 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.TaoDon (QuanLyNhanSu) in 719.6279ms
+2026-10-12 17:46:37.652 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.TaoDon (QuanLyNhanSu)'
+2026-10-12 17:46:37.659 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/DonNghiPhep - 201 null application/json; charset=utf-8 788.1605ms
+2026-10-12 17:46:37.697 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 17:46:37.707 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:46:37.711 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:46:37.722 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@nhanVienId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[NhanVienId] = @nhanVienId
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 17:46:37.730 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:46:37.736 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 18.5144ms
+2026-10-12 17:46:37.740 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:46:37.744 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 47.3379ms
+2026-10-12 17:46:50.764 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 41
+2026-10-12 17:46:50.773 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:46:50.778 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-12 17:46:50.785 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: binh
+2026-10-12 17:46:50.793 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-12 17:46:50.800 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 2, Role: TruongPhong
+2026-10-12 17:46:50.804 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:46:50.809 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 24.9037ms
+2026-10-12 17:46:50.814 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:46:50.817 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 52.8501ms
+2026-10-12 17:46:52.828 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 17:46:52.836 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:46:52.839 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:46:52.850 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@nhanVienId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[NhanVienId] = @nhanVienId
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 17:46:52.857 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:46:52.861 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 16.6845ms
+2026-10-12 17:46:52.865 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:46:52.869 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 41.5344ms
+2026-10-12 17:47:06.331 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/DonNghiPhep - application/json; charset=utf-8 null
+2026-10-12 17:47:06.344 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (NhanVien)
+2026-10-12 17:47:06.356 +07:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-12 17:47:06.359 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/DonNghiPhep - 403 0 null 28.5132ms
+2026-10-12 17:47:08.522 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/DonNghiPhep - application/json; charset=utf-8 null
+2026-10-12 17:47:08.531 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (NhanVien)
+2026-10-12 17:47:08.534 +07:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-12 17:47:08.538 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/DonNghiPhep - 403 0 null 15.8858ms
+2026-10-12 17:47:10.635 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/DonNghiPhep - application/json; charset=utf-8 null
+2026-10-12 17:47:10.644 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (NhanVien)
+2026-10-12 17:47:10.646 +07:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-12 17:47:10.649 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/DonNghiPhep - 403 0 null 14.5213ms
+2026-10-12 17:54:22.280 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-12 17:54:23.054 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-12 17:54:23.060 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-12 17:54:23.309 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-12 17:54:23.312 +07:00 [INF] Hosting environment: Development
+2026-10-12 17:54:23.316 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-12 17:54:23.585 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-12 17:54:24.322 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 763.7249ms
+2026-10-12 17:54:24.350 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-12 17:54:24.352 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-12 17:54:24.350 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-12 17:54:24.350 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-12 17:54:24.350 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-12 17:54:24.351 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-12 17:54:24.356 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-12 17:54:24.421 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 70.1805ms
+2026-10-12 17:54:24.423 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 73.1313ms
+2026-10-12 17:54:24.431 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 79.7013ms
+2026-10-12 17:54:24.432 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 82.1176ms
+2026-10-12 17:54:24.431 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 81.402ms
+2026-10-12 17:54:24.431 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 81.4029ms
+2026-10-12 17:54:24.530 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 174.3712ms
+2026-10-12 17:54:24.580 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-12 17:54:24.666 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.3749ms
+2026-10-12 17:54:27.490 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 41
+2026-10-12 17:54:27.601 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:54:27.646 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-12 17:54:28.114 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: binh
+2026-10-12 17:54:33.289 +07:00 [INF] Executed DbCommand (152ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-12 17:54:33.480 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 2, Role: TruongPhong
+2026-10-12 17:54:33.507 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:54:33.560 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 5894.8291ms
+2026-10-12 17:54:33.566 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 17:54:33.606 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 6117.4461ms
+2026-10-12 17:55:10.461 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 17:55:10.602 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:55:10.634 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:55:11.169 +07:00 [INF] Executed DbCommand (107ms) [Parameters=[@nhanVienId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[NhanVienId] = @nhanVienId
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 17:55:11.234 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:55:11.276 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 634.8917ms
+2026-10-12 17:55:11.282 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:55:11.290 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 828.9573ms
+2026-10-12 17:55:24.531 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/DonNghiPhep - application/json; charset=utf-8 null
+2026-10-12 17:55:24.553 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.TaoDon (QuanLyNhanSu)'
+2026-10-12 17:55:24.578 +07:00 [INF] Route matched with {action = "TaoDon", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] TaoDon(QuanLyNhanSu.Models.DTO.TaoDonNghiPhepRequestDTO) on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:55:25.676 +07:00 [INF] Executed DbCommand (46ms) [Parameters=[@p0='?' (Size = 500), @p1='?' (Size = 500), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (Size = 20)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [DonNghiPheps] ([GhiChuDuyet], [LyDoNghi], [NgayBatDauNghi], [NgayDuyet], [NgayKetThucNghi], [NgayVietDon], [NguoiDuyetId], [NhanVienId], [SoNgayNghi], [TrangThai])
+OUTPUT INSERTED.[DonNghiPhepId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2026-10-12 17:55:25.869 +07:00 [INF] Executed DbCommand (17ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[DonNghiPhepId] = @id
+2026-10-12 17:55:26.073 +07:00 [INF] Executing CreatedAtActionResult, writing value of type 'QuanLyNhanSu.Models.DTO.DonNghiPhepDTO'.
+2026-10-12 17:55:26.150 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.TaoDon (QuanLyNhanSu) in 1567.6691ms
+2026-10-12 17:55:26.155 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.TaoDon (QuanLyNhanSu)'
+2026-10-12 17:55:26.160 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/DonNghiPhep - 201 null application/json; charset=utf-8 1628.8377ms
+2026-10-12 17:55:26.212 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 17:55:26.227 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:55:26.231 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 17:55:26.263 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@nhanVienId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+WHERE [d].[NhanVienId] = @nhanVienId
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 17:55:26.275 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 17:55:26.281 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 43.6628ms
+2026-10-12 17:55:26.285 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 17:55:26.294 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 81.6168ms
+2026-10-12 18:00:35.319 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-12 18:00:35.537 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-12 18:00:35.539 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-12 18:00:35.603 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-12 18:00:35.606 +07:00 [INF] Hosting environment: Development
+2026-10-12 18:00:35.612 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-12 18:00:36.128 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-12 18:00:36.329 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 208.3659ms
+2026-10-12 18:00:36.341 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-12 18:00:36.341 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-12 18:00:36.341 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-12 18:00:36.367 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 26.209ms
+2026-10-12 18:00:36.367 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 26.207ms
+2026-10-12 18:00:36.367 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 26.2081ms
+2026-10-12 18:00:36.375 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-12 18:00:36.379 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-12 18:00:36.393 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-12 18:00:36.393 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 18.48ms
+2026-10-12 18:00:36.395 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 15.7031ms
+2026-10-12 18:00:36.407 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 13.6779ms
+2026-10-12 18:00:36.428 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-12 18:00:36.462 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.2459ms
+2026-10-12 18:00:36.519 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-12 18:00:36.543 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.7044ms
+2026-10-12 18:00:40.364 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 42
+2026-10-12 18:00:40.401 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 18:00:40.416 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-12 18:00:40.549 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-12 18:00:41.728 +07:00 [INF] Executed DbCommand (37ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-12 18:00:41.766 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, Role: GiamDoc
+2026-10-12 18:00:41.773 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 18:00:41.787 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 1367.1304ms
+2026-10-12 18:00:41.789 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 18:00:41.798 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 1434.1148ms
+2026-10-12 18:00:44.707 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - null null
+2026-10-12 18:00:44.753 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 18:00:44.763 +07:00 [INF] Route matched with {action = "GetAll", controller = "DonNghiPhep"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller QuanLyNhanSu.Controllers.DonNghiPhepController (QuanLyNhanSu).
+2026-10-12 18:00:44.876 +07:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DonNghiPhepId], [d].[GhiChuDuyet], [d].[LyDoNghi], [d].[NgayBatDauNghi], [d].[NgayDuyet], [d].[NgayKetThucNghi], [d].[NgayVietDon], [d].[NguoiDuyetId], [d].[NhanVienId], [d].[SoNgayNghi], [d].[TrangThai], [n].[NhanVienId], [n].[ChucVuId], [n].[DiaChi], [n].[Email], [n].[GioiTinh], [n].[HoTen], [n].[LuongCoBan], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PhongBanId], [n].[PhuCap], [n].[SoDienThoai], [n].[Thuong], [p].[PhongBanId], [p].[MoTa], [p].[TenPhongBan], [n0].[NhanVienId], [n0].[ChucVuId], [n0].[DiaChi], [n0].[Email], [n0].[GioiTinh], [n0].[HoTen], [n0].[LuongCoBan], [n0].[NgaySinh], [n0].[NgayVaoLam], [n0].[PhongBanId], [n0].[PhuCap], [n0].[SoDienThoai], [n0].[Thuong]
+FROM [DonNghiPheps] AS [d]
+INNER JOIN [NhanViens] AS [n] ON [d].[NhanVienId] = [n].[NhanVienId]
+INNER JOIN [PhongBans] AS [p] ON [n].[PhongBanId] = [p].[PhongBanId]
+LEFT JOIN [NhanViens] AS [n0] ON [d].[NguoiDuyetId] = [n0].[NhanVienId]
+ORDER BY [d].[NgayVietDon] DESC
+2026-10-12 18:00:45.026 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.DonNghiPhepDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 18:00:45.045 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu) in 280.0223ms
+2026-10-12 18:00:45.047 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.DonNghiPhepController.GetAll (QuanLyNhanSu)'
+2026-10-12 18:00:45.050 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/api/DonNghiPhep - 200 null application/json; charset=utf-8 342.9052ms
+2026-10-12 18:49:22.189 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-12 18:49:22.601 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-12 18:49:22.603 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-12 18:49:22.657 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-12 18:49:22.658 +07:00 [INF] Hosting environment: Development
+2026-10-12 18:49:22.659 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-12 18:49:23.178 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-12 18:49:23.340 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 168.1679ms
+2026-10-12 18:49:23.352 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-12 18:49:23.352 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-12 18:49:23.352 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-12 18:49:23.352 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-12 18:49:23.352 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-12 18:49:23.352 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-12 18:49:23.400 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 48.4776ms
+2026-10-12 18:49:23.354 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-12 18:49:23.403 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 50.7419ms
+2026-10-12 18:49:23.409 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 57.6422ms
+2026-10-12 18:49:23.409 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 57.5883ms
+2026-10-12 18:49:23.409 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 57.5963ms
+2026-10-12 18:49:23.409 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 57.5884ms
+2026-10-12 18:49:23.441 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 87.162ms
+2026-10-12 18:49:23.479 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-12 18:49:23.498 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.1936ms
+2026-10-12 18:49:30.418 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 42
+2026-10-12 18:49:30.462 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 18:49:30.476 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-12 18:49:30.737 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-12 18:49:32.183 +07:00 [INF] Executed DbCommand (46ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-12 18:49:32.222 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, Role: GiamDoc
+2026-10-12 18:49:32.228 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-12 18:49:32.241 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 1761.2454ms
+2026-10-12 18:49:32.242 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-12 18:49:32.251 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 1833.8673ms
+2026-10-12 19:34:51.002 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-12 19:34:51.198 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-12 19:34:51.200 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-12 19:34:51.262 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-12 19:34:51.263 +07:00 [INF] Hosting environment: Development
+2026-10-12 19:34:51.264 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-12 19:34:51.797 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-12 19:34:51.964 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 170.7491ms
+2026-10-12 19:34:51.975 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-12 19:34:51.975 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-12 19:34:51.975 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-12 19:34:51.993 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 18.8799ms
+2026-10-12 19:34:51.993 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 18.8629ms
+2026-10-12 19:34:51.993 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 18.8784ms
+2026-10-12 19:34:51.998 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-12 19:34:52.002 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-12 19:34:52.010 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-12 19:34:52.010 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 12.3147ms
+2026-10-12 19:34:52.012 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 9.5391ms
+2026-10-12 19:34:52.022 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 12.1231ms
+2026-10-12 19:34:52.039 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-12 19:34:52.069 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.3043ms
+2026-10-12 19:34:52.119 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-12 19:34:52.144 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.0015ms
+2026-10-12 19:35:17.829 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-12 19:35:18.016 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-12 19:35:18.018 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-12 19:35:18.063 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-12 19:35:18.064 +07:00 [INF] Hosting environment: Development
+2026-10-12 19:35:18.065 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-12 19:35:18.654 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-12 19:35:18.808 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 161.552ms
+2026-10-12 19:35:18.818 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-12 19:35:18.818 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-12 19:35:18.818 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-12 19:35:18.818 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-12 19:35:18.852 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 33.8589ms
+2026-10-12 19:35:18.818 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-12 19:35:18.847 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-12 19:35:18.849 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-12 19:35:18.868 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 50.6551ms
+2026-10-12 19:35:18.868 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 50.1358ms
+2026-10-12 19:35:18.868 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 50.649ms
+2026-10-12 19:35:18.868 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 50.6492ms
+2026-10-12 19:35:18.873 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 52.7366ms
+2026-10-12 19:35:18.901 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.7936ms
+2026-10-12 19:35:18.945 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-12 19:35:18.968 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.2335ms

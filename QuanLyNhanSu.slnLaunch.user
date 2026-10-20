@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "QuanLyNhanSu\\QuanLyNhanSu.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "QuanLyNhanSuMVC\\QuanLyNhanSuMVC.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

@@ -1,0 +1,397 @@
+﻿@{
+    ViewData["Title"] = "Chấm công";
+}
+
+<div class="container mt-4 mb-5">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+        <div>
+            <h2 class="fw-bold">Chấm công nhân viên</h2>
+            <p class="text-muted mb-0">
+                Chụp ảnh và ghi nhận thời gian, vị trí chấm công.
+            </p>
+        </div>
+
+        <a asp-controller="Home" asp-action="Index"
+           class="btn btn-outline-secondary">
+            ← Trang chủ
+        </a>
+    </div>
+
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white
+            d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <h4 class="mb-0">📸 Chấm công bằng hình ảnh</h4>
+
+            <a asp-controller="LichSuChamCong" asp-action="Index"
+               class="btn btn-light">
+                📋 Lịch sử chấm công
+            </a>
+        </div>
+
+        <div class="card-body">
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger">@ViewBag.Error</div>
+            }
+
+            @if (TempData["Success"] != null)
+            {
+                <div class="alert alert-success">@TempData["Success"]</div>
+            }
+
+            <form asp-controller="ChamCong"
+                  asp-action="Create"
+                  method="post"
+                  enctype="multipart/form-data"
+                  id="formChamCong">
+
+                @Html.AntiForgeryToken()
+
+                <div class="mb-4">
+                    <label for="HinhAnh" class="form-label fw-bold">
+                        📷 Ảnh chấm công
+                    </label>
+
+                    <input type="file"
+                           name="HinhAnh"
+                           id="HinhAnh"
+                           class="form-control"
+                           accept="image/jpeg,image/png,image/webp"
+                           capture="user"
+                           required />
+
+                    <small class="text-muted">
+                        Chọn ảnh hoặc chụp bằng camera. Tối đa 5 MB.
+                    </small>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label fw-bold">
+                        🖼️ Ảnh xem trước
+                    </label>
+
+                    <div>
+                        <img id="preview"
+                             alt="Ảnh chấm công"
+                             style="display:none; max-width:100%;
+                        max-height:450px; border-radius:12px;
+                        border:1px solid #ddd; padding:5px;" />
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="thoiGian" class="form-label fw-bold">
+                        🕒 Thời gian
+                    </label>
+
+                    <input type="text"
+                           id="thoiGian"
+                           class="form-control"
+                           readonly />
+                </div>
+
+                <div class="mb-3">
+                    <label for="ViTri" class="form-label fw-bold">
+                        📍 Vị trí
+                    </label>
+
+                    <input type="text"
+                           name="ViTri"
+                           id="ViTri"
+                           class="form-control"
+                           value="Công ty ABC - Đà Lạt"
+                           readonly
+                           required />
+                </div>
+
+                <input type="hidden" name="Latitude" id="Latitude" />
+                <input type="hidden" name="Longitude" id="Longitude" />
+
+                <div id="gpsStatus" class="alert alert-info">
+                    📍 Đang lấy vị trí GPS...
+                </div>
+
+                <div id="imageStatus" class="alert alert-secondary">
+                    Vui lòng chọn ảnh chấm công.
+                </div>
+
+                <button type="submit"
+                        id="btnChamCong"
+                        class="btn btn-primary btn-lg"
+                        disabled>
+                    🕒 Chấm công
+                </button>
+
+                <a asp-controller="Home" asp-action="Index"
+                   class="btn btn-secondary btn-lg">
+                    ↩ Quay lại
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    const inputAnh = document.getElementById("HinhAnh");
+    const preview = document.getElementById("preview");
+    const inputThoiGian = document.getElementById("thoiGian");
+    const inputViTri = document.getElementById("ViTri");
+    const inputLatitude = document.getElementById("Latitude");
+    const inputLongitude = document.getElementById("Longitude");
+    const gpsStatus = document.getElementById("gpsStatus");
+    const imageStatus = document.getElementById("imageStatus");
+    const btnChamCong = document.getElementById("btnChamCong");
+    const formChamCong = document.getElementById("formChamCong");
+
+    let gpsDaLay = false;
+    let anhDaChon = false;
+    let dangXuLy = false;
+
+    function dinhDangThoiGian(date) {
+        const ngay = String(date.getDate()).padStart(2, "0");
+        const thang = String(date.getMonth() + 1).padStart(2, "0");
+        const nam = date.getFullYear();
+        const gio = String(date.getHours()).padStart(2, "0");
+        const phut = String(date.getMinutes()).padStart(2, "0");
+        const giay = String(date.getSeconds()).padStart(2, "0");
+
+        return `${ngay}/${thang}/${nam} ${gio}:${phut}:${giay}`;
+    }
+
+    function capNhatThoiGian() {
+        inputThoiGian.value = dinhDangThoiGian(new Date());
+    }
+
+    capNhatThoiGian();
+    setInterval(capNhatThoiGian, 1000);
+
+    function capNhatNut() {
+        btnChamCong.disabled = !(gpsDaLay && anhDaChon) || dangXuLy;
+    }
+
+    // Giữ nguyên vị trí cố định theo yêu cầu.
+    function layViTri() {
+        if (!navigator.geolocation) {
+            gpsStatus.className = "alert alert-danger";
+            gpsStatus.textContent = "Trình duyệt không hỗ trợ GPS.";
+            return;
+        }
+
+        gpsStatus.className = "alert alert-info";
+        gpsStatus.textContent = "Đang lấy vị trí GPS...";
+
+        navigator.geolocation.getCurrentPosition(
+            function (position) {
+                inputLatitude.value = position.coords.latitude.toFixed(7);
+                inputLongitude.value = position.coords.longitude.toFixed(7);
+                inputViTri.value = "Công ty ABC - Đà Lạt";
+
+                gpsDaLay = true;
+                gpsStatus.className = "alert alert-success";
+                gpsStatus.textContent =
+                    "Đã lấy GPS. Độ chính xác ước tính: " +
+                    Math.round(position.coords.accuracy) + " mét.";
+
+                capNhatNut();
+            },
+            function (error) {
+                gpsDaLay = false;
+                gpsStatus.className = "alert alert-danger";
+                gpsStatus.textContent =
+                    "Không lấy được GPS. Hãy cho phép trình duyệt truy cập vị trí.";
+
+                capNhatNut();
+            },
+            {
+                enableHighAccuracy: true,
+                timeout: 20000,
+                maximumAge: 0
+            }
+        );
+    }
+
+    // Chọn ảnh và kiểm tra dung lượng.
+    inputAnh.addEventListener("change", function () {
+        anhDaChon = false;
+        preview.style.display = "none";
+
+        const file = this.files[0];
+
+        if (!file) {
+            capNhatNut();
+            return;
+        }
+
+        const loaiAnhHopLe = [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+        ];
+
+        if (!loaiAnhHopLe.includes(file.type)) {
+            alert("Chỉ chấp nhận ảnh JPG, PNG hoặc WEBP.");
+            this.value = "";
+            capNhatNut();
+            return;
+        }
+
+        if (file.size > 5 * 1024 * 1024) {
+            alert("Ảnh không được vượt quá 5 MB.");
+            this.value = "";
+            capNhatNut();
+            return;
+        }
+
+        const reader = new FileReader();
+
+        reader.onload = function (event) {
+            preview.src = event.target.result;
+            preview.style.display = "block";
+
+            anhDaChon = true;
+            imageStatus.className = "alert alert-success";
+            imageStatus.textContent = "Đã chọn ảnh.";
+
+            capNhatNut();
+        };
+
+        reader.readAsDataURL(file);
+    });
+
+    // Vẽ thông tin trực tiếp vào ảnh.
+    function dongDauAnh(file, thoiGian) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+
+            reader.onerror = () =>
+                reject(new Error("Không đọc được ảnh."));
+
+            reader.onload = function () {
+                const image = new Image();
+
+                image.onerror = () =>
+                    reject(new Error("Ảnh không hợp lệ."));
+
+                image.onload = function () {
+                    const canvas = document.createElement("canvas");
+                    const ctx = canvas.getContext("2d");
+
+                    canvas.width = image.naturalWidth;
+                    canvas.height = image.naturalHeight;
+
+                    ctx.drawImage(image, 0, 0);
+
+                    const scale = Math.max(1, canvas.width / 700);
+                    const padding = 14 * scale;
+                    const lineHeight = 26 * scale;
+                    const fontSize = 18 * scale;
+
+                    const lines = [
+                        "CHAM CONG",
+                        "Thoi gian: " + thoiGian,
+                        "Vi tri: Cong ty ABC - Da Lat",
+                        "GPS: " + inputLatitude.value + ", " +
+                            inputLongitude.value
+                    ];
+
+                    ctx.font = `bold ${fontSize}px Arial`;
+
+                    const boxHeight =
+                        padding * 2 + lineHeight * lines.length;
+
+                    const boxY = canvas.height - boxHeight;
+
+                    ctx.fillStyle = "rgba(0, 0, 0, 0.75)";
+                    ctx.fillRect(
+                        0,
+                        boxY,
+                        canvas.width,
+                        boxHeight
+                    );
+
+                    ctx.fillStyle = "#FFFFFF";
+                    ctx.textBaseline = "top";
+
+                    lines.forEach((line, index) => {
+                        ctx.fillText(
+                            line,
+                            padding,
+                            boxY + padding + index * lineHeight,
+                            canvas.width - padding * 2
+                        );
+                    });
+
+                    canvas.toBlob(function (blob) {
+                        if (!blob) {
+                            reject(new Error("Không tạo được ảnh đã đóng dấu."));
+                            return;
+                        }
+
+                        const fileName =
+                            file.name.replace(/\.[^.]+$/, "") +
+                            "_chamcong.jpg";
+
+                        resolve(new File([blob], fileName, {
+                            type: "image/jpeg",
+                            lastModified: Date.now()
+                        }));
+                    }, "image/jpeg", 0.92);
+                };
+
+                image.src = reader.result;
+            };
+
+            reader.readAsDataURL(file);
+        });
+    }
+
+    // Đóng dấu ảnh trước khi gửi tới controller MVC.
+    formChamCong.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        if (dangXuLy) return;
+
+        const file = inputAnh.files[0];
+
+        if (!file || !gpsDaLay) {
+            alert("Vui lòng chọn ảnh và lấy được GPS trước khi chấm công.");
+            return;
+        }
+
+        dangXuLy = true;
+        capNhatNut();
+
+        try {
+            const thoiGian = dinhDangThoiGian(new Date());
+            inputThoiGian.value = thoiGian;
+
+            imageStatus.className = "alert alert-info";
+            imageStatus.textContent = "Đang đóng dấu lên ảnh...";
+
+            const anhDaDongDau = await dongDauAnh(file, thoiGian);
+
+            const dataTransfer = new DataTransfer();
+            dataTransfer.items.add(anhDaDongDau);
+            inputAnh.files = dataTransfer.files;
+
+            // Hiển thị chính ảnh đã đóng dấu.
+            preview.src = URL.createObjectURL(anhDaDongDau);
+            preview.style.display = "block";
+
+            imageStatus.textContent =
+                "Đã đóng dấu ảnh. Đang gửi lên máy chủ...";
+
+            // Gửi file đã đóng dấu theo tên trường HinhAnh.
+            formChamCong.submit();
+        } catch (error) {
+            imageStatus.className = "alert alert-danger";
+            imageStatus.textContent =
+                error.message || "Không thể xử lý ảnh.";
+
+            dangXuLy = false;
+            capNhatNut();
+        }
+    });
+
+    layViTri();
+</script>

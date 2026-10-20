@@ -1,0 +1,845 @@
+﻿@{
+    ViewData["Title"] = "Trang chủ";
+
+    var role = ViewBag.Role as string ?? "";
+    var tenDangNhap = ViewBag.TenDangNhap as string ?? "";
+
+    var tenQuyen = role switch
+    {
+        "GiamDoc" => "Giám đốc",
+        "TruongPhong" => "Trưởng phòng",
+        "NhanVien" => "Nhân viên",
+        _ => "Người dùng"
+    };
+}
+
+<style>
+    :root {
+        --primary: #4f46e5;
+        --primary-light: #eef2ff;
+        --sidebar-width: 260px;
+        --text: #1e293b;
+        --muted: #64748b;
+        --border: #e8edf5;
+        --background: #f5f7fc;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        background: var(--background);
+        color: var(--text);
+        font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .hr-sidebar {
+        position: fixed;
+        inset: 0 auto 0 0;
+        width: var(--sidebar-width);
+        background: #fff;
+        border-right: 1px solid var(--border);
+        padding: 24px 16px;
+        z-index: 1050;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 8px 28px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .brand-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #4f46e5, #7c3aed);
+        color: white;
+        display: grid;
+        place-items: center;
+        font-size: 23px;
+        box-shadow: 0 6px 15px #4f46e533;
+        flex-shrink: 0;
+    }
+
+    .brand-name {
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: .2px;
+    }
+
+    .brand-sub {
+        color: #94a3b8;
+        font-size: 11px;
+        margin-top: 4px;
+    }
+
+    .menu-label {
+        margin: 25px 10px 10px;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        color: #94a3b8;
+    }
+
+    .menu-link {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 13px;
+        margin-bottom: 5px;
+        border-radius: 12px;
+        color: #64748b;
+        font-size: 13px;
+        font-weight: 600;
+        transition: .2s;
+    }
+
+        .menu-link:hover,
+        .menu-link.active {
+            color: var(--primary);
+            background: var(--primary-light);
+        }
+
+    .menu-icon {
+        width: 24px;
+        text-align: center;
+        font-size: 18px;
+        flex-shrink: 0;
+    }
+
+    .sidebar-bottom {
+        margin-top: auto;
+        padding-top: 20px;
+    }
+
+    .sidebar-user {
+        background: #f8fafc;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    .avatar {
+        width: 38px;
+        height: 38px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        background: #e0e7ff;
+        display: grid;
+        place-items: center;
+        font-size: 19px;
+    }
+
+    .sidebar-user-name {
+        font-weight: 700;
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .sidebar-user-role {
+        font-size: 11px;
+        color: var(--muted);
+        margin-top: 3px;
+    }
+
+    .logout-link {
+        display: block;
+        padding: 11px 13px;
+        border-radius: 11px;
+        color: #dc2626;
+        background: #fff1f2;
+        font-size: 13px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+        .logout-link:hover {
+            color: white;
+            background: #dc2626;
+        }
+
+    .hr-main {
+        margin-left: var(--sidebar-width);
+        min-height: 100vh;
+    }
+
+    .topbar {
+        min-height: 76px;
+        background: rgba(255,255,255,.94);
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 15px 32px;
+        position: sticky;
+        top: 0;
+        z-index: 900;
+        backdrop-filter: blur(12px);
+    }
+
+    .page-heading {
+        font-size: 20px;
+        font-weight: 800;
+        margin: 0;
+    }
+
+    .page-description {
+        color: var(--muted);
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    .topbar-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .notification-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        border: 1px solid #e0e7ff;
+        background: #eef2ff;
+        color: #4338ca;
+        border-radius: 11px;
+        padding: 10px 14px;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+        .notification-btn:hover {
+            background: #e0e7ff;
+            color: #3730a3;
+        }
+
+    .content {
+        max-width: 1500px;
+        padding: 28px 30px 45px;
+        margin: auto;
+    }
+
+    .welcome {
+        position: relative;
+        overflow: hidden;
+        border-radius: 23px;
+        padding: 32px;
+        color: white;
+        background: linear-gradient(120deg, #4338ca, #6366f1 65%, #818cf8);
+        box-shadow: 0 12px 30px #4f46e526;
+        margin-bottom: 30px;
+    }
+
+        .welcome::after {
+            content: "";
+            position: absolute;
+            width: 240px;
+            height: 240px;
+            right: 4%;
+            top: -135px;
+            border-radius: 50%;
+            background: #ffffff12;
+            box-shadow: 0 190px 0 35px #ffffff0b;
+        }
+
+    .welcome-content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .welcome-tag {
+        font-size: 11px;
+        letter-spacing: 2px;
+        font-weight: 800;
+        opacity: .8;
+        margin-bottom: 12px;
+    }
+
+    .welcome h2 {
+        font-size: clamp(23px, 3vw, 31px);
+        font-weight: 800;
+        margin: 0 0 10px;
+    }
+
+    .welcome p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.7;
+        opacity: .9;
+    }
+
+    .welcome-emoji {
+        font-size: 53px;
+        width: 86px;
+        height: 86px;
+        flex-shrink: 0;
+        display: grid;
+        place-items: center;
+        background: #ffffff18;
+        border: 1px solid #ffffff30;
+        border-radius: 24px;
+    }
+
+    .section-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 15px;
+        margin: 28px 0 18px;
+    }
+
+        .section-heading h3 {
+            font-size: 19px;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 12px;
+            margin: 6px 0 0;
+        }
+
+    .feature-card {
+        height: 100%;
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 17px;
+        overflow: hidden;
+        transition: transform .2s, box-shadow .2s, border-color .2s;
+    }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #c7d2fe;
+            box-shadow: 0 14px 30px #0f172a10;
+        }
+
+    .feature-link {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 218px;
+        padding: 22px;
+        color: inherit;
+    }
+
+        .feature-link:hover {
+            color: inherit;
+        }
+
+    .feature-icon {
+        width: 51px;
+        height: 51px;
+        display: grid;
+        place-items: center;
+        border-radius: 15px;
+        font-size: 25px;
+        margin-bottom: 18px;
+    }
+
+    .icon-blue {
+        background: #e0edff;
+    }
+
+    .icon-green {
+        background: #dcfce7;
+    }
+
+    .icon-orange {
+        background: #ffedd5;
+    }
+
+    .icon-purple {
+        background: #ede9fe;
+    }
+
+    .icon-red {
+        background: #fee2e2;
+    }
+
+    .icon-cyan {
+        background: #cffafe;
+    }
+
+    .icon-pink {
+        background: #fce7f3;
+    }
+
+    .feature-card h4 {
+        font-size: 15px;
+        font-weight: 800;
+        margin: 0 0 9px;
+    }
+
+    .feature-card p {
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.7;
+        margin: 0;
+        flex: 1;
+    }
+
+    .feature-arrow {
+        margin-top: 18px;
+        font-size: 12px;
+        color: var(--primary);
+        font-weight: 800;
+    }
+
+    .footer-note {
+        margin-top: 28px;
+        border: 1px solid var(--border);
+        background: white;
+        border-radius: 14px;
+        padding: 17px 20px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--muted);
+        font-size: 12px;
+    }
+
+        .footer-note strong {
+            display: block;
+            color: var(--text);
+            margin-bottom: 3px;
+        }
+
+    .mobile-menu-btn {
+        display: none;
+        border: 1px solid var(--border);
+        background: white;
+        border-radius: 10px;
+        padding: 8px 12px;
+        font-size: 20px;
+    }
+
+    .sidebar-overlay {
+        display: none;
+    }
+
+    @@media (max-width: 900px) {
+        .hr-sidebar {
+            transform: translateX(-100%);
+            transition: transform .25s ease;
+        }
+
+            .hr-sidebar.open {
+                transform: translateX(0);
+            }
+
+        .hr-main {
+            margin-left: 0;
+        }
+
+        .mobile-menu-btn {
+            display: inline-block;
+        }
+
+        .sidebar-overlay.show {
+            display: block;
+            position: fixed;
+            inset: 0;
+            background: #0f172a70;
+            z-index: 1040;
+        }
+
+        .topbar {
+            padding: 14px 18px;
+        }
+
+        .content {
+            padding: 22px 18px 35px;
+        }
+    }
+
+    @@media (max-width: 520px) {
+        .topbar {
+            gap: 9px;
+            flex-wrap: wrap;
+        }
+
+        .page-heading {
+            font-size: 17px;
+        }
+
+        .page-description {
+            display: none;
+        }
+
+        .notification-btn {
+            padding: 9px 10px;
+        }
+
+        .welcome {
+            padding: 24px 20px;
+        }
+
+        .welcome-emoji {
+            width: 55px;
+            height: 55px;
+            font-size: 30px;
+            border-radius: 16px;
+        }
+
+        .welcome h2 {
+            font-size: 23px;
+        }
+
+        .feature-link {
+            min-height: 195px;
+        }
+    }
+</style>
+
+<!-- SIDEBAR -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+<aside class="hr-sidebar" id="hrSidebar">
+    <div class="brand">
+        <div class="brand-icon">🏢</div>
+        <div>
+            <div class="brand-name">HR MANAGEMENT</div>
+            <div class="brand-sub">Hệ thống quản lý nhân sự</div>
+        </div>
+    </div>
+
+    <div class="menu-label">TỔNG QUAN</div>
+
+    <a class="menu-link active" asp-controller="Home" asp-action="Index">
+        <span class="menu-icon">🏠</span> Trang chủ
+    </a>
+
+    @if (role == "GiamDoc")
+    {
+        <a class="menu-link" asp-controller="Dashboard" asp-action="Index">
+            <span class="menu-icon">📊</span> Dashboard tổng quan
+        </a>
+    }
+
+    <div class="menu-label">NHÂN SỰ</div>
+
+    @if (role == "GiamDoc" || role == "TruongPhong")
+    {
+        <a class="menu-link" asp-controller="NhanVien" asp-action="Index">
+            <span class="menu-icon">👥</span> Quản lý nhân viên
+        </a>
+    }
+
+    @if (role == "GiamDoc")
+    {
+        <a class="menu-link" asp-controller="TaiKhoan" asp-action="Index">
+            <span class="menu-icon">🔐</span> Tài khoản
+        </a>
+
+        <a class="menu-link" asp-controller="PhongBan" asp-action="Index">
+            <span class="menu-icon">🏢</span> Phòng ban
+        </a>
+
+        <a class="menu-link" asp-controller="ChucVu" asp-action="Index">
+            <span class="menu-icon">💼</span> Chức vụ
+        </a>
+
+        <a class="menu-link" asp-controller="LichSuChamCong" asp-action="Index">
+            <span class="menu-icon">📋</span> Lịch sử chấm công
+        </a>
+    }
+
+    <div class="menu-label">CÔNG VIỆC</div>
+
+    <a class="menu-link" asp-controller="ChamCong" asp-action="Create">
+        <span class="menu-icon">🕒</span> Chấm công
+    </a>
+
+    <a class="menu-link" asp-controller="LichSuChamCong" asp-action="CuaToi">
+        <span class="menu-icon">🗓️</span> Lịch sử của tôi
+    </a>
+
+    <a class="menu-link" asp-controller="BangLuong" asp-action="Index">
+        <span class="menu-icon">💰</span> Bảng lương
+    </a>
+
+    <a class="menu-link" asp-controller="ThongBao" asp-action="Index">
+        <span class="menu-icon">🔔</span> Thông báo
+    </a>
+
+    <!-- NÚT ĐƠN NGHỈ PHÉP -->
+    <a class="menu-link"
+       asp-controller="DonNghiPhep"
+       asp-action="Index">
+        <span class="menu-icon">📄</span> Đơn nghỉ phép
+    </a>
+
+    <div class="sidebar-bottom">
+        <div class="sidebar-user">
+            <div class="avatar">👤</div>
+            <div>
+                <div class="sidebar-user-name">@tenDangNhap</div>
+                <div class="sidebar-user-role">@tenQuyen</div>
+            </div>
+        </div>
+
+        <a class="logout-link"
+           asp-controller="Account"
+           asp-action="Logout"
+           onclick="return confirm('Bạn có chắc muốn đăng xuất không?');">
+            🚪 Đăng xuất
+        </a>
+    </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<div class="hr-main">
+    <header class="topbar">
+        <div class="d-flex align-items-center gap-3">
+            <button type="button"
+                    class="mobile-menu-btn"
+                    aria-label="Mở menu"
+                    onclick="toggleSidebar()">
+                ☰
+            </button>
+
+            <div>
+                <h1 class="page-heading">Trang chủ</h1>
+                <div class="page-description">
+                    Tổng quan hệ thống quản lý nhân sự
+                </div>
+            </div>
+        </div>
+
+        <div class="topbar-right">
+            <a class="notification-btn"
+               asp-controller="ThongBao"
+               asp-action="Index">
+                🔔 <span>Thông báo</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="content">
+        <section class="welcome">
+            <div class="welcome-content">
+                <div>
+                    <div class="welcome-tag">HUMAN RESOURCE MANAGEMENT</div>
+                    <h2>Xin chào, @tenDangNhap! 👋</h2>
+                    <p>
+                        Chúc bạn một ngày làm việc hiệu quả.<br />
+                        Bạn đang đăng nhập với quyền <strong>@tenQuyen</strong>.
+                    </p>
+                </div>
+                <div class="welcome-emoji">🏢</div>
+            </div>
+        </section>
+
+        <div class="section-heading">
+            <div>
+                <h3>📌 Chức năng hệ thống</h3>
+                <p>Chọn một chức năng để bắt đầu làm việc.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            @if (role == "GiamDoc")
+            {
+                <div class="col-sm-6 col-xl-4">
+                    <div class="feature-card">
+                        <a class="feature-link" asp-controller="NhanVien" asp-action="Index">
+                            <div class="feature-icon icon-blue">👨‍💼</div>
+                            <h4>Quản lý nhân viên</h4>
+                            <p>Quản lý hồ sơ và thông tin nhân viên trong công ty.</p>
+                            <div class="feature-arrow">Mở chức năng →</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-4">
+                    <div class="feature-card">
+                        <a class="feature-link" asp-controller="TaiKhoan" asp-action="Index">
+                            <div class="feature-icon icon-red">🔐</div>
+                            <h4>Quản lý tài khoản</h4>
+                            <p>Quản lý tài khoản và quyền truy cập hệ thống.</p>
+                            <div class="feature-arrow">Mở chức năng →</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-4">
+                    <div class="feature-card">
+                        <a class="feature-link" asp-controller="PhongBan" asp-action="Index">
+                            <div class="feature-icon icon-green">🏢</div>
+                            <h4>Quản lý phòng ban</h4>
+                            <p>Quản lý cơ cấu phòng ban của công ty.</p>
+                            <div class="feature-arrow">Mở chức năng →</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-4">
+                    <div class="feature-card">
+                        <a class="feature-link" asp-controller="ChucVu" asp-action="Index">
+                            <div class="feature-icon icon-purple">💼</div>
+                            <h4>Quản lý chức vụ</h4>
+                            <p>Quản lý chức danh và vị trí công việc.</p>
+                            <div class="feature-arrow">Mở chức năng →</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-4">
+                    <div class="feature-card">
+                        <a class="feature-link" asp-controller="LichSuChamCong" asp-action="Index">
+                            <div class="feature-icon icon-cyan">📋</div>
+                            <h4>Lịch sử chấm công nhân viên</h4>
+                            <p>Theo dõi lịch sử chấm công của nhân viên.</p>
+                            <div class="feature-arrow">Xem lịch sử →</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-4">
+                    <div class="feature-card">
+                        <a class="feature-link" asp-controller="Dashboard" asp-action="Index">
+                            <div class="feature-icon icon-red">📊</div>
+                            <h4>Dashboard tổng quan</h4>
+                            <p>Theo dõi số liệu nhân sự và biểu đồ quỹ lương.</p>
+                            <div class="feature-arrow">Mở dashboard →</div>
+                        </a>
+                    </div>
+                </div>
+            }
+
+            @if (role == "TruongPhong")
+            {
+                <div class="col-sm-6 col-xl-4">
+                    <div class="feature-card">
+                        <a class="feature-link" asp-controller="NhanVien" asp-action="Index">
+                            <div class="feature-icon icon-blue">👥</div>
+                            <h4>Nhân viên phòng</h4>
+                            <p>Xem danh sách nhân viên thuộc phòng mình.</p>
+                            <div class="feature-arrow">Xem nhân viên →</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-4">
+                    <div class="feature-card">
+                        <a class="feature-link" asp-controller="LichSuChamCong" asp-action="Index">
+                            <div class="feature-icon icon-cyan">📋</div>
+                            <h4>Lịch sử chấm công nhân viên</h4>
+                            <p>Theo dõi chấm công của nhân viên trong phòng.</p>
+                            <div class="feature-arrow">Xem lịch sử →</div>
+                        </a>
+                    </div>
+                </div>
+            }
+
+            <div class="col-sm-6 col-xl-4">
+                <div class="feature-card">
+                    <a class="feature-link" asp-controller="ChamCong" asp-action="Create">
+                        <div class="feature-icon icon-orange">🕒</div>
+                        <h4>Chấm công</h4>
+                        <p>Thực hiện chấm công bằng hình ảnh, thời gian và vị trí.</p>
+                        <div class="feature-arrow">Chấm công ngay →</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-4">
+                <div class="feature-card">
+                    <a class="feature-link" asp-controller="LichSuChamCong" asp-action="CuaToi">
+                        <div class="feature-icon icon-cyan">🗓️</div>
+                        <h4>Lịch sử chấm công của tôi</h4>
+                        <p>Xem lại lịch sử chấm công cá nhân.</p>
+                        <div class="feature-arrow">Xem lịch sử →</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-4">
+                <div class="feature-card">
+                    <a class="feature-link" asp-controller="ThongBao" asp-action="Index">
+                        <div class="feature-icon icon-purple">🔔</div>
+                        <h4>Thông báo nội bộ</h4>
+                        <p>Đọc các thông báo mới từ ban quản lý và phòng ban.</p>
+                        <div class="feature-arrow">Xem thông báo →</div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- THẺ ĐƠN NGHỈ PHÉP -->
+            <div class="col-sm-6 col-xl-4">
+                <div class="feature-card">
+                    <a class="feature-link"
+                       asp-controller="DonNghiPhep"
+                       asp-action="Index">
+                        <div class="feature-icon icon-pink">📄</div>
+                        <h4>Quản lý đơn nghỉ phép</h4>
+                        <p>
+                            Tạo đơn nghỉ phép, theo dõi trạng thái
+                            và xem danh sách đơn theo quyền tài khoản.
+                        </p>
+                        <div class="feature-arrow">Mở chức năng →</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-4">
+                <div class="feature-card">
+                    <a class="feature-link" asp-controller="BangLuong" asp-action="Index">
+                        <div class="feature-icon icon-green">💰</div>
+                        <h4>Bảng lương</h4>
+                        <p>Xem thông tin bảng lương theo quyền tài khoản.</p>
+                        <div class="feature-arrow">Xem bảng lương →</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <div style="font-size:24px;">🛡️</div>
+            <div>
+                <strong>Hệ thống quản lý nhân sự</strong>
+                Vui lòng sử dụng tài khoản đúng quyền hạn và đăng xuất sau khi làm việc.
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+    function toggleSidebar() {
+        document.getElementById("hrSidebar").classList.toggle("open");
+        document.getElementById("sidebarOverlay").classList.toggle("show");
+    }
+
+    document.querySelectorAll(".hr-sidebar .menu-link").forEach(function (link) {
+        link.addEventListener("click", function () {
+            if (window.innerWidth <= 900) {
+                document.getElementById("hrSidebar").classList.remove("open");
+                document.getElementById("sidebarOverlay").classList.remove("show");
+            }
+        });
+    });
+</script>
+

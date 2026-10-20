@@ -1,0 +1,67 @@
+﻿@model QuanLyNhanSuMVC.Models.PhongBanModel
+
+@{
+    ViewData["Title"] = "Sửa phòng ban";
+}
+
+<h1>✏️ Sửa phòng ban</h1>
+
+@if (!string.IsNullOrEmpty(ViewBag.Error))
+{
+    <div class="alert alert-danger">
+        @ViewBag.Error
+    </div>
+}
+
+<form asp-action="Edit"
+      asp-route-id="@Model.PhongBanId"
+      method="post">
+
+    @Html.AntiForgeryToken()
+
+    <div class="mb-3">
+        <label class="form-label">
+            ID phòng ban
+        </label>
+
+        <input value="@Model.PhongBanId"
+               class="form-control"
+               readonly />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="TenPhongBan"
+               class="form-label">
+            Tên phòng ban
+        </label>
+
+        <input asp-for="TenPhongBan"
+               class="form-control"
+               required />
+
+        <span asp-validation-for="TenPhongBan"
+              class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="MoTa"
+               class="form-label">
+            Mô tả
+        </label>
+
+        <textarea asp-for="MoTa"
+                  class="form-control"
+                  rows="4"></textarea>
+    </div>
+
+    <button type="submit"
+            class="btn btn-primary">
+        💾 Cập nhật
+    </button>
+
+    <a asp-action="Index"
+       class="btn btn-secondary">
+        ← Quay lại
+    </a>
+
+</form>

@@ -1,0 +1,179 @@
+﻿@model QuanLyNhanSuMVC.Models.NhanVienModel
+
+@{
+    ViewData["Title"] = "Sửa nhân viên";
+}
+<div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+    <div class="d-flex flex-wrap gap-2">
+        <a asp-controller="Home"
+           asp-action="Index"
+           class="btn btn-outline-secondary">
+            ← Quay về trang chủ
+        </a>
+    </div>
+</div>
+<div class="container mt-4">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">
+                ✏️ Sửa thông tin nhân viên
+            </h3>
+        </div>
+
+        <div class="card-body">
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger">
+                    @ViewBag.Error
+                </div>
+            }
+
+            <form asp-action="Edit"
+                  asp-route-id="@Model.NhanVienId"
+                  method="post">
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Họ tên
+                    </label>
+
+                    <input asp-for="HoTen"
+                           class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Ngày sinh
+                    </label>
+
+                    <input asp-for="NgaySinh"
+                           type="date"
+                           class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Giới tính
+                    </label>
+
+                    <select asp-for="GioiTinh"
+                            class="form-select">
+
+                        <option value="Nam">
+                            Nam
+                        </option>
+
+                        <option value="Nữ">
+                            Nữ
+                        </option>
+
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Số điện thoại
+                    </label>
+
+                    <input asp-for="SoDienThoai"
+                           class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Email
+                    </label>
+
+                    <input asp-for="Email"
+                           type="email"
+                           class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Địa chỉ
+                    </label>
+
+                    <input asp-for="DiaChi"
+                           class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Ngày vào làm
+                    </label>
+
+                    <input asp-for="NgayVaoLam"
+                           type="date"
+                           class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Lương cơ bản
+                    </label>
+
+                    <input asp-for="LuongCoBan"
+                           type="number"
+                           class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Phụ cấp
+                    </label>
+
+                    <input asp-for="PhuCap"
+                           type="number"
+                           class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Thưởng
+                    </label>
+
+                    <input asp-for="Thuong"
+                           type="number"
+                           class="form-control" />
+                </div>
+                <div class="mb-3">
+    <label class="form-label">
+        Phòng ban
+    </label>
+
+    <input asp-for="PhongBanId"
+           type="number"
+           class="form-control" />
+</div>
+
+<div class="mb-3">
+    <label class="form-label">
+        Chức vụ
+    </label>
+
+    <input asp-for="ChucVuId"
+           type="number"
+           class="form-control" />
+</div>
+
+                <button type="submit"
+                        class="btn btn-success">
+                    💾 Lưu thay đổi
+                </button>
+
+                <a asp-action="Index"
+                   class="btn btn-secondary">
+                    ↩ Quay lại
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

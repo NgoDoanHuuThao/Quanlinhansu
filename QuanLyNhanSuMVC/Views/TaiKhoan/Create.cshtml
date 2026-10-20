@@ -1,0 +1,181 @@
+﻿@model QuanLyNhanSuMVC.Models.AddTaiKhoanModel
+
+@{
+    ViewData["Title"] = "Thêm tài khoản";
+
+    var nhanViens =
+        ViewBag.NhanViens
+        as List<QuanLyNhanSuMVC.Models.NhanVienModel>
+        ?? new List<QuanLyNhanSuMVC.Models.NhanVienModel>();
+}
+
+
+<div class="container mt-4">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-7">
+
+            <div class="card shadow">
+
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">
+                        Thêm tài khoản nhân viên
+                    </h4>
+                </div>
+
+                <div class="card-body">
+
+                    <form asp-action="Create"
+                          method="post">
+
+                        @Html.AntiForgeryToken()
+
+                        <div asp-validation-summary="ModelOnly"
+                             class="text-danger mb-3">
+                        </div>
+
+                        <!-- NHÂN VIÊN -->
+
+                        <div class="mb-3">
+
+                            <label asp-for="NhanVienId"
+                                   class="form-label">
+                                Nhân viên
+                            </label>
+
+                            <select asp-for="NhanVienId"
+                                    class="form-select">
+
+                                <option value="0">
+                                    -- Chọn nhân viên --
+                                </option>
+
+                                @foreach (var nv in nhanViens)
+                                {
+                                    <option value="@nv.NhanVienId">
+                                        @nv.HoTen
+                                        -
+                                        @(nv.TenChucVu ?? "Chưa có chức vụ")
+                                    </option>
+                                }
+
+                            </select>
+
+                            <span asp-validation-for="NhanVienId"
+                                  class="text-danger">
+                            </span>
+
+                        </div>
+
+                        <!-- USERNAME -->
+
+                        <div class="mb-3">
+
+                            <label asp-for="TenDangNhap"
+                                   class="form-label">
+                                Tên đăng nhập
+                            </label>
+
+                            <input asp-for="TenDangNhap"
+                                   class="form-control"
+                                   placeholder="Nhập tên đăng nhập" />
+
+                            <span asp-validation-for="TenDangNhap"
+                                  class="text-danger">
+                            </span>
+
+                        </div>
+
+                        <!-- PASSWORD -->
+
+                        <div class="mb-3">
+
+                            <label asp-for="MatKhau"
+                                   class="form-label">
+                                Mật khẩu
+                            </label>
+
+                            <input asp-for="MatKhau"
+                                   type="password"
+                                   class="form-control"
+                                   placeholder="Nhập mật khẩu" />
+
+                            <span asp-validation-for="MatKhau"
+                                  class="text-danger">
+                            </span>
+
+                            <small class="text-muted">
+                                Mật khẩu tối thiểu 6 ký tự.
+                            </small>
+
+                        </div>
+
+                        <!-- ROLE -->
+
+                        <div class="mb-4">
+
+                            <label asp-for="VaiTro"
+                                   class="form-label">
+                                Vai trò
+                            </label>
+
+                            <select asp-for="VaiTro"
+                                    class="form-select">
+
+                                <option value="">
+                                    -- Chọn vai trò --
+                                </option>
+
+                                <option value="Nhân viên">
+                                    Nhân viên
+                                </option>
+
+                                <option value="Trưởng phòng">
+                                    Trưởng phòng
+                                </option>
+
+                                <option value="Giám đốc">
+                                    Giám đốc
+                                </option>
+
+                            </select>
+
+                            <span asp-validation-for="VaiTro"
+                                  class="text-danger">
+                            </span>
+
+                        </div>
+
+                        <div class="d-flex gap-2">
+
+                            <button type="submit"
+                                    class="btn btn-primary">
+                                Lưu tài khoản
+                            </button>
+
+                            <a asp-action="Index"
+                               class="btn btn-secondary">
+                                Quay lại
+                            </a>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync(
+            "_ValidationScriptsPartial");
+    }
+}

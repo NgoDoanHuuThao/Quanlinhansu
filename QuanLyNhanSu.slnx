@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="QuanLyNhanSu/QuanLyNhanSu.csproj" />
+  <Project Path="QuanLyNhanSuMVC/QuanLyNhanSuMVC.csproj" Id="7b63ff56-34e0-4bd1-b2ad-5fc45e4fdaf7" />
+</Solution>

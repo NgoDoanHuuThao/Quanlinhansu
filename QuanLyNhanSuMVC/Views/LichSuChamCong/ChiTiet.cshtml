@@ -1,0 +1,176 @@
+﻿@model List<QuanLyNhanSuMVC.Models.LichSuChamCongModel>
+
+@{
+    ViewData["Title"] = "Lịch sử chấm công";
+
+    string hoTen = ViewBag.HoTen as string ?? "";
+    string tenPhongBan = ViewBag.TenPhongBan as string ?? "";
+}
+
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+        <div>
+            <h2>📋 Lịch sử chấm công</h2>
+
+            <h5 class="mt-3">
+                Nhân viên: <strong>@hoTen</strong>
+            </h5>
+
+            <p class="text-muted mb-0">
+                Phòng ban: <strong>@tenPhongBan</strong>
+            </p>
+        </div>
+
+        <div class="d-flex gap-2">
+            <a asp-controller="Home"
+               asp-action="Index"
+               class="btn btn-outline-secondary">
+                <i class="bi bi-house"></i>
+                Trang chủ
+            </a>
+
+            <button type="button"
+                    class="btn btn-primary"
+                    onclick="quayLai()">
+                <i class="bi bi-arrow-left"></i>
+                Quay lại
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function quayLai() {
+            const trangTruoc = document.referrer;
+
+            if (trangTruoc &&
+                new URL(trangTruoc).origin === window.location.origin &&
+                trangTruoc !== window.location.href) {
+                window.location.assign(trangTruoc);
+            } else {
+                window.location.assign('@Url.Action("Index", "Home")');
+            }
+        }
+    </script>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.Error
+        </div>
+    }
+
+    @if (Model == null || Model.Count == 0)
+    {
+        <div class="alert alert-info">
+            Nhân viên này chưa có lịch sử chấm công.
+        </div>
+    }
+    else
+    {
+        <div class="card shadow-sm">
+
+            <div class="card-body">
+
+                <div class="table-responsive">
+
+                    <table class="table table-bordered table-hover">
+
+                        <thead class="table-dark">
+                            <tr>
+                                <th>STT</th>
+                                <th>Thời gian chấm</th>
+                                <th>Vị trí</th>
+                                <th>Latitude</th>
+                                <th>Longitude</th>
+                                <th>Hình ảnh</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            @{
+                                int stt = 1;
+                            }
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+
+                                    <td>
+                                        @stt
+                                    </td>
+
+                                    <td>
+                                        @item.ThoiGianChamCong.ToString("dd/MM/yyyy HH:mm:ss")
+                                    </td>
+
+                                    <td>
+                                        @(item.ViTri ?? "Không có")
+                                    </td>
+
+                                    <td>
+                                        @item.Latitude
+                                    </td>
+
+                                    <td>
+                                        @item.Longitude
+                                    </td>
+
+                                    <td>
+                                        
+@if (!string.IsNullOrWhiteSpace(item.HinhAnh))
+{
+    var imageUrl = item.HinhAnh.Trim();
+
+    if (imageUrl.StartsWith(
+        "https://localhost:7151/https://localhost:7151/",
+        StringComparison.OrdinalIgnoreCase))
+    {
+        imageUrl = imageUrl.Replace(
+            "https://localhost:7151/https://localhost:7151/",
+            "https://localhost:7151/",
+            StringComparison.OrdinalIgnoreCase);
+    }
+    else if (imageUrl.StartsWith("/Images/",
+        StringComparison.OrdinalIgnoreCase))
+    {
+        imageUrl = "https://localhost:7151" + imageUrl;
+    }
+    else if (imageUrl.StartsWith("Images/",
+        StringComparison.OrdinalIgnoreCase))
+    {
+        imageUrl = "https://localhost:7151/" + imageUrl;
+    }
+
+    <a href="@imageUrl" target="_blank" rel="noopener noreferrer">
+        <img src="@imageUrl"
+             alt="Ảnh chấm công"
+             style="width:100px;height:80px;object-fit:cover;border-radius:8px;"
+             onerror="this.onerror=null;this.alt='Không tải được ảnh';" />
+    </a>
+}
+else
+{
+    <span></span>
+}
+
+                                      
+
+                                </tr>
+
+                                stt++;
+                            }
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+    }
+
+</div>

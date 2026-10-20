@@ -1,0 +1,351 @@
+﻿@model IEnumerable<QuanLyNhanSuMVC.Models.DonNghiPhepModel>
+
+@{
+    ViewData["Title"] = "Quản lý đơn nghỉ phép";
+
+    var danhSach = Model?.ToList()
+        ?? new List<QuanLyNhanSuMVC.Models.DonNghiPhepModel>();
+
+    var role = Context.Session.GetString("Role");
+    var laGiamDoc = role == "GiamDoc";
+}
+
+<div class="container-fluid mt-4 mb-5">
+
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+        <div>
+            <h2 class="fw-bold">Quản lý đơn nghỉ phép</h2>
+            <p class="text-muted mb-0">
+                Theo dõi đơn nghỉ phép và kết quả xử lý.
+            </p>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+            <a asp-controller="Home"
+               asp-action="Index"
+               class="btn btn-outline-secondary">
+                ← Quay về trang chủ
+            </a>
+
+            <a asp-controller="DonNghiPhep"
+               asp-action="TaoDon"
+               class="btn btn-primary">
+                + Tạo đơn nghỉ phép
+            </a>
+        </div>
+    </div>
+    
+
+<form asp-controller="DonNghiPhep"
+      asp-action="Index"
+      method="get"
+      class="d-flex flex-wrap align-items-end gap-2 mb-3">
+
+    <div>
+        <label for="trangThai" class="form-label">
+            Lọc theo trạng thái
+        </label>
+
+        <select id="trangThai"
+                name="trangThai"
+                class="form-select">
+            <option value="">Tất cả đơn</option>
+            <option value="ChoDuyet"
+                    selected="@(Context.Request.Query["trangThai"] == "ChoDuyet")">
+                Chờ duyệt
+            </option>
+            <option value="DaDuyet"
+                    selected="@(Context.Request.Query["trangThai"] == "DaDuyet")">
+                Đã duyệt
+            </option>
+            <option value="TuChoi"
+                    selected="@(Context.Request.Query["trangThai"] == "TuChoi")">
+                Từ chối
+            </option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Lọc đơn
+    </button>
+
+    <a asp-controller="DonNghiPhep"
+       asp-action="Index"
+       class="btn btn-outline-secondary">
+        Xóa bộ lọc
+    </a>
+</form>
+
+    @if (TempData["ThongBao"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["ThongBao"]
+        </div>
+    }
+
+    @if (TempData["ThongBaoLoi"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ThongBaoLoi"]
+        </div>
+    }
+
+    @if (ViewBag.Loi != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.Loi
+        </div>
+    }
+
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-white py-3">
+            <h5 class="mb-0">Danh sách đơn nghỉ phép</h5>
+        </div>
+
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Mã đơn</th>
+                            <th>Người xin nghỉ</th>
+                            <th>Phòng ban</th>
+                            <th>Ngày bắt đầu</th>
+                            <th>Ngày kết thúc</th>
+                            <th>Lý do nghỉ</th>
+                            <th>Số ngày</th>
+                            <th>Trạng thái</th>
+                            <th>Nội dung xử lý</th>
+
+                            @if (laGiamDoc)
+                            {
+                                <th style="min-width: 250px;">Thao tác</th>
+
+                            }
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @if (danhSach.Count == 0)
+                        {
+                            <tr>
+                                <td colspan="@(laGiamDoc ? 10 : 9)"
+                                    class="text-center py-5 text-muted">
+                                    Chưa có dữ liệu đơn nghỉ phép.
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                            @foreach (var don in danhSach)
+                            {
+                                <tr>
+<td>
+    <div class="d-flex align-items-center justify-content-between gap-3">
+        <span class="order-code">
+            #@don.DonNghiPhepId
+        </span>
+
+        <a asp-controller="DonNghiPhep"
+           asp-action="ChiTiet"
+           asp-route-id="@don.DonNghiPhepId"
+           class="btn-detail">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="17" height="17"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+                <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/>
+                <circle cx="12" cy="12" r="3"/>
+            </svg>
+            <span>Chi tiết</span>
+        </a>
+    </div>
+</td>
+                                    <td>
+                                        @(don.HoTenNhanVien ?? "Chưa có thông tin")
+                                    </td>
+
+                                    <td>
+                                        @(don.TenPhongBan ?? "Chưa có thông tin")
+                                    </td>
+
+                                    <td>
+                                        @don.NgayBatDauNghi.ToString("dd/MM/yyyy")
+                                    </td>
+
+                                    <td>
+                                        @don.NgayKetThucNghi.ToString("dd/MM/yyyy")
+                                    </td>
+
+                                    <td>@don.LyDoNghi</td>
+
+                                    <td>@don.SoNgayNghi</td>
+
+                                    <td>
+                                        @if (don.TrangThai == "ChoDuyet")
+                                        {
+                                            <span class="badge bg-warning text-dark">
+                                                Chờ duyệt
+                                            </span>
+                                        }
+                                        else if (don.TrangThai == "DaDuyet")
+                                        {
+                                            <span class="badge bg-success">
+                                                Đã duyệt
+                                            </span>
+                                        }
+                                        else if (don.TrangThai == "TuChoi")
+                                        {
+                                            <span class="badge bg-danger">
+                                                Từ chối
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-secondary">
+                                                @don.TrangThai
+                                            </span>
+                                        }
+                                    </td>
+
+                                    <td style="min-width: 200px;">
+                                        @if (don.TrangThai == "ChoDuyet")
+                                        {
+                                            <span class="text-muted">
+                                                Chưa xử lý
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            @if (!string.IsNullOrWhiteSpace(don.GhiChuDuyet))
+                                            {
+                                                <div>@don.GhiChuDuyet</div>
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted">
+                                                    Không có ghi chú
+                                                </span>
+                                            }
+
+                                            @if (don.NgayDuyet.HasValue)
+                                            {
+                                                <div class="small text-muted mt-1">
+                                                    @don.NgayDuyet.Value.ToString("dd/MM/yyyy HH:mm")
+                                                </div>
+                                            }
+                                        }
+                                    </td>
+
+                                    @if (laGiamDoc)
+                                    {
+                                        <td>
+                                            @if (don.TrangThai == "ChoDuyet")
+                                            {
+                                                <form asp-controller="DonNghiPhep"
+                                                      asp-action="Duyet"
+                                                      method="post">
+                                                    @Html.AntiForgeryToken()
+
+                                                    <input type="hidden"
+                                                           name="id"
+                                                           value="@don.DonNghiPhepId" />
+
+                                                    
+<div class="mb-2">
+    <label class="form-label small fw-bold">
+        Chế độ nghỉ nếu duyệt
+    </label>
+
+    <select name="huongLuong"
+            class="form-select form-select-sm">
+        <option value="true" selected>Hưởng lương</option>
+        <option value="false">Không hưởng lương</option>
+    </select>
+</div>
+
+<input type="text"
+       name="ghiChuDuyet"
+       class="form-control form-control-sm mb-2"
+       placeholder="Nhập ghi chú xử lý" />
+
+
+                                                    <div class="d-flex gap-2">
+                                                        <button type="submit"
+                                                                name="trangThai"
+                                                                value="DaDuyet"
+                                                                class="btn btn-success btn-sm">
+                                                            Duyệt
+                                                        </button>
+
+                                                        <button type="submit"
+                                                                name="trangThai"
+                                                                value="TuChoi"
+                                                                class="btn btn-danger btn-sm"
+                                                                onclick="return confirm('Bạn có chắc muốn từ chối đơn này?');">
+                                                            Từ chối
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted small">
+                                                    Đã xử lý
+                                                </span>
+                                            }
+                                        </td>
+                                    }
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        border-radius: 12px;
+    }
+
+    .table th,
+    .table td {
+        padding: 12px;
+        vertical-align: middle;
+    }
+
+    .badge {
+        padding: 7px 10px;
+    }
+    .btn-detail {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.btn-detail:hover {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+</style>

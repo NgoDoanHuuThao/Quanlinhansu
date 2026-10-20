@@ -1,0 +1,410 @@
+﻿@model QuanLyNhanSuMVC.Models.DashboardModel
+
+@{
+    ViewData["Title"] = "Dashboard tổng quan";
+
+    string TienVietNam(double value)
+    {
+        return value.ToString("#,##0") + " đ";
+    }
+}
+
+<div class="container-fluid py-4 dashboard-page">
+
+    <!-- Tiêu đề -->
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+    <div class="d-flex flex-wrap gap-2">
+        <a asp-controller="Home"
+           asp-action="Index"
+           class="btn btn-outline-secondary">
+            ← Quay về trang chủ
+        </a>
+    </div>
+</div>
+        <div>
+            <h2 class="fw-bold mb-1">Dashboard tổng quan</h2>
+            <p class="text-muted mb-0">
+                Tổng quan tình hình nhân sự và quỹ lương
+            </p>
+        </div>
+
+        <div class="text-muted mt-2 mt-md-0">
+            <i class="bi bi-calendar3"></i>
+            Tháng @ViewBag.Thang / @ViewBag.Nam
+        </div>
+    </div>
+
+    <!-- Thẻ thống kê -->
+    <div class="row g-4 mb-4">
+
+        <div class="col-12 col-md-6 col-xl-4">
+            <div class="stat-card employee-card">
+                <div class="stat-icon">
+                    <i class="bi bi-people-fill"></i>
+                </div>
+
+                <div class="stat-content">
+                    <p class="stat-label">Tổng nhân viên</p>
+                    <h3>@Model.TongNhanVien</h3>
+                    <span>Nhân viên trong hệ thống</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-xl-4">
+            <div class="stat-card account-card">
+                <div class="stat-icon">
+                    <i class="bi bi-person-badge-fill"></i>
+                </div>
+
+                <div class="stat-content">
+                    <p class="stat-label">Tổng tài khoản</p>
+                    <h3>@Model.TongTaiKhoan</h3>
+                    <span>Tài khoản đăng nhập</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-xl-4">
+            <div class="stat-card salary-card">
+                <div class="stat-icon">
+                    <i class="bi bi-cash-stack"></i>
+                </div>
+
+                <div class="stat-content">
+                    <p class="stat-label">Quỹ lương tháng @ViewBag.Thang</p>
+                    <h3 class="salary-number">
+                        @TienVietNam(Model.TongQuyLuong)
+                    </h3>
+                    <span>Tổng quỹ lương tháng hiện tại</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Biểu đồ quỹ lương -->
+    <div class="card chart-card border-0 shadow-sm mb-4">
+        <div class="card-header bg-white border-0 px-4 pt-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-center">
+                <div>
+                    <h5 class="fw-bold mb-1">
+                        <i class="bi bi-bar-chart-line-fill text-primary me-2"></i>
+                        Biểu đồ quỹ lương năm @ViewBag.Nam
+                    </h5>
+                    <p class="text-muted mb-0">
+                        So sánh quỹ lương của từng tháng trong năm
+                    </p>
+                </div>
+
+                <span class="year-badge mt-2 mt-md-0">
+                    Năm @ViewBag.Nam
+                </span>
+            </div>
+        </div>
+
+        <div class="card-body px-3 px-md-4 pb-4">
+            <div class="chart-container">
+                <canvas id="quyLuongChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bảng dữ liệu quỹ lương -->
+    <div class="card border-0 shadow-sm">
+        <div class="card-header bg-white border-0 px-4 pt-4">
+            <h5 class="fw-bold mb-1">
+                <i class="bi bi-table text-primary me-2"></i>
+                Chi tiết quỹ lương theo tháng
+            </h5>
+            <p class="text-muted mb-0">
+                Số liệu thống kê năm @ViewBag.Nam
+            </p>
+        </div>
+
+        <div class="card-body px-4 pb-4">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead>
+                        <tr>
+                            <th>Tháng</th>
+                            <th class="text-end">Quỹ lương</th>
+                            <th>Trạng thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 0; i < Model.ThangLabels.Count; i++)
+                        {
+                            var quyLuong = Model.QuyLuongData[i];
+
+                            <tr>
+                                <td class="fw-semibold">
+                                    @Model.ThangLabels[i]
+                                </td>
+
+                                <td class="text-end fw-semibold">
+                                    @TienVietNam(quyLuong)
+                                </td>
+
+                                <td>
+                                    @if (quyLuong > 0)
+                                    {
+                                        <span class="status-badge status-has-data">
+                                            <i class="bi bi-check-circle-fill me-1"></i>
+                                            Có dữ liệu
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <span class="status-badge status-no-data">
+                                            <i class="bi bi-dash-circle me-1"></i>
+                                            Chưa có dữ liệu
+                                        </span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    .dashboard-page {
+        color: #1e293b;
+    }
+
+    .stat-card {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        min-height: 155px;
+        padding: 25px;
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: 0 5px 22px rgba(15, 23, 42, 0.06);
+        border: 1px solid #edf0f5;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 28px rgba(15, 23, 42, 0.1);
+    }
+
+    .stat-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 62px;
+        height: 62px;
+        border-radius: 16px;
+        font-size: 28px;
+    }
+
+    .employee-card .stat-icon {
+        color: #2563eb;
+        background: #dbeafe;
+    }
+
+    .account-card .stat-icon {
+        color: #7c3aed;
+        background: #ede9fe;
+    }
+
+    .salary-card .stat-icon {
+        color: #059669;
+        background: #d1fae5;
+    }
+
+    .stat-label {
+        color: #64748b;
+        font-size: 14px;
+        margin-bottom: 7px;
+    }
+
+    .stat-content h3 {
+        font-size: clamp(22px, 2vw, 29px);
+        font-weight: 750;
+        margin-bottom: 7px;
+        overflow-wrap: anywhere;
+    }
+
+    .stat-content span {
+        color: #94a3b8;
+        font-size: 12px;
+    }
+
+    .salary-number {
+        color: #059669;
+    }
+
+    .chart-card,
+    .dashboard-page > .card {
+        border-radius: 18px;
+        overflow: hidden;
+    }
+
+    .chart-container {
+        position: relative;
+        width: 100%;
+        height: 360px;
+    }
+
+    .year-badge {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 10px;
+        background: #eff6ff;
+        color: #2563eb;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .table thead th {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: #64748b;
+        background: #f8fafc;
+        font-size: 13px;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .table tbody td {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .status-badge {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 8px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .status-has-data {
+        background: #d1fae5;
+        color: #047857;
+    }
+
+    .status-no-data {
+        background: #f1f5f9;
+        color: #64748b;
+    }
+
+    @@media (max-width: 576px) {
+        .stat-card {
+            padding: 18px;
+            gap: 14px;
+        }
+
+        .stat-icon {
+            width: 52px;
+            height: 52px;
+            font-size: 23px;
+        }
+
+        .chart-container {
+            height: 280px;
+        }
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const canvas = document.getElementById("quyLuongChart");
+
+        if (!canvas || typeof Chart === "undefined") {
+            return;
+        }
+
+        const labels = @Html.Raw(
+            System.Text.Json.JsonSerializer.Serialize(Model.ThangLabels)
+        );
+
+        const values = @Html.Raw(
+            System.Text.Json.JsonSerializer.Serialize(Model.QuyLuongData)
+        );
+
+        new Chart(canvas, {
+            type: "bar",
+
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: "Quỹ lương",
+                    data: values,
+                    backgroundColor: [
+                        "#93c5fd", "#93c5fd", "#93c5fd",
+                        "#93c5fd", "#93c5fd", "#93c5fd",
+                        "#93c5fd", "#93c5fd", "#93c5fd",
+                        "#93c5fd", "#93c5fd", "#93c5fd"
+                    ],
+                    hoverBackgroundColor: "#2563eb",
+                    borderRadius: 7,
+                    borderSkipped: false,
+                    maxBarThickness: 42
+                }]
+            },
+
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                interaction: {
+                    intersect: false,
+                    mode: "index"
+                },
+
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                const value = Number(context.raw || 0);
+
+                                return "Quỹ lương: " +
+                                    value.toLocaleString("vi-VN") + " đ";
+                            }
+                        }
+                    }
+                },
+
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    },
+
+                    y: {
+                        beginAtZero: true,
+
+                        ticks: {
+                            callback: function (value) {
+                                return Number(value).toLocaleString("vi-VN") + " đ";
+                            }
+                        },
+
+                        title: {
+                            display: true,
+                            text: "Số tiền (VNĐ)"
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+```

@@ -1,0 +1,389 @@
+﻿ @model List<QuanLyNhanSuMVC.Models.BangLuongModel>
+@using Microsoft.AspNetCore.Http
+@using System.Globalization
+
+@{
+    ViewData["Title"] = "Quản lý bảng lương";
+
+    var role = Context.Session.GetString("Role") ?? "";
+    int thangChon = ViewBag.Thang != null ? Convert.ToInt32(ViewBag.Thang) : 0;
+    int namChon = ViewBag.Nam != null ? Convert.ToInt32(ViewBag.Nam) : DateTime.Now.Year;
+    bool laGiamDoc = role == "GiamDoc";
+}
+
+@functions {
+    public static decimal GiaTriTien(object? value)
+    {
+        if (value == null)
+            return 0m;
+
+        try
+        {
+            return Convert.ToDecimal(value, CultureInfo.InvariantCulture);
+        }
+        catch
+        {
+            return decimal.TryParse(
+                Convert.ToString(value),
+                NumberStyles.Any,
+                CultureInfo.CurrentCulture,
+                out decimal ketQua)
+                    ? ketQua
+                    : 0m;
+        }
+    }
+
+    public static string DinhDangTien(object? value)
+    {
+        return GiaTriTien(value).ToString("N0", CultureInfo.GetCultureInfo("vi-VN"));
+    }
+}
+
+<div class="container-fluid mt-4">
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+        <div>
+            <h2 class="fw-bold mb-1">💰 Quản lý bảng lương</h2>
+            <p class="text-muted mb-0">Theo dõi bảng lương nhân viên</p>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+            @if (laGiamDoc)
+            {
+                <a asp-controller="BangLuong"
+                   asp-action="Create"
+                   class="btn btn-primary">
+                    + Thêm bảng lương
+                </a>
+
+                <button type="button"
+                        class="btn btn-success"
+                        data-bs-toggle="modal"
+                        data-bs-target="#taoTatCaModal">
+                    Tính lương toàn bộ
+                </button>
+
+                <a asp-controller="BangLuong"
+                   asp-action="ThongKe"
+                   class="btn btn-info text-white">
+                    Thống kê tháng
+                </a>
+
+                <a asp-controller="BangLuong"
+                   asp-action="ThongKeNam"
+                   asp-route-nam="@namChon"
+                   class="btn btn-secondary">
+                    Thống kê năm
+                </a>
+            }
+        </div>
+    </div>
+
+    @if (TempData["BangLuongSuccess"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["BangLuongSuccess"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Đóng"></button>
+        </div>
+    }
+
+    @if (TempData["BangLuongError"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["BangLuongError"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Đóng"></button>
+        </div>
+    }
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-warning" role="alert">
+            @ViewBag.Error
+        </div>
+    }
+
+    <!-- BỘ LỌC THÁNG/NĂM -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <form asp-controller="BangLuong"
+                  asp-action="Index"
+                  method="get"
+                  class="row g-3 align-items-end">
+
+                <div class="col-md-4">
+                    <label for="thang" class="form-label fw-semibold">Tháng</label>
+                    <select id="thang" name="thang" class="form-select">
+                        <option value="0" selected="@(thangChon == 0)">
+                            Tất cả tháng
+                        </option>
+
+                        @for (int i = 1; i <= 12; i++)
+                        {
+                            <option value="@i" selected="@(thangChon == i)">
+                                Tháng @i
+                            </option>
+                        }
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="nam" class="form-label fw-semibold">Năm</label>
+                    <select id="nam" name="nam" class="form-select">
+                        @for (int y = DateTime.Now.Year - 5;
+                              y <= DateTime.Now.Year + 5; y++)
+                        {
+                            <option value="@y" selected="@(namChon == y)">
+                                @y
+                            </option>
+                        }
+                    </select>
+                </div>
+
+                <div class="col-md-4 d-flex flex-wrap gap-2">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-search"></i> Lọc dữ liệu
+                    </button>
+
+                    <a asp-controller="BangLuong"
+                       asp-action="Index"
+                       asp-route-thang="0"
+                       asp-route-nam="@DateTime.Now.Year"
+                       class="btn btn-outline-secondary">
+                        Làm mới
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- BẢNG LƯƠNG -->
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover table-striped align-middle">
+                    <thead class="table-dark text-center">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nhân viên</th>
+                            <th>Tháng</th>
+                            <th>Năm</th>
+                            <th>Lương cơ bản</th>
+                            <th>Phụ cấp</th>
+                            <th>Thưởng</th>
+                            <th>Ngày nghỉ không lương</th>
+                            <th>Tiền trừ nghỉ</th>
+                            <th>Tổng lương</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="text-center">@item.BangLuongId</td>
+
+                                    <td class="fw-semibold">
+                                        @(string.IsNullOrWhiteSpace(item.HoTenNhanVien ?? "")
+                                            ? $"Nhân viên #{item.NhanVienId}"
+                                            : item.HoTenNhanVien ?? "")
+                                    </td>
+
+                                    <td class="text-center">@item.Thang</td>
+                                    <td class="text-center">@item.Nam</td>
+
+                                    <td class="text-end">
+                                        @DinhDangTien(item.LuongCoBan) đ
+                                    </td>
+
+                                    <td class="text-end">
+                                        @DinhDangTien(item.PhuCap) đ
+                                    </td>
+
+                                    <td class="text-end">
+                                        @DinhDangTien(item.Thuong) đ
+                                    </td>
+
+                                    <td class="text-center">
+                                        @item.SoNgayNghiKhongLuong ngày
+                                    </td>
+
+                                    <td class="text-end">
+                                        @DinhDangTien(item.TienTruNghi) đ
+                                    </td>
+
+                                    <td class="text-end fw-bold text-success">
+                                        @DinhDangTien(item.TongLuong) đ
+                                    </td>
+
+                                    <td class="text-center text-nowrap">
+                                        <a asp-controller="BangLuong"
+                                           asp-action="Details"
+                                           asp-route-id="@item.BangLuongId"
+                                           class="btn btn-sm btn-info text-white"
+                                           title="Xem chi tiết">
+                                            Xem
+                                        </a>
+
+                                        @if (laGiamDoc)
+                                        {
+                                            <a asp-controller="BangLuong"
+                                               asp-action="Edit"
+                                               asp-route-id="@item.BangLuongId"
+                                               class="btn btn-sm btn-warning"
+                                               title="Sửa bảng lương">
+                                                Sửa
+                                            </a>
+
+                                            <form asp-controller="BangLuong"
+                                                  asp-action="Delete"
+                                                  asp-route-id="@item.BangLuongId"
+                                                  method="post"
+                                                  class="d-inline"
+                                                  onsubmit="return confirm('Bạn có chắc muốn xóa bảng lương này?');">
+                                                @Html.AntiForgeryToken()
+                                                <button type="submit" class="btn btn-sm btn-danger">
+                                                    Xóa
+                                                </button>
+                                            </form>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="11" class="text-center py-4 text-muted">
+                                    Không có bảng lương trong kỳ đã chọn.
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+
+                    @if (Model != null && Model.Any())
+{
+    <tfoot class="table-light fw-bold">
+        <tr>
+            <td colspan="4" class="text-end">Tổng cộng:</td>
+
+            <td class="text-end">
+                @DinhDangTien(Model.Sum(x => GiaTriTien(x.LuongCoBan))) đ
+            </td>
+
+            <td class="text-end">
+                @DinhDangTien(Model.Sum(x => GiaTriTien(x.PhuCap))) đ
+            </td>
+
+            <td class="text-end">
+                @DinhDangTien(Model.Sum(x => GiaTriTien(x.Thuong))) đ
+            </td>
+
+            <td class="text-center">
+                @Model.Sum(x => x.SoNgayNghiKhongLuong) ngày
+            </td>
+
+            <td class="text-end">
+                @DinhDangTien(Model.Sum(x => GiaTriTien(x.TienTruNghi))) đ
+            </td>
+
+            <td class="text-end text-success">
+                @DinhDangTien(Model.Sum(x => GiaTriTien(x.TongLuong))) đ
+            </td>
+
+            <td></td>
+        </tr>
+    </tfoot>
+
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (laGiamDoc)
+{
+    <!-- MODAL TÍNH LƯƠNG TOÀN BỘ -->
+    <div class="modal fade"
+         id="taoTatCaModal"
+         tabindex="-1"
+         aria-labelledby="taoTatCaLabel"
+         aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <form asp-controller="BangLuong"
+                      asp-action="TaoTatCa"
+                      method="post">
+
+                    @Html.AntiForgeryToken()
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="taoTatCaLabel">
+                            Tính lương toàn bộ nhân viên
+                        </h5>
+
+                        <button type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Đóng"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="thangTinh" class="form-label">
+                                Tháng tính lương
+                            </label>
+
+                            <select id="thangTinh"
+                                    name="thang"
+                                    class="form-select"
+                                    required>
+                                @for (int i = 1; i <= 12; i++)
+                                {
+                                    <option value="@i" selected="@(i == DateTime.Now.Month)">
+                                        Tháng @i
+                                    </option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="namTinh" class="form-label">
+                                Năm tính lương
+                            </label>
+
+                            <input id="namTinh"
+                                   name="nam"
+                                   type="number"
+                                   class="form-control"
+                                   min="2000"
+                                   max="2100"
+                                   value="@DateTime.Now.Year"
+                                   required />
+                        </div>
+
+                        <div class="alert alert-info mb-0">
+                            Hệ thống sẽ tạo hoặc cập nhật bảng lương
+                            cho kỳ được chọn.
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button"
+                                class="btn btn-secondary"
+                                data-bs-dismiss="modal">
+                            Hủy
+                        </button>
+
+                        <button type="submit" class="btn btn-success">
+                            Xác nhận tính lương
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+}

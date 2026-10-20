@@ -1,0 +1,106 @@
+﻿@model List<QuanLyNhanSuMVC.Models.NhanVienModel>
+
+@{
+    ViewData["Title"] = "Lịch sử chấm công";
+    var role = ViewBag.Role as string ?? "";
+}
+
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+    <div class="d-flex flex-wrap gap-2">
+        <a asp-controller="Home"
+           asp-action="Index"
+           class="btn btn-outline-secondary">
+            ← Quay về trang chủ
+        </a>
+    </div>
+</div>
+        <div>
+            <h2>📋 Lịch sử chấm công</h2>
+            <p class="text-muted">
+                Chọn nhân viên để xem lịch sử chấm công
+            </p>
+        </div>
+
+        <button type="button"
+        class="btn btn-outline-secondary"
+        onclick="quayLai()">
+    <i class="bi bi-arrow-left"></i>
+    Quay lại
+</button>
+
+<script>
+    function quayLai() {
+        const url = sessionStorage.getItem("trangTruocChamCong");
+
+        if (url && new URL(url).origin === window.location.origin) {
+            window.location.href = url;
+        } else {
+            window.location.href = '@Url.Action("Index", "Home")';
+        }
+    }
+</script>
+    </div>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.Error
+        </div>
+    }
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-warning">
+            Không có nhân viên để hiển thị.
+        </div>
+    }
+    else
+    {
+        <div class="row">
+
+            @foreach (var nv in Model)
+            {
+                <div class="col-md-4 mb-4">
+
+                    <div class="card shadow-sm h-100">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                @nv.HoTen
+                            </h5>
+
+                            <p class="card-text mb-1">
+                                <strong>Phòng ban:</strong>
+                                @(nv.TenPhongBan ?? "Chưa có")
+                            </p>
+
+                            <p class="card-text mb-3">
+                                <strong>Chức vụ:</strong>
+                                @(nv.TenChucVu ?? "Chưa có")
+                            </p>
+
+                            <a asp-controller="LichSuChamCong"
+   asp-action="NhanVien"
+   asp-route-id="@nv.NhanVienId"
+   onclick="sessionStorage.setItem('trangTruocChamCong', window.location.href)"
+   class="btn btn-primary w-100">
+
+    <i class="bi bi-clock-history"></i>
+    Xem lịch sử chấm công
+
+</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+
+        </div>
+    }
+
+</div>

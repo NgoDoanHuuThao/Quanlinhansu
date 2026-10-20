@@ -1,0 +1,872 @@
+2026-10-06 08:08:00.189 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 08:08:00.374 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 08:08:00.376 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 08:08:00.420 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 08:08:00.421 +07:00 [INF] Hosting environment: Development
+2026-10-06 08:08:00.421 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 08:08:00.627 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 08:08:00.775 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 152.2383ms
+2026-10-06 08:08:00.785 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 08:08:00.785 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 08:08:00.785 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 08:08:00.785 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 08:08:00.785 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 08:08:00.821 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 08:08:00.852 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 08:08:00.864 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 76.8985ms
+2026-10-06 08:08:00.871 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 85.1223ms
+2026-10-06 08:08:00.871 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 85.6388ms
+2026-10-06 08:08:00.871 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 85.5821ms
+2026-10-06 08:08:00.871 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 86.1521ms
+2026-10-06 08:08:00.902 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 117.481ms
+2026-10-06 08:08:00.935 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 83.7026ms
+2026-10-06 08:08:01.035 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 08:08:01.051 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/favicon-32x32.png - null null
+2026-10-06 08:08:01.056 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/favicon-32x32.png - 200 628 image/png 4.8843ms
+2026-10-06 08:08:01.065 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 30.3129ms
+2026-10-06 08:20:27.043 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 08:20:27.249 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 08:20:27.251 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 08:20:27.294 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 08:20:27.296 +07:00 [INF] Hosting environment: Development
+2026-10-06 08:20:27.296 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 08:20:28.397 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 08:20:28.538 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 144.7926ms
+2026-10-06 08:20:28.548 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 08:20:28.548 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 08:20:28.548 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 08:20:28.548 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 08:20:28.548 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 08:20:28.548 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 08:20:28.555 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 7.3651ms
+2026-10-06 08:20:28.549 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 08:20:28.605 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 57.5806ms
+2026-10-06 08:20:28.614 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 66.9931ms
+2026-10-06 08:20:28.614 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 67.0037ms
+2026-10-06 08:20:28.614 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 67.0037ms
+2026-10-06 08:20:28.614 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 67.091ms
+2026-10-06 08:20:28.636 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 86.9763ms
+2026-10-06 08:20:28.749 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 08:20:28.777 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 27.704ms
+2026-10-06 08:21:28.099 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7151/api/TaiKhoan/login - application/json 51
+2026-10-06 08:21:28.145 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 08:21:28.159 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 08:21:28.574 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-06 08:21:30.366 +07:00 [INF] Executed DbCommand (59ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-06 08:21:30.412 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, VaiTro: Giám đốc
+2026-10-06 08:21:30.419 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 08:21:30.430 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 2266.5428ms
+2026-10-06 08:21:30.431 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 08:21:30.438 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 2338.6652ms
+2026-10-06 08:23:29.494 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7151/api/Images/upload - multipart/form-data; boundary=----WebKitFormBoundaryaV9GfmpWIbo1sV65 339242
+2026-10-06 08:23:29.538 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.ImagesController.Upload (QuanLyNhanSu)'
+2026-10-06 08:23:29.551 +07:00 [INF] Route matched with {action = "Upload", controller = "Images"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Upload(QuanLyNhanSu.Models.DTO.ImageUploadRequestDTO) on controller QuanLyNhanSu.Controllers.ImagesController (QuanLyNhanSu).
+2026-10-06 08:23:29.590 +07:00 [INF] Executing OkObjectResult, writing value of type 'QuanLyNhanSu.Models.DTO.ImageDTO'.
+2026-10-06 08:23:29.594 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.ImagesController.Upload (QuanLyNhanSu) in 41.0582ms
+2026-10-06 08:23:29.596 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.ImagesController.Upload (QuanLyNhanSu)'
+2026-10-06 08:23:29.598 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7151/api/Images/upload - 200 null application/json; charset=utf-8 104.2654ms
+2026-10-06 08:26:06.324 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 08:26:06.496 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 08:26:06.498 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 08:26:06.534 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 08:26:06.535 +07:00 [INF] Hosting environment: Development
+2026-10-06 08:26:06.536 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 08:26:07.142 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 08:26:07.264 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 127.0719ms
+2026-10-06 08:26:07.273 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 08:26:07.273 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 08:26:07.273 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 08:26:07.290 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 16.6435ms
+2026-10-06 08:26:07.290 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 16.6359ms
+2026-10-06 08:26:07.290 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 16.6447ms
+2026-10-06 08:26:07.295 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 08:26:07.298 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 08:26:07.307 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 08:26:07.307 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 12.2385ms
+2026-10-06 08:26:07.308 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 10.0953ms
+2026-10-06 08:26:07.317 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 10.8461ms
+2026-10-06 08:26:07.329 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 08:26:07.353 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.4278ms
+2026-10-06 08:26:07.424 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 08:26:07.446 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.2178ms
+2026-10-06 08:26:51.661 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/api/Images - null null
+2026-10-06 08:26:51.699 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.ImagesController.GetAllImages (QuanLyNhanSu)'
+2026-10-06 08:26:51.718 +07:00 [INF] Route matched with {action = "GetAllImages", controller = "Images"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllImages() on controller QuanLyNhanSu.Controllers.ImagesController (QuanLyNhanSu).
+2026-10-06 08:26:51.730 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.ImageDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 08:26:51.740 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.ImagesController.GetAllImages (QuanLyNhanSu) in 17.0352ms
+2026-10-06 08:26:51.741 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.ImagesController.GetAllImages (QuanLyNhanSu)'
+2026-10-06 08:26:51.742 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/api/Images - 200 null application/json; charset=utf-8 81.0755ms
+2026-10-06 08:28:43.795 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 08:28:44.024 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 08:28:44.025 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 08:28:44.062 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 08:28:44.063 +07:00 [INF] Hosting environment: Development
+2026-10-06 08:28:44.065 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 08:28:44.442 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 08:28:44.563 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 125.7487ms
+2026-10-06 08:28:44.571 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 08:28:44.572 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 08:28:44.571 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 08:28:44.571 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 08:28:44.578 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 7.1507ms
+2026-10-06 08:28:44.571 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 08:28:44.571 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 08:28:44.573 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 08:28:44.585 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 14.7056ms
+2026-10-06 08:28:44.593 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 22.2829ms
+2026-10-06 08:28:44.593 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 22.104ms
+2026-10-06 08:28:44.593 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 22.1557ms
+2026-10-06 08:28:44.593 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 22.1558ms
+2026-10-06 08:28:44.614 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.937ms
+2026-10-06 08:28:44.664 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 08:28:44.688 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.6559ms
+2026-10-06 08:28:50.365 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/api/Images - null null
+2026-10-06 08:28:50.402 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.ImagesController.GetAllImages (QuanLyNhanSu)'
+2026-10-06 08:28:50.419 +07:00 [INF] Route matched with {action = "GetAllImages", controller = "Images"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllImages() on controller QuanLyNhanSu.Controllers.ImagesController (QuanLyNhanSu).
+2026-10-06 08:28:50.430 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuanLyNhanSu.Models.DTO.ImageDTO, QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 08:28:50.440 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.ImagesController.GetAllImages (QuanLyNhanSu) in 15.3023ms
+2026-10-06 08:28:50.441 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.ImagesController.GetAllImages (QuanLyNhanSu)'
+2026-10-06 08:28:50.442 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/api/Images - 200 null application/json; charset=utf-8 77.0045ms
+2026-10-06 08:48:21.253 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 08:48:21.483 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 08:48:21.484 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 08:48:21.529 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 08:48:21.529 +07:00 [INF] Hosting environment: Development
+2026-10-06 08:48:21.530 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 08:48:22.135 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 08:48:22.258 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 128.5122ms
+2026-10-06 08:48:22.269 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 08:48:22.269 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 08:48:22.269 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 08:48:22.275 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 6.0704ms
+2026-10-06 08:48:22.269 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 08:48:22.269 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 08:48:22.269 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 08:48:22.271 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 08:48:22.330 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 61.8116ms
+2026-10-06 08:48:22.330 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 61.8065ms
+2026-10-06 08:48:22.330 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 61.8116ms
+2026-10-06 08:48:22.330 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 61.9679ms
+2026-10-06 08:48:22.336 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 67.8593ms
+2026-10-06 08:48:22.359 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 88.3503ms
+2026-10-06 08:48:22.406 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 08:48:22.423 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.7386ms
+2026-10-06 08:52:07.637 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 08:52:07.834 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 08:52:07.835 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 08:52:07.873 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 08:52:07.874 +07:00 [INF] Hosting environment: Development
+2026-10-06 08:52:07.875 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 08:52:08.239 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 08:52:08.361 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 125.6843ms
+2026-10-06 08:52:08.369 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 08:52:08.369 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 08:52:08.369 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 08:52:08.369 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 08:52:08.369 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 08:52:08.370 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 08:52:08.432 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 08:52:08.444 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 73.5222ms
+2026-10-06 08:52:08.449 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 80.1382ms
+2026-10-06 08:52:08.451 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 82.6103ms
+2026-10-06 08:52:08.451 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 82.6401ms
+2026-10-06 08:52:08.451 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 82.6108ms
+2026-10-06 08:52:08.451 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 82.9846ms
+2026-10-06 08:52:08.473 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 71.5326ms
+2026-10-06 08:52:08.520 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 08:52:08.542 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.5898ms
+2026-10-06 09:37:23.562 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 09:37:23.767 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 09:37:23.769 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 09:37:23.808 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 09:37:23.810 +07:00 [INF] Hosting environment: Development
+2026-10-06 09:37:23.811 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 09:37:24.122 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 09:37:24.318 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 203.0021ms
+2026-10-06 09:37:24.328 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 09:37:24.328 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 09:37:24.328 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 09:37:24.328 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 09:37:24.336 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 7.603ms
+2026-10-06 09:37:24.328 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 09:37:24.328 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 09:37:24.374 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 45.9134ms
+2026-10-06 09:37:24.382 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 54.6937ms
+2026-10-06 09:37:24.382 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 54.684ms
+2026-10-06 09:37:24.382 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 54.696ms
+2026-10-06 09:37:24.384 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 55.9851ms
+2026-10-06 09:37:24.386 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 09:37:24.430 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.5483ms
+2026-10-06 09:37:24.469 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 09:37:24.490 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.6238ms
+2026-10-06 09:37:54.840 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7151/api/TaiKhoan/login - application/json 52
+2026-10-06 09:37:54.893 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 09:37:54.913 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 09:37:55.087 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-06 09:37:56.669 +07:00 [INF] Executed DbCommand (78ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-06 09:37:56.733 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, VaiTro: Giám đốc
+2026-10-06 09:37:56.748 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 09:37:56.767 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 1849.262ms
+2026-10-06 09:37:56.769 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 09:37:56.779 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 1938.9894ms
+2026-10-06 09:39:15.237 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7151/api/ChamCong - multipart/form-data; boundary=----WebKitFormBoundarywmNxpILprcqqBCDu 339555
+2026-10-06 09:39:15.311 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.ChamCongController.Add (QuanLyNhanSu)'
+2026-10-06 09:39:15.324 +07:00 [INF] Route matched with {action = "Add", controller = "ChamCong"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Add(QuanLyNhanSu.Models.DTO.AddChamCongRequestDTO) on controller QuanLyNhanSu.Controllers.ChamCongController (QuanLyNhanSu).
+2026-10-06 09:39:15.362 +07:00 [INF] Bắt đầu chấm công
+2026-10-06 09:39:15.364 +07:00 [INF] GPS chấm công - Nhân viên: 1, Latitude: 11.9404, Longitude: 108.4583, Khoảng cách: 0m
+2026-10-06 09:39:16.004 +07:00 [INF] Executed DbCommand (36ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Double), @p2='?' (DbType = Double), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ChamCongs] ([HinhAnh], [Latitude], [Longitude], [NhanVienId], [ThoiGianCham], [ViTri])
+OUTPUT INSERTED.[ChamCongId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-10-06 09:39:16.062 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ChamCongId], [c].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien], [c].[ThoiGianCham], [c].[HinhAnh], [c].[ViTri], [c].[Latitude], [c].[Longitude]
+FROM [ChamCongs] AS [c]
+INNER JOIN [NhanViens] AS [n] ON [c].[NhanVienId] = [n].[NhanVienId]
+WHERE [c].[ChamCongId] = @id
+2026-10-06 09:39:16.069 +07:00 [INF] Chấm công thành công cho nhân viên ID: 1
+2026-10-06 09:39:16.073 +07:00 [INF] Executing CreatedAtActionResult, writing value of type 'QuanLyNhanSu.Models.DTO.ChamCongDTO'.
+2026-10-06 09:39:16.105 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.ChamCongController.Add (QuanLyNhanSu) in 779.495ms
+2026-10-06 09:39:16.108 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.ChamCongController.Add (QuanLyNhanSu)'
+2026-10-06 09:39:16.112 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7151/api/ChamCong - 201 null application/json; charset=utf-8 874.8398ms
+2026-10-06 09:49:36.716 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 09:49:36.951 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 09:49:36.952 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 09:49:37.001 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 09:49:37.002 +07:00 [INF] Hosting environment: Development
+2026-10-06 09:49:37.002 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 09:49:37.358 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 09:49:37.492 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 138.4784ms
+2026-10-06 09:49:37.501 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 09:49:37.501 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 09:49:37.501 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 09:49:37.501 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 09:49:37.501 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 09:49:37.503 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 09:49:37.504 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 09:49:37.520 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 17.0867ms
+2026-10-06 09:49:37.521 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 19.7285ms
+2026-10-06 09:49:37.528 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 26.5884ms
+2026-10-06 09:49:37.528 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 27.051ms
+2026-10-06 09:49:37.528 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 27.0511ms
+2026-10-06 09:49:37.528 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 27.1846ms
+2026-10-06 09:49:37.551 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.4014ms
+2026-10-06 09:49:37.607 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 09:49:37.633 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.4218ms
+2026-10-06 09:50:31.952 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 09:50:32.159 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 09:50:32.161 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 09:50:32.206 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 09:50:32.207 +07:00 [INF] Hosting environment: Development
+2026-10-06 09:50:32.208 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 09:50:32.541 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 09:50:32.689 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 152.0472ms
+2026-10-06 09:50:32.695 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 09:50:32.695 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 09:50:32.695 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 09:50:32.713 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 17.3184ms
+2026-10-06 09:50:32.713 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 17.3039ms
+2026-10-06 09:50:32.713 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 17.3188ms
+2026-10-06 09:50:32.717 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 09:50:32.719 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 09:50:32.736 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 09:50:32.736 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 16.3569ms
+2026-10-06 09:50:32.737 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 19.8618ms
+2026-10-06 09:50:32.748 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 12.1198ms
+2026-10-06 09:50:32.760 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 09:50:32.787 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.2811ms
+2026-10-06 09:50:32.850 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 09:50:32.865 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.5408ms
+2026-10-06 09:54:31.966 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 09:54:39.815 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 09:54:39.817 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 09:54:39.864 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 09:54:39.865 +07:00 [INF] Hosting environment: Development
+2026-10-06 09:54:39.866 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 09:54:40.222 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 09:54:40.366 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 150.9538ms
+2026-10-06 09:54:40.375 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 09:54:40.376 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 09:54:40.375 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 09:54:40.382 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 6.0386ms
+2026-10-06 09:54:40.375 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 09:54:40.375 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 09:54:40.375 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 09:54:40.376 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 09:54:40.428 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 52.3721ms
+2026-10-06 09:54:40.430 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 55.24ms
+2026-10-06 09:54:40.428 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 52.8991ms
+2026-10-06 09:54:40.428 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 52.3721ms
+2026-10-06 09:54:40.428 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 52.372ms
+2026-10-06 09:54:40.486 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 109.8091ms
+2026-10-06 09:54:40.525 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 09:54:40.552 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 27.4125ms
+2026-10-06 10:05:54.361 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 10:05:54.595 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 10:05:54.597 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 10:05:54.644 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 10:05:54.645 +07:00 [INF] Hosting environment: Development
+2026-10-06 10:05:54.646 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 10:05:55.013 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 10:05:55.149 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 141.7014ms
+2026-10-06 10:05:55.158 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 10:05:55.159 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 10:05:55.158 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 10:05:55.158 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 10:05:55.169 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 11.0182ms
+2026-10-06 10:05:55.158 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 10:05:55.160 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 10:05:55.161 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 10:05:55.180 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 22.146ms
+2026-10-06 10:05:55.180 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 22.1475ms
+2026-10-06 10:05:55.181 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 22.4884ms
+2026-10-06 10:05:55.180 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 21.6013ms
+2026-10-06 10:05:55.186 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 25.6465ms
+2026-10-06 10:05:55.207 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.2164ms
+2026-10-06 10:05:55.258 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 10:05:55.281 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.1468ms
+2026-10-06 10:06:12.497 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 null
+2026-10-06 10:06:12.532 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:06:12.545 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 10:06:12.662 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-06 10:06:13.919 +07:00 [INF] Executed DbCommand (37ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-06 10:06:13.956 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, VaiTro: Giám đốc
+2026-10-06 10:06:13.962 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 10:06:13.975 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 1425.8562ms
+2026-10-06 10:06:13.976 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:06:13.988 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 1490.5008ms
+2026-10-06 10:13:24.850 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 10:13:25.050 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 10:13:25.051 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 10:13:25.095 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 10:13:25.096 +07:00 [INF] Hosting environment: Development
+2026-10-06 10:13:25.097 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 10:13:25.621 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 10:13:25.757 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 140.5616ms
+2026-10-06 10:13:25.766 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 10:13:25.766 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 10:13:25.766 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 10:13:25.783 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 17.0838ms
+2026-10-06 10:13:25.783 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 17.0811ms
+2026-10-06 10:13:25.783 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 17.4825ms
+2026-10-06 10:13:25.788 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 10:13:25.791 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 10:13:25.801 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 10:13:25.801 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 12.991ms
+2026-10-06 10:13:25.802 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 11.6051ms
+2026-10-06 10:13:25.811 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 9.9615ms
+2026-10-06 10:13:25.820 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 10:13:25.845 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.5705ms
+2026-10-06 10:13:25.905 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 10:13:25.921 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.2475ms
+2026-10-06 10:13:27.187 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 null
+2026-10-06 10:13:27.222 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:13:27.236 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 10:13:27.354 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-06 10:13:28.624 +07:00 [INF] Executed DbCommand (47ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-06 10:13:28.665 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, VaiTro: Giám đốc
+2026-10-06 10:13:28.671 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 10:13:28.683 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 1441.3333ms
+2026-10-06 10:13:28.685 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:13:28.693 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 1505.6877ms
+2026-10-06 10:15:16.975 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 10:15:17.497 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 10:15:17.498 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 10:15:17.541 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 10:15:17.542 +07:00 [INF] Hosting environment: Development
+2026-10-06 10:15:17.543 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 10:15:18.078 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 10:15:18.199 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 125.6082ms
+2026-10-06 10:15:18.209 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 10:15:18.209 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 10:15:18.209 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 10:15:18.209 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 10:15:18.217 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 8.8065ms
+2026-10-06 10:15:18.209 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 10:15:18.209 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 10:15:18.209 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 10:15:18.225 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 15.7364ms
+2026-10-06 10:15:18.237 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 28.1475ms
+2026-10-06 10:15:18.237 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 28.1051ms
+2026-10-06 10:15:18.237 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 28.2164ms
+2026-10-06 10:15:18.237 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 28.1475ms
+2026-10-06 10:15:18.261 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.9982ms
+2026-10-06 10:15:18.313 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 10:15:18.330 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.9656ms
+2026-10-06 10:15:19.813 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 null
+2026-10-06 10:15:19.847 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:15:19.859 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 10:15:19.979 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-06 10:15:21.347 +07:00 [INF] Executed DbCommand (52ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-06 10:15:21.386 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, VaiTro: Giám đốc
+2026-10-06 10:15:21.391 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 10:15:21.403 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 1539.8067ms
+2026-10-06 10:15:21.405 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:15:21.412 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 1598.8926ms
+2026-10-06 10:19:28.701 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 10:19:29.197 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 10:19:29.198 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 10:19:29.242 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 10:19:29.243 +07:00 [INF] Hosting environment: Development
+2026-10-06 10:19:29.244 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 10:19:29.861 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 10:19:30.004 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 147.5762ms
+2026-10-06 10:19:30.014 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 10:19:30.017 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 10:19:30.014 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 10:19:30.015 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 10:19:30.028 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 13.2731ms
+2026-10-06 10:19:30.014 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 10:19:30.015 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 10:19:30.020 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 10:19:30.036 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 20.9329ms
+2026-10-06 10:19:30.049 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 34.9373ms
+2026-10-06 10:19:30.049 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 34.9374ms
+2026-10-06 10:19:30.049 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 34.9044ms
+2026-10-06 10:19:30.049 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 34.7574ms
+2026-10-06 10:19:30.077 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.6867ms
+2026-10-06 10:19:30.127 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 10:19:30.148 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.1821ms
+2026-10-06 10:19:43.475 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 null
+2026-10-06 10:19:43.510 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:19:43.525 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 10:19:43.655 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-06 10:19:44.989 +07:00 [INF] Executed DbCommand (51ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-06 10:19:45.038 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, VaiTro: Giám đốc
+2026-10-06 10:19:45.044 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 10:19:45.063 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 1532.6537ms
+2026-10-06 10:19:45.065 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:19:45.074 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 1599.5237ms
+2026-10-06 10:26:43.583 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 10:26:44.013 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 10:26:44.014 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 10:26:44.056 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 10:26:44.057 +07:00 [INF] Hosting environment: Development
+2026-10-06 10:26:44.058 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 10:26:44.644 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 10:26:44.773 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 136.4084ms
+2026-10-06 10:26:44.782 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 10:26:44.782 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 10:26:44.782 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 10:26:44.782 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 10:26:44.791 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 9.2046ms
+2026-10-06 10:26:44.782 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 10:26:44.782 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 10:26:44.783 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 10:26:44.799 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 16.9043ms
+2026-10-06 10:26:44.812 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 30.0452ms
+2026-10-06 10:26:44.812 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 30.0714ms
+2026-10-06 10:26:44.812 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 30.1461ms
+2026-10-06 10:26:44.812 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 30.0713ms
+2026-10-06 10:26:44.836 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.9406ms
+2026-10-06 10:26:44.886 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 10:26:44.904 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.6961ms
+2026-10-06 10:26:46.582 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 null
+2026-10-06 10:26:46.623 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:26:46.637 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 10:26:46.749 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-06 10:26:48.129 +07:00 [INF] Executed DbCommand (50ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-06 10:26:48.164 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, VaiTro: Giám đốc
+2026-10-06 10:26:48.170 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 10:26:48.181 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 1540.3138ms
+2026-10-06 10:26:48.182 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:26:48.193 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 1611.3914ms
+2026-10-06 10:28:32.597 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 10:28:32.785 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 10:28:32.787 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 10:28:32.835 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 10:28:32.836 +07:00 [INF] Hosting environment: Development
+2026-10-06 10:28:32.837 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 10:28:33.334 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 10:28:33.476 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 146.5939ms
+2026-10-06 10:28:33.485 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 10:28:33.485 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 10:28:33.485 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 10:28:33.485 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 10:28:33.485 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 10:28:33.516 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 10:28:33.556 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 71.6814ms
+2026-10-06 10:28:33.546 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 10:28:33.567 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 82.0539ms
+2026-10-06 10:28:33.567 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 81.6873ms
+2026-10-06 10:28:33.567 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 82.0539ms
+2026-10-06 10:28:33.567 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 80.6251ms
+2026-10-06 10:28:33.567 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 82.054ms
+2026-10-06 10:28:33.590 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.5412ms
+2026-10-06 10:28:33.643 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 10:28:33.668 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.5741ms
+2026-10-06 10:28:37.097 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 null
+2026-10-06 10:28:37.133 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:28:37.146 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 10:28:37.265 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-06 10:28:38.408 +07:00 [INF] Executed DbCommand (46ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-06 10:28:38.490 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, VaiTro: Giám đốc
+2026-10-06 10:28:38.500 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 10:28:38.512 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 1361.1235ms
+2026-10-06 10:28:38.514 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:28:38.522 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 1424.8577ms
+2026-10-06 10:30:09.279 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 10:30:09.498 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 10:30:09.499 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 10:30:09.549 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 10:30:09.550 +07:00 [INF] Hosting environment: Development
+2026-10-06 10:30:09.550 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 10:30:10.115 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 10:30:10.267 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 158.0158ms
+2026-10-06 10:30:10.275 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 10:30:10.275 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 10:30:10.275 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 10:30:10.292 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 16.9953ms
+2026-10-06 10:30:10.292 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 16.9948ms
+2026-10-06 10:30:10.292 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 16.9949ms
+2026-10-06 10:30:10.296 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 10:30:10.297 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 10:30:10.309 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 10:30:10.309 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 12.717ms
+2026-10-06 10:30:10.310 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 12.9433ms
+2026-10-06 10:30:10.318 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 9.8142ms
+2026-10-06 10:30:10.329 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 10:30:10.352 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.5024ms
+2026-10-06 10:30:10.402 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 10:30:10.422 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.0811ms
+2026-10-06 10:30:11.834 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 null
+2026-10-06 10:30:11.870 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:30:11.885 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 10:30:12.007 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-06 10:30:13.056 +07:00 [INF] Executed DbCommand (36ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-06 10:30:13.102 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, VaiTro: Giám đốc
+2026-10-06 10:30:13.109 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 10:30:13.121 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 1231.4464ms
+2026-10-06 10:30:13.122 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:30:13.133 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 1299.4923ms
+2026-10-06 10:30:38.460 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 10:30:38.626 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 10:30:38.628 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 10:30:38.666 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 10:30:38.667 +07:00 [INF] Hosting environment: Development
+2026-10-06 10:30:38.668 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 10:30:39.268 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 10:30:39.414 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 151.3176ms
+2026-10-06 10:30:39.423 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 10:30:39.423 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 10:30:39.423 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 10:30:39.423 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 10:30:39.423 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 10:30:39.425 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 10:30:39.490 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 10:30:39.504 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 79.68ms
+2026-10-06 10:30:39.511 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 88.1462ms
+2026-10-06 10:30:39.511 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 88.5999ms
+2026-10-06 10:30:39.511 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 88.9626ms
+2026-10-06 10:30:39.511 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 88.5997ms
+2026-10-06 10:30:39.512 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 89.5042ms
+2026-10-06 10:30:39.537 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.2263ms
+2026-10-06 10:30:39.594 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 10:30:39.624 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 29.786ms
+2026-10-06 10:30:41.342 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 null
+2026-10-06 10:30:41.377 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:30:41.390 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 10:30:41.511 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-06 10:30:42.745 +07:00 [INF] Executed DbCommand (44ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-06 10:30:42.787 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, VaiTro: Giám đốc
+2026-10-06 10:30:42.794 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 10:30:42.811 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 1414.6682ms
+2026-10-06 10:30:42.813 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:30:42.821 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 1478.8451ms
+2026-10-06 10:33:51.950 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 10:33:52.276 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 10:33:52.277 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 10:33:52.322 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 10:33:52.324 +07:00 [INF] Hosting environment: Development
+2026-10-06 10:33:52.324 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 10:33:52.773 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 10:33:52.914 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 145.7872ms
+2026-10-06 10:33:52.922 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 10:33:52.923 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 10:33:52.922 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 10:33:52.922 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 10:33:52.922 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 10:33:52.925 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 10:33:52.926 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 10:33:52.938 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 14.1471ms
+2026-10-06 10:33:52.946 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 23.5066ms
+2026-10-06 10:33:52.946 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 23.1132ms
+2026-10-06 10:33:52.946 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 23.4667ms
+2026-10-06 10:33:52.946 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 23.5066ms
+2026-10-06 10:33:52.947 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 25.038ms
+2026-10-06 10:33:52.975 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.8976ms
+2026-10-06 10:33:53.029 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 10:33:53.054 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.938ms
+2026-10-06 10:33:55.128 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 null
+2026-10-06 10:33:55.162 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:33:55.179 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 10:33:55.302 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-06 10:33:56.613 +07:00 [INF] Executed DbCommand (42ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-06 10:33:56.649 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, VaiTro: Giám đốc
+2026-10-06 10:33:56.655 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 10:33:56.669 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 1484.9246ms
+2026-10-06 10:33:56.670 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:33:56.678 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 1550.5632ms
+2026-10-06 10:38:19.217 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 10:38:19.617 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 10:38:19.619 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 10:38:19.672 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 10:38:19.673 +07:00 [INF] Hosting environment: Development
+2026-10-06 10:38:19.674 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 10:38:20.283 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 10:38:20.412 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 133.9983ms
+2026-10-06 10:38:20.421 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 10:38:20.422 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 10:38:20.421 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 10:38:20.421 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 10:38:20.421 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 10:38:20.421 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 10:38:20.428 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 6.835ms
+2026-10-06 10:38:20.423 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 10:38:20.441 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 18.8275ms
+2026-10-06 10:38:20.445 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 23.9787ms
+2026-10-06 10:38:20.445 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 24.0856ms
+2026-10-06 10:38:20.445 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 23.9494ms
+2026-10-06 10:38:20.445 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 23.9786ms
+2026-10-06 10:38:20.467 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.6765ms
+2026-10-06 10:38:20.518 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 10:38:20.542 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.2944ms
+2026-10-06 10:38:23.896 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 null
+2026-10-06 10:38:23.931 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:38:23.946 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 10:38:24.071 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-06 10:38:25.300 +07:00 [INF] Executed DbCommand (37ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-06 10:38:25.345 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, VaiTro: Giám đốc
+2026-10-06 10:38:25.352 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 10:38:25.366 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 1416.3308ms
+2026-10-06 10:38:25.367 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:38:25.376 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 1480.3297ms
+2026-10-06 10:39:32.749 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7151/api/TaiKhoan/login - application/json 49
+2026-10-06 10:39:32.753 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:39:32.754 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 10:39:32.769 +07:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-10-06 10:39:32.782 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 26.6818ms
+2026-10-06 10:39:32.784 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:39:32.785 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7151/api/TaiKhoan/login - 400 null application/problem+json; charset=utf-8 36.0956ms
+2026-10-06 10:39:38.014 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7151/api/TaiKhoan/login - application/json 49
+2026-10-06 10:39:38.024 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:39:38.025 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 10:39:38.031 +07:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-10-06 10:39:38.033 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 7.3229ms
+2026-10-06 10:39:38.034 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:39:38.035 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7151/api/TaiKhoan/login - 400 null application/problem+json; charset=utf-8 20.7979ms
+2026-10-06 10:40:07.524 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7151/api/TaiKhoan/login - application/json 51
+2026-10-06 10:40:07.527 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:40:07.528 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 10:40:07.531 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-06 10:40:07.578 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-06 10:40:07.581 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, VaiTro: Giám đốc
+2026-10-06 10:40:07.582 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 10:40:07.583 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 53.3686ms
+2026-10-06 10:40:07.584 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:40:07.585 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 61.2334ms
+2026-10-06 10:43:49.907 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 10:43:51.557 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 10:43:51.559 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 10:43:51.598 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 10:43:51.599 +07:00 [INF] Hosting environment: Development
+2026-10-06 10:43:51.600 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 10:43:51.948 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 10:43:52.091 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 147.7705ms
+2026-10-06 10:43:52.103 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 10:43:52.103 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 10:43:52.103 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 10:43:52.103 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 10:43:52.115 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 12.0925ms
+2026-10-06 10:43:52.103 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 10:43:52.105 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 10:43:52.129 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 26.037ms
+2026-10-06 10:43:52.132 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 26.2625ms
+2026-10-06 10:43:52.134 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 10:43:52.129 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 26.2143ms
+2026-10-06 10:43:52.129 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 25.2235ms
+2026-10-06 10:43:52.129 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 26.0344ms
+2026-10-06 10:43:52.167 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.4313ms
+2026-10-06 10:43:52.229 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 10:43:52.248 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.4247ms
+2026-10-06 10:43:54.333 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 null
+2026-10-06 10:43:54.366 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:43:54.380 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 10:43:54.501 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-06 10:43:55.802 +07:00 [INF] Executed DbCommand (36ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-06 10:43:55.844 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, VaiTro: Giám đốc
+2026-10-06 10:43:55.857 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 10:43:55.870 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 1484.9373ms
+2026-10-06 10:43:55.871 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:43:55.879 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 1546.8107ms
+2026-10-06 10:46:27.602 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/api/TaiKhoan - null null
+2026-10-06 10:46:27.613 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (GiamDoc)
+2026-10-06 10:46:27.619 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-06 10:46:27.620 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/api/TaiKhoan - 401 0 null 18.2102ms
+2026-10-06 10:46:51.925 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7151/api/TaiKhoan/login - application/json 51
+2026-10-06 10:46:51.930 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:46:51.932 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 10:46:51.936 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: admin
+2026-10-06 10:46:51.983 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-06 10:46:51.986 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 1, VaiTro: Giám đốc
+2026-10-06 10:46:51.988 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 10:46:51.989 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 55.9772ms
+2026-10-06 10:46:51.990 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:46:51.991 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 66.3249ms
+2026-10-06 10:47:08.582 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/api/TaiKhoan - null null
+2026-10-06 10:47:08.627 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (GiamDoc)
+2026-10-06 10:47:08.630 +07:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-06 10:47:08.631 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/api/TaiKhoan - 403 0 null 48.9404ms
+2026-10-06 10:52:52.262 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 10:52:52.443 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 10:52:52.444 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 10:52:52.486 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 10:52:52.488 +07:00 [INF] Hosting environment: Development
+2026-10-06 10:52:52.489 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 10:52:52.939 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 10:52:53.098 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 164.0924ms
+2026-10-06 10:52:53.105 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 10:52:53.105 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 10:52:53.105 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 10:52:53.124 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 18.3754ms
+2026-10-06 10:52:53.124 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 18.3751ms
+2026-10-06 10:52:53.124 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 18.392ms
+2026-10-06 10:52:53.128 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 10:52:53.129 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 10:52:53.140 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 10:52:53.141 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 12.503ms
+2026-10-06 10:52:53.142 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 13.0475ms
+2026-10-06 10:52:53.154 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 13.7509ms
+2026-10-06 10:52:53.167 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 10:52:53.191 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.9169ms
+2026-10-06 10:52:53.240 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 10:52:53.255 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.0794ms
+2026-10-06 10:53:04.105 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 null
+2026-10-06 10:53:04.142 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:53:04.155 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 10:53:04.272 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: cuong
+2026-10-06 10:53:05.495 +07:00 [INF] Executed DbCommand (50ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-06 10:53:05.534 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 3, VaiTro: Nhân viên
+2026-10-06 10:53:05.545 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 10:53:05.556 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 1397.42ms
+2026-10-06 10:53:05.558 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:53:05.569 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 1464.2619ms
+2026-10-06 10:53:21.858 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 null
+2026-10-06 10:53:21.862 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:53:21.863 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 10:53:21.867 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: binh
+2026-10-06 10:53:21.876 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-06 10:53:21.878 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 2, VaiTro: Trưởng phòng
+2026-10-06 10:53:21.880 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 10:53:21.881 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 16.1179ms
+2026-10-06 10:53:21.882 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:53:21.883 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 25.7353ms
+2026-10-06 10:54:22.146 +07:00 [INF] User profile is available. Using 'C:\Users\huuth\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 10:54:22.344 +07:00 [INF] Now listening on: https://localhost:7151
+2026-10-06 10:54:22.346 +07:00 [INF] Now listening on: http://localhost:5087
+2026-10-06 10:54:22.388 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 10:54:22.389 +07:00 [INF] Hosting environment: Development
+2026-10-06 10:54:22.390 +07:00 [INF] Content root path: C:\Users\huuth\OneDrive\Tài liệu\web 2\qlnhansu\QuanLyNhanSu\QuanLyNhanSu
+2026-10-06 10:54:22.817 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.html - null null
+2026-10-06 10:54:22.985 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.html - 304 null null 171.3478ms
+2026-10-06 10:54:22.996 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - null null
+2026-10-06 10:54:22.996 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 10:54:22.996 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 10:54:22.996 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.css - null null
+2026-10-06 10:54:22.996 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - null null
+2026-10-06 10:54:22.997 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/index.js - null null
+2026-10-06 10:54:23.040 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.js - 304 null null 42.4533ms
+2026-10-06 10:54:23.043 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 47.6441ms
+2026-10-06 10:54:23.047 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-standalone-preset.js - 304 null null 50.9215ms
+2026-10-06 10:54:23.047 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/index.css - 304 null null 51.343ms
+2026-10-06 10:54:23.047 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui-bundle.js - 304 null null 51.3968ms
+2026-10-06 10:54:23.047 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/swagger-ui.css - 304 null null 51.343ms
+2026-10-06 10:54:23.051 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/_vs/browserLink - null null
+2026-10-06 10:54:23.090 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.1671ms
+2026-10-06 10:54:23.130 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - null null
+2026-10-06 10:54:23.154 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7151/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.5353ms
+2026-10-06 10:54:27.263 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - application/json; charset=utf-8 null
+2026-10-06 10:54:27.299 +07:00 [INF] Executing endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:54:27.316 +07:00 [INF] Route matched with {action = "Login", controller = "TaiKhoan"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(QuanLyNhanSu.Models.DTO.LoginRequestDTO) on controller QuanLyNhanSu.Controllers.TaiKhoanController (QuanLyNhanSu).
+2026-10-06 10:54:27.437 +07:00 [INF] Đang xử lý đăng nhập cho tài khoản: cuong
+2026-10-06 10:54:28.656 +07:00 [INF] Executed DbCommand (35ms) [Parameters=[@request_TenDangNhap='?' (Size = 4000), @request_MatKhau='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TaiKhoanId], [t].[TenDangNhap], [t].[VaiTro], [t].[NhanVienId], [n].[HoTen] AS [HoTenNhanVien]
+FROM [TaiKhoans] AS [t]
+LEFT JOIN [NhanViens] AS [n] ON [t].[NhanVienId] = [n].[NhanVienId]
+WHERE [t].[TenDangNhap] = @request_TenDangNhap AND [t].[MatKhau] = @request_MatKhau
+2026-10-06 10:54:28.691 +07:00 [INF] Đăng nhập thành công. TaiKhoanId: 3, VaiTro: Nhân viên
+2026-10-06 10:54:28.698 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`4[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuanLyNhanSu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 10:54:28.709 +07:00 [INF] Executed action QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu) in 1387.672ms
+2026-10-06 10:54:28.711 +07:00 [INF] Executed endpoint 'QuanLyNhanSu.Controllers.TaiKhoanController.Login (QuanLyNhanSu)'
+2026-10-06 10:54:28.719 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7151/api/TaiKhoan/login - 200 null application/json; charset=utf-8 1456.4118ms

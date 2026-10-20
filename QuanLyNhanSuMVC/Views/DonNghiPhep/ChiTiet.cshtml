@@ -1,0 +1,139 @@
+﻿@model QuanLyNhanSuMVC.Models.DonNghiPhepModel
+
+@{
+    ViewData["Title"] = "Chi tiết đơn nghỉ phép";
+}
+
+<div class="container mt-4 mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-bold">Chi tiết đơn nghỉ phép</h2>
+            <p class="text-muted mb-0">
+                Thông tin và kết quả xử lý đơn nghỉ phép.
+            </p>
+        </div>
+
+        <a asp-controller="Home"
+           asp-action="Index"
+           class="btn btn-outline-secondary">
+            ← Trang chủ
+        </a>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-primary text-white py-3">
+            <h5 class="mb-0">
+                Đơn nghỉ phép #@Model.DonNghiPhepId
+            </h5>
+        </div>
+
+        <div class="card-body p-4">
+            <dl class="row">
+                <dt class="col-md-4">Nhân viên</dt>
+                <dd class="col-md-8">
+                    @(Model.HoTenNhanVien ?? "Chưa có thông tin")
+                </dd>
+
+                <dt class="col-md-4">Phòng ban</dt>
+                <dd class="col-md-8">
+                    @(Model.TenPhongBan ?? "Chưa có thông tin")
+                </dd>
+
+                <dt class="col-md-4">Ngày viết đơn</dt>
+                <dd class="col-md-8">
+                    @Model.NgayVietDon.ToString("dd/MM/yyyy")
+                </dd>
+
+                <dt class="col-md-4">Ngày bắt đầu nghỉ</dt>
+                <dd class="col-md-8">
+                    @Model.NgayBatDauNghi.ToString("dd/MM/yyyy")
+                </dd>
+
+                <dt class="col-md-4">Ngày kết thúc nghỉ</dt>
+                <dd class="col-md-8">
+                    @Model.NgayKetThucNghi.ToString("dd/MM/yyyy")
+                </dd>
+
+                <dt class="col-md-4">Số ngày nghỉ</dt>
+                <dd class="col-md-8">
+                    @Model.SoNgayNghi ngày
+                </dd>
+
+                <dt class="col-md-4">Lý do nghỉ</dt>
+                <dd class="col-md-8">
+                    @Model.LyDoNghi
+                </dd>
+                
+<dt class="col-md-4">Chế độ nghỉ</dt>
+<dd class="col-md-8">
+    @if (Model.TrangThai == "ChoDuyet")
+    {
+        <span class="badge bg-secondary">
+            Chưa xác định
+        </span>
+    }
+    else if (Model.HuongLuong)
+    {
+        <span class="badge bg-success">
+            Hưởng lương
+        </span>
+    }
+    else
+    {
+        <span class="badge bg-danger">
+            Không hưởng lương
+        </span>
+    }
+</dd>
+
+
+                <dt class="col-md-4">Trạng thái</dt>
+                <dd class="col-md-8">
+                    @if (Model.TrangThai == "ChoDuyet")
+                    {
+                        <span class="badge bg-warning text-dark">
+                            Chờ duyệt
+                        </span>
+                    }
+                    else if (Model.TrangThai == "DaDuyet")
+                    {
+                        <span class="badge bg-success">
+                            Đã duyệt
+                        </span>
+                    }
+                    else if (Model.TrangThai == "TuChoi")
+                    {
+                        <span class="badge bg-danger">
+                            Từ chối
+                        </span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-secondary">
+                            @Model.TrangThai
+                        </span>
+                    }
+                </dd>
+
+                <dt class="col-md-4">Ngày xử lý</dt>
+                <dd class="col-md-8">
+                    @(Model.NgayDuyet?.ToString("dd/MM/yyyy HH:mm")
+                        ?? "Chưa xử lý")
+                </dd>
+
+                <dt class="col-md-4">Ghi chú xử lý</dt>
+                <dd class="col-md-8">
+                    @(Model.GhiChuDuyet ?? "Không có ghi chú")
+                </dd>
+            </dl>
+
+            <hr />
+
+            <a asp-controller="DonNghiPhep"
+               asp-action="Index"
+               class="btn btn-secondary">
+                ← Quay lại danh sách
+            </a>
+        </div>
+    </div>
+</div>

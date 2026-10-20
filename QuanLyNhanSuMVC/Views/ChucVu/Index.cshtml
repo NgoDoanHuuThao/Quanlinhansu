@@ -1,0 +1,252 @@
+﻿@model List<QuanLyNhanSuMVC.Models.ChucVuModel>
+
+@{
+    ViewData["Title"] = "Quản lý chức vụ";
+}
+
+<style>
+    .page-header {
+        margin-bottom: 25px;
+    }
+
+    .page-header h1 {
+        color: #1e293b;
+        margin-bottom: 8px;
+    }
+
+    .page-header p {
+        color: #64748b;
+    }
+
+    .toolbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .toolbar-left {
+        display: flex;
+        gap: 10px;
+    }
+
+    .btn-custom {
+        display: inline-block;
+        padding: 10px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .btn-home {
+        background: #64748b;
+        color: white;
+    }
+
+    .btn-home:hover {
+        background: #475569;
+        color: white;
+    }
+
+    .btn-add {
+        background: #16a34a;
+        color: white;
+    }
+
+    .btn-add:hover {
+        background: #15803d;
+        color: white;
+    }
+
+    .btn-edit {
+        background: #f59e0b;
+        color: white;
+        padding: 7px 12px;
+    }
+
+    .btn-edit:hover {
+        background: #d97706;
+        color: white;
+    }
+
+    .btn-delete {
+        background: #dc2626;
+        color: white;
+        border: none;
+        padding: 7px 12px;
+        border-radius: 7px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    .btn-delete:hover {
+        background: #b91c1c;
+    }
+
+    .table-container {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th {
+        background: #1e293b;
+        color: white;
+        padding: 14px;
+        text-align: left;
+    }
+
+    td {
+        padding: 14px;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    tr:hover {
+        background: #f8fafc;
+    }
+
+    .empty {
+        text-align: center;
+        padding: 40px;
+        color: #64748b;
+    }
+
+    .error {
+        background: #fee2e2;
+        color: #991b1b;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="page-header">
+    <h1>💼 Quản lý chức vụ</h1>
+    <p>Quản lý các chức vụ và vị trí nhân viên</p>
+
+@if (!string.IsNullOrEmpty(ViewBag.Error))
+{
+    <div class="error">
+        ⚠️ @ViewBag.Error
+    </div>
+}
+
+<div class="toolbar">
+
+    <div class="toolbar-left">
+
+        <a asp-controller="Home"
+           asp-action="Index"
+           class="btn-custom btn-home">
+            ← Về trang chủ
+        </a>
+
+        <a asp-controller="NhanVien"
+           asp-action="Index"
+           class="btn-custom btn-home">
+            👨‍💼 Nhân viên
+        </a>
+
+        <a asp-controller="PhongBan"
+           asp-action="Index"
+           class="btn-custom btn-home">
+            🏢 Phòng ban
+        </a>
+
+    </div>
+
+    <a asp-action="Create"
+       class="btn-custom btn-add">
+        ➕ Thêm chức vụ
+    </a>
+
+</div>
+
+<div class="table-container">
+
+    @if (Model != null && Model.Any())
+    {
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên chức vụ</th>
+                    <th>Mô tả</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>
+                            <strong>#@item.ChucVuId</strong>
+                        </td>
+
+                        <td>
+                            <strong>@item.TenChucVu</strong>
+                        </td>
+
+                        <td>
+                            @(string.IsNullOrEmpty(item.MoTa)
+                                ? "Chưa có mô tả"
+                                : item.MoTa)
+                        </td>
+
+                        <td>
+
+                            <a asp-action="Edit"
+                               asp-route-id="@item.ChucVuId"
+                               class="btn-custom btn-edit">
+                                ✏️ Sửa
+                            </a>
+
+                            <form asp-action="Delete"
+                                  asp-route-id="@item.ChucVuId"
+                                  method="post"
+                                  style="display:inline;"
+                                  onsubmit="return confirm('Bạn có chắc muốn xóa chức vụ này?');">
+
+                                @Html.AntiForgeryToken()
+
+                                <button type="submit"
+                                        class="btn-delete">
+                                    🗑️ Xóa
+                                </button>
+
+                            </form>
+
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+    }
+    else
+    {
+        <div class="empty">
+            <h3>💼 Chưa có chức vụ</h3>
+            <p>
+                Hãy bấm
+                <strong>➕ Thêm chức vụ</strong>
+                để tạo chức vụ.
+            </p>
+        </div>
+    }
+
+</div>

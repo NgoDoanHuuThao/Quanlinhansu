@@ -1,0 +1,65 @@
+﻿@model QuanLyNhanSuMVC.Models.NhanVienModel
+
+@{
+    ViewData["Title"] = "Xóa nhân viên";
+}
+
+<div class="container mt-5">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-danger text-white">
+            <h3>🗑️ Xóa nhân viên</h3>
+        </div>
+
+        <div class="card-body">
+
+            <div class="alert alert-warning">
+                ⚠️ Bạn có chắc chắn muốn xóa nhân viên này không?
+            </div>
+
+            <table class="table">
+
+                <tr>
+                    <th>ID</th>
+                    <td>@Model.NhanVienId</td>
+                </tr>
+
+                <tr>
+                    <th>Họ tên</th>
+                    <td>@Model.HoTen</td>
+                </tr>
+
+                <tr>
+                    <th>Email</th>
+                    <td>@Model.Email</td>
+                </tr>
+
+                <tr>
+                    <th>Số điện thoại</th>
+                    <td>@Model.SoDienThoai</td>
+                </tr>
+
+            </table>
+
+            <form asp-action="Delete"
+                  asp-route-id="@Model.NhanVienId"
+                  method="post">
+
+                <button type="submit"
+                        class="btn btn-danger">
+                    🗑️ Xác nhận xóa
+                </button>
+
+                <a asp-action="Index"
+                   class="btn btn-secondary">
+                    Hủy
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

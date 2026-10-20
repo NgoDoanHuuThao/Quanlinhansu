@@ -1,0 +1,329 @@
+﻿@model QuanLyNhanSuMVC.Models.ThongKeLuongModel
+
+@{
+    ViewData["Title"] = "Thống kê lương";
+
+    var thang = Model?.Thang ?? DateTime.Now.Month;
+    var nam = Model?.Nam ?? DateTime.Now.Year;
+}
+
+<div class="container mt-4">
+
+    <!-- TIÊU ĐỀ -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <div>
+            <h2>📊 Thống kê lương</h2>
+
+            <p class="text-muted">
+                Thống kê quỹ lương theo tháng
+            </p>
+        </div>
+        <a asp-action="ThongKeNam"
+   class="btn btn-success">
+    📈 Thống kê năm
+</a>
+
+        <a asp-action="Index"
+           class="btn btn-secondary">
+            ← Quay lại
+        </a>
+
+    </div>
+
+
+    <!-- THÔNG BÁO LỖI -->
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            ❌ @ViewBag.Error
+        </div>
+    }
+
+
+    <!-- CHỌN THÁNG / NĂM -->
+    <div class="card shadow-sm mb-4">
+
+        <div class="card-body">
+
+            <form asp-action="ThongKe"
+                  method="get">
+
+                <div class="row align-items-end">
+
+                    <div class="col-md-4">
+
+                        <label class="form-label">
+                            Tháng
+                        </label>
+
+                        <select name="thang"
+                                class="form-select">
+
+                            @for (int i = 1; i <= 12; i++)
+                            {
+                                if (i == thang)
+                                {
+                                    <option value="@i" selected>
+                                        Tháng @i
+                                    </option>
+                                }
+                                else
+                                {
+                                    <option value="@i">
+                                        Tháng @i
+                                    </option>
+                                }
+                            }
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <label class="form-label">
+                            Năm
+                        </label>
+
+                        <input type="number"
+                               name="nam"
+                               value="@nam"
+                               min="2000"
+                               max="2100"
+                               class="form-control" />
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <button type="submit"
+                                class="btn btn-primary w-100">
+                            🔍 Xem thống kê
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- 4 Ô THỐNG KÊ -->
+
+    <div class="row g-4 mb-4">
+
+        <!-- SỐ NHÂN VIÊN -->
+        <div class="col-md-6 col-lg-3">
+
+            <div class="card shadow-sm border-0">
+
+                <div class="card-body">
+
+                    <div class="text-muted">
+                        Nhân viên
+                    </div>
+
+                    <h3 class="mt-2">
+                        @Model.SoNhanVien
+                    </h3>
+
+                    <small class="text-muted">
+                        Tháng @thang/@nam
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LƯƠNG CƠ BẢN -->
+        <div class="col-md-6 col-lg-3">
+
+            <div class="card shadow-sm border-0">
+
+                <div class="card-body">
+
+                    <div class="text-muted">
+                        Tổng lương cơ bản
+                    </div>
+
+                    <h3 class="mt-2">
+                        @Model.TongLuongCoBan.ToString("N0") đ
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PHỤ CẤP -->
+        <div class="col-md-6 col-lg-3">
+
+            <div class="card shadow-sm border-0">
+
+                <div class="card-body">
+
+                    <div class="text-muted">
+                        Tổng phụ cấp
+                    </div>
+
+                    <h3 class="mt-2">
+                        @Model.TongPhuCap.ToString("N0") đ
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TỔNG LƯƠNG -->
+        <div class="col-md-6 col-lg-3">
+
+            <div class="card shadow-sm border-0">
+
+                <div class="card-body">
+
+                    <div class="text-muted">
+                        Tổng quỹ lương
+                    </div>
+
+                    <h3 class="mt-2 text-success">
+                        @Model.TongLuong.ToString("N0") đ
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CHI TIẾT -->
+
+    <div class="card shadow-sm">
+
+        <div class="card-body">
+
+            <h4 class="mb-4">
+                📋 Chi tiết thống kê
+            </h4>
+
+            <div class="table-responsive">
+
+                <table class="table table-bordered">
+
+                    <thead class="table-dark">
+
+                        <tr>
+
+                            <th>
+                                Nội dung
+                            </th>
+
+                            <th class="text-end">
+                                Số tiền
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Số nhân viên
+                            </td>
+
+                            <td class="text-end">
+                                @Model.SoNhanVien người
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Tổng lương cơ bản
+                            </td>
+
+                            <td class="text-end">
+                                @Model.TongLuongCoBan.ToString("N0") đ
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Tổng phụ cấp
+                            </td>
+
+                            <td class="text-end">
+                                @Model.TongPhuCap.ToString("N0") đ
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Tổng thưởng
+                            </td>
+
+                            <td class="text-end">
+                                @Model.TongThuong.ToString("N0") đ
+                            </td>
+
+                        </tr>
+
+
+                        <tr class="table-success">
+
+                            <td>
+                                <strong>
+                                    TỔNG QUỸ LƯƠNG
+                                </strong>
+                            </td>
+
+                            <td class="text-end">
+
+                                <strong>
+                                    @Model.TongLuong.ToString("N0") đ
+                                </strong>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

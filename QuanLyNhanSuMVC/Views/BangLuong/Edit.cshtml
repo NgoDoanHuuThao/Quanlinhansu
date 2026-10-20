@@ -1,0 +1,272 @@
+﻿@model QuanLyNhanSuMVC.Models.BangLuongFormModel
+
+@{
+    ViewData["Title"] = "Sửa bảng lương";
+
+    var nhanViens =
+        ViewBag.NhanViens as List<QuanLyNhanSuMVC.Models.NhanVienModel>
+        ?? new List<QuanLyNhanSuMVC.Models.NhanVienModel>();
+
+    var nhanVien =
+        nhanViens.FirstOrDefault(x => x.NhanVienId == Model.NhanVienId);
+
+    var tongLuong =
+        (Model.LuongCoBan ?? 0)
+        + (Model.PhuCap ?? 0)
+        + (Model.Thuong ?? 0);
+}
+
+<div class="container mt-4">
+
+    <div class="mb-4">
+        <h2>✏️ Sửa bảng lương</h2>
+
+        <p class="text-muted">
+            Cập nhật thông tin bảng lương
+        </p>
+    </div>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            ❌ @ViewBag.Error
+        </div>
+    }
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            @Html.ValidationSummary(false)
+        </div>
+    }
+
+    <div class="card shadow-sm">
+
+        <div class="card-body">
+
+            <form asp-action="Edit"
+                  asp-route-id="@ViewBag.BangLuongId"
+                  method="post">
+
+                @Html.AntiForgeryToken()
+
+                <!-- NHÂN VIÊN -->
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Nhân viên
+                    </label>
+
+                    <input type="text"
+                           class="form-control"
+                           value="@(nhanVien?.HoTen ?? "Không xác định")"
+                           readonly />
+
+                    <input type="hidden"
+                           asp-for="NhanVienId" />
+
+                </div>
+
+
+                <!-- THÁNG + NĂM -->
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label asp-for="Thang"
+                               class="form-label">
+                            Tháng
+                        </label>
+
+                        <input asp-for="Thang"
+                               type="number"
+                               class="form-control"
+                               min="1"
+                               max="12"
+                               required />
+
+                        <span asp-validation-for="Thang"
+                              class="text-danger">
+                        </span>
+
+                    </div>
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label asp-for="Nam"
+                               class="form-label">
+                            Năm
+                        </label>
+
+                        <input asp-for="Nam"
+                               type="number"
+                               class="form-control"
+                               min="2000"
+                               max="2100"
+                               required />
+
+                        <span asp-validation-for="Nam"
+                              class="text-danger">
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LƯƠNG CƠ BẢN -->
+                <div class="mb-3">
+
+                    <label asp-for="LuongCoBan"
+                           class="form-label">
+                        Lương cơ bản
+                    </label>
+
+                    <input asp-for="LuongCoBan"
+                           id="LuongCoBan"
+                           type="number"
+                           class="form-control"
+                           min="0"
+                           step="1000" />
+
+                    <span asp-validation-for="LuongCoBan"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+
+                <!-- PHỤ CẤP -->
+                <div class="mb-3">
+
+                    <label asp-for="PhuCap"
+                           class="form-label">
+                        Phụ cấp
+                    </label>
+
+                    <input asp-for="PhuCap"
+                           id="PhuCap"
+                           type="number"
+                           class="form-control"
+                           min="0"
+                           step="1000" />
+
+                    <span asp-validation-for="PhuCap"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+
+                <!-- THƯỞNG -->
+                <div class="mb-3">
+
+                    <label asp-for="Thuong"
+                           class="form-label">
+                        Thưởng
+                    </label>
+
+                    <input asp-for="Thuong"
+                           id="Thuong"
+                           type="number"
+                           class="form-control"
+                           min="0"
+                           step="1000" />
+
+                    <span asp-validation-for="Thuong"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+
+                <!-- TỔNG LƯƠNG -->
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Tổng lương
+                    </label>
+
+                    <input type="text"
+                           id="TongLuong"
+                           class="form-control fw-bold"
+                           value="@tongLuong.ToString("N0") đ"
+                           readonly />
+
+                    <small class="text-muted">
+                        Tổng lương được tính tự động:
+                        Lương cơ bản + Phụ cấp + Thưởng.
+                    </small>
+
+                </div>
+
+
+                <!-- BUTTON -->
+                <div class="mt-4">
+
+                    <button type="submit"
+                            class="btn btn-success">
+                        💾 Lưu thay đổi
+                    </button>
+
+                    <a asp-action="Index"
+                       class="btn btn-secondary">
+                        ← Quay lại
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    function tinhTongLuong() {
+
+        var luongCoBan =
+            parseFloat(
+                document.getElementById("LuongCoBan").value
+            ) || 0;
+
+        var phuCap =
+            parseFloat(
+                document.getElementById("PhuCap").value
+            ) || 0;
+
+        var thuong =
+            parseFloat(
+                document.getElementById("Thuong").value
+            ) || 0;
+
+        var tong =
+            luongCoBan +
+            phuCap +
+            thuong;
+
+        document.getElementById("TongLuong").value =
+            tong.toLocaleString("vi-VN") + " đ";
+    }
+
+
+    document
+        .getElementById("LuongCoBan")
+        .addEventListener("input", tinhTongLuong);
+
+
+    document
+        .getElementById("PhuCap")
+        .addEventListener("input", tinhTongLuong);
+
+
+    document
+        .getElementById("Thuong")
+        .addEventListener("input", tinhTongLuong);
+
+</script>

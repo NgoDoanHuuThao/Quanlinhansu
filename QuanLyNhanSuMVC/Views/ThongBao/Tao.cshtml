@@ -1,0 +1,92 @@
+﻿@model QuanLyNhanSuMVC.Models.ThongBaoModel
+
+@{
+    ViewData["Title"] = "Tạo thông báo";
+}
+
+<div class="container py-4" style="max-width: 800px;">
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-primary text-white py-3">
+            <h4 class="mb-0">🔔 Tạo thông báo nội bộ</h4>
+        </div>
+
+        <div class="card-body p-4">
+            <div asp-validation-summary="All"
+                 class="text-danger mb-3"></div>
+
+            <form asp-controller="ThongBao"
+                  asp-action="Tao"
+                  method="post">
+
+                @Html.AntiForgeryToken()
+
+                <div class="mb-3">
+                    <label asp-for="TieuDe"
+                           class="form-label fw-bold">Tiêu đề</label>
+                    <input asp-for="TieuDe"
+                           class="form-control"
+                           placeholder="Nhập tiêu đề thông báo" />
+                    <span asp-validation-for="TieuDe"
+                          class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="NoiDung"
+                           class="form-label fw-bold">Nội dung</label>
+                    <textarea asp-for="NoiDung"
+                              class="form-control"
+                              rows="5"
+                              placeholder="Nhập nội dung thông báo"></textarea>
+                    <span asp-validation-for="NoiDung"
+                          class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="DoiTuongNhan"
+                           class="form-label fw-bold">Đối tượng nhận</label>
+                    <select asp-for="DoiTuongNhan" class="form-select">
+                        <option value="ALL">Tất cả nhân viên</option>
+                        <option value="PHONGBAN">Theo phòng ban</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="PhongBanId"
+                           class="form-label fw-bold">Mã phòng ban</label>
+                    <input asp-for="PhongBanId"
+                           type="number"
+                           class="form-control"
+                           placeholder="Nhập mã phòng ban nếu gửi theo phòng" />
+                    <small class="text-muted">
+                        Chỉ cần nhập khi chọn đối tượng nhận là phòng ban.
+                    </small>
+                </div>
+
+                <div class="mb-4">
+                    <label asp-for="NgayHetHan"
+                           class="form-label fw-bold">Ngày hết hạn (không bắt buộc)</label>
+                    <input asp-for="NgayHetHan"
+                           type="datetime-local"
+                           class="form-control" />
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary">
+                        📤 Gửi thông báo
+                    </button>
+
+                    <a asp-controller="ThongBao"
+                       asp-action="Index"
+                       class="btn btn-outline-secondary">
+                        Quay lại
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+```

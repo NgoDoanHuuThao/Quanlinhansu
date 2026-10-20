@@ -1,0 +1,55 @@
+﻿@model QuanLyNhanSuMVC.Models.ChucVuModel
+
+@{
+    ViewData["Title"] = "Thêm chức vụ";
+}
+
+<h1>➕ Thêm chức vụ</h1>
+
+@if (!string.IsNullOrEmpty(ViewBag.Error))
+{
+    <div class="alert alert-danger">
+        @ViewBag.Error
+    </div>
+}
+
+<form asp-action="Create" method="post">
+
+    @Html.AntiForgeryToken()
+
+    <div class="mb-3">
+        <label asp-for="TenChucVu" class="form-label">
+            Tên chức vụ
+        </label>
+
+        <input asp-for="TenChucVu"
+               class="form-control"
+               required
+               placeholder="Ví dụ: Giám đốc" />
+
+        <span asp-validation-for="TenChucVu"
+              class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="MoTa" class="form-label">
+            Mô tả
+        </label>
+
+        <textarea asp-for="MoTa"
+                  class="form-control"
+                  rows="4"
+                  placeholder="Nhập mô tả chức vụ"></textarea>
+    </div>
+
+    <button type="submit"
+            class="btn btn-success">
+        💾 Lưu chức vụ
+    </button>
+
+    <a asp-action="Index"
+       class="btn btn-secondary">
+        ← Quay lại
+    </a>
+
+</form>
